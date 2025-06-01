@@ -1,0 +1,1125 @@
+/* リセットスタイル */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sukhumvit Set', sans-serif;
+    background-color: #f5f5f5;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+}
+.sp-none {
+    display: none;
+}
+/* ヒーローセクション */
+.hero {
+    position: relative;
+    background-image: url('/wp-content/themes/wp_Hiyoku/img/LMS_MV_sp.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 100vh;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ヘッダーのスタイル */
+.header {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: auto;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 46px;
+}
+
+.company-name {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: white;
+}
+
+/* h1のスタイル */
+.hero h1 {
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 80px;
+    letter-spacing: 0.04em;
+    color: white;
+}
+
+/* h2のスタイル */
+.hero h2 {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 44.8px;
+    letter-spacing: 0.06em;
+    color: white;
+}
+
+/* pのスタイル */
+.hero p {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    letter-spacing: 0.04em;
+    color: white;
+    max-width: 320px;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .hero {
+        background-image: url('/wp-content/themes/wp_Hiyoku/img/LMS_MV.png');
+        background-size: cover;
+        background-position: center;    
+    }
+
+    .hero h1 {
+        font-size: 64px;
+    }
+
+    .hero h2 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 77.78px;
+        letter-spacing: 0.04em;
+        text-align: left;
+    }
+
+    .hero p {
+        font-size: 17px;
+        font-weight: 500;
+        line-height: 27.2px;
+        letter-spacing: 0.04em;
+        text-align: left;
+        max-width: 650px;
+    }
+
+    /* コンテンツ部分のスタイル */
+    .content {
+        display: flex;
+        width: 85%;
+        max-width: 1097px;
+        align-items: center;
+    }
+
+    /* 左側のコンテンツ */
+    .left-content {
+        text-align: left;
+        flex: 1;
+    }
+
+    /* 右側のコンテンツ */
+    .right-content {
+        text-align: left;
+        flex: 1.3;
+    }
+    .pc-none {
+        display: none;
+    }
+}
+/* 問題セクション */
+.problem-section {
+    background-color: #f8f9fa;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    color: #579FBB;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* 破線のスタイル */
+.section-title::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin-top: 5px;
+    border-bottom: 2px dashed #44585F;
+}
+
+/* 吹き出しカードのレイアウト */
+.problem-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+}
+
+/* 吹き出しカード */
+.card {
+    position: relative;
+    width: 100%;
+    max-width: 352px;
+    height: 122px;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 20px;
+}
+
+/* 左向きの吹き出し */
+.blowing-left {
+    background-image: url('/wp-content/themes/wp_Hiyoku/img/blowing_left.png');
+}
+
+/* 右向きの吹き出し */
+.blowing-right {
+    background-image: url('/wp-content/themes/wp_Hiyoku/img/blowing_right.png');
+}
+
+/* テキストのスタイル */
+.card p {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    color: #579FBB;
+    margin: 0;
+}
+
+.card p span {
+    color: #44585F;
+}
+
+/* 会話画像のスタイル */
+.conversation {
+    width: 153px;
+    margin: 0 auto;
+}
+
+.conversation-card {
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    width: 352px;
+    height: 122px;
+}
+
+@media (min-width: 768px) {
+    .problem-cards {
+        height: 350px;
+    }
+
+    .blowing-left {
+        background-image: url('/wp-content/themes/wp_Hiyoku/img/blowing_right_pc.png');
+    }
+
+    .blowing-right {
+        background-image: url('/wp-content/themes/wp_Hiyoku/img/blowing_left_pc.png');
+    }
+
+    .card {
+        height: 140px;
+    }
+
+    .conversation-card.pc {
+        display: block;
+        order: 2;
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 166px;
+    }
+
+    .problem-section {
+        position: relative;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+        transform: translateX(-50%);
+    }
+
+    .top-right {
+        position: absolute;
+        top: 20%;
+        left: 73%;
+        transform: translateX(-50%);
+    }
+
+    .bottom-left {
+        position: absolute;
+        top: 55%;
+        left: 30%;
+        transform: translateX(-50%);
+    }
+
+    .bottom-right {
+        position: absolute;
+        top: 55%;
+        left: 68%;
+        transform: translateX(-50%);
+    }
+
+    .sp {
+        display: none;
+    }
+
+    .conversation-card.pc {
+        display: block;
+        order: 2;
+    }
+}
+
+/* スマホサイズのスタイル */
+@media (max-width: 768px) {
+    .conversation-card.pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+}
+/* イントロセクション */
+.intro-effects {
+    position: relative;
+    background-color:#579FBB;
+    background-image: url('/wp-content/themes/wp_Hiyoku/img/bg.png');
+    background-size: 2327px 1018px;
+    background-repeat: no-repeat;
+    background-position: 50% 13%;
+    width: 100%;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.triangle {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #f8f9fa; 
+    clip-path: polygon(50% 100%, -40% 0, 140% 0);
+}
+
+/* ヘッダー部分 */
+.intro-header {
+    margin: 60px 0;
+    position: relative;
+    display: inline-block;
+}
+.intro-header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* ロゴのスタイル */
+.intro-logo {
+    width: 39px;
+    margin-right: 8px;
+}
+
+/* テキストスタイル */
+.intro-text {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 36.8px;
+    letter-spacing: 0.04em;
+    color: #FFF;
+    display: flex;
+    white-space: nowrap;
+    padding-top: 2px;
+}
+
+/* テキストの上に白い点を表示 */
+.dot-text {
+    position: relative;
+}
+  .dot-text::before{
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    padding-top: 26px;
+    background: -webkit-radial-gradient(circle 4px,#FFF 50%,transparent 50%);
+    background: radial-gradient(circle 4px,#FFF 50%,transparent 50%);
+    background: -moz-radial-gradient(circle 4px,#FFF 50%,transparent 50%);
+  }
+
+/* 下線を追加 */
+.intro-header::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    border-bottom: 2px solid #FFF;
+}
+
+/* タイトル */
+.intro-title {
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 35px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 5px;
+    margin: 0 auto;
+}
+
+.intro-subtitle {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+
+/* カード全体 */
+.intro-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* 各カード */
+.intro-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* カード内のアイコン画像 */
+.card-icon-container {
+    position: relative;
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: #E4F0FF;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-icon {
+    width: 100%;
+    height: 226px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-icon2 {
+    width: 71px;
+    padding: 50px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* カード番号を表示する白い円 */
+.card-number-circle {
+    position: absolute;
+    bottom: -43px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: 86px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* カード番号 */
+.card-number {
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 33px;
+    font-weight: 300;
+    line-height: 52.8px;
+    letter-spacing: 0.04em;
+    color: #579FBB;
+    padding-bottom: 20px;
+}
+
+/* タイトルのスタイル */
+.card-title {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.04em;
+    color: #579FBB;
+    margin: 20px 0;
+}
+
+/* 説明文のスタイル */
+.card-description {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    color: #000000;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+@media (min-width: 960px) {
+    .intro-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .intro-card {
+        margin-bottom: 0;
+        flex: 1;
+        height: 525px;
+    }
+}
+/* 導入事例セクションのスタイル */
+.case-study {
+    background-color: #FFFFFF;
+    padding: 70px 20px;
+    text-align: center;
+    position: relative;
+    z-index: -2;
+    overflow: hidden;
+}
+/* 画像の共通スタイル */
+.background-image {
+    position: absolute;
+    z-index: -1;
+  }
+  
+/* 画像1の位置 */
+.image1 {
+    top: 0;
+    left: 30%;
+    width: 364px;
+}
+
+/* 画像2の位置 */
+.image2 {
+    top: 65%;
+    left: 56%;
+    transform: translate(-50%, -50%);
+    width: 435px;
+}
+
+/* 画像3の位置 */
+.image3 {
+    bottom: 0;
+    left: -8%;
+    width: 226px;
+}
+.image4 {
+    display: none;
+}
+/* タイトルスタイル */
+.case-study-title {
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0.04em;
+    color: #44585F;
+    margin: 30px 0 10px 0;
+
+}
+
+/* サブタイトルスタイル */
+.case-study-subtitle {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.04em;
+    color: #93C259;
+    margin-bottom: 70px;
+}
+
+/* 導入事例カード全体のスタイル */
+.case-card {
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+}
+
+/* カードヘッダー（会社情報）のスタイル */
+.case-header {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-bottom: 10px;
+}
+
+/* ケース番号コンテナ */
+.case-number-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+}
+
+/* ケース番号のロゴ画像 */
+.case-number-logo {
+    display: block;
+    width: 86px;
+    height: auto;
+}
+
+/* 会社名 */
+.case-company {
+    font-size: 18px;
+    font-weight: 700;
+    color: #44585F;
+    margin-left: 10px;
+}
+
+/* 従業員数・導入目的スタイル */
+.case-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+/* 従業員数コンテナ */
+.case-employees-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding: 5px 13px;
+    width: fit-content;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* 画像スタイル */
+.employees-logo {
+    width: 25px;
+    height: auto;
+}
+
+/* 従業員数のテキスト */
+.case-employees{
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25.6px;
+    color: #44585F;
+}
+/* 従業員数コンテナ */
+.case-purpose-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    padding: 5px 0;
+    width: fit-content;
+}
+
+.purpose-logo {
+    padding-top: 2px;
+}
+/* 導入目的のテキスト */
+.case-purpose {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    letter-spacing: 0.04em;
+    color: #44585F;
+    display: flex;
+    align-items: flex-start;
+    white-space: nowrap;
+}
+.case-purpose-label {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25.6px;
+    letter-spacing: 0.04em;
+}
+
+/* 点線のスタイル */
+.case-purpose-dotted-line {
+    display: inline-block;
+    width: 30px;
+    border-bottom: 1px dotted #44585F;
+    margin: 10px;
+}
+
+/* 課題・受講・解決セクション全体のスタイル */
+.case-details {
+    position: relative;
+    padding-left: 60px;
+}
+
+/* 各ケースアイテムのスタイル */
+.case-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* 点線を生成：最後のアイテム以外 */
+.case-item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: -30px;
+    top: 0;
+    bottom: -20px;
+    width: 3px;
+    background: repeating-linear-gradient(
+        to bottom,
+        #CCCCCC,
+        #CCCCCC 3px,
+        transparent 3px,
+        transparent 6px
+    );
+}
+
+/* ラベルのスタイル */
+.case-label {
+    background-color: #FFFFFF;
+    color: #44585F;
+    border: 1px solid #CCCCCC;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    width: 73px;
+    position: absolute;
+    top: 0;
+    left: -65px;
+    z-index: 1;
+}
+
+/* 解決ラベルの特別スタイル */
+.result {
+    background-color: #FD9940;
+    color: #FFFFFF;
+    border-color: transparent;
+}
+
+/* 各段落のスタイル */
+.case-text {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    color: #44585F;
+    margin: 0;
+    padding-left: 20px;
+    flex: 1;
+}
+
+/* 解決ラベルのテキスト */
+.result-text {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25.6px;
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.pdf-container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    overflow: auto;
+}
+
+#pdfCanvas {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+  
+@media (min-width: 768px) {
+    .image1 {
+        top: 3%;
+        left: 70%;
+    }
+
+    .image2 {
+        top: 90%;
+        left: 10%;
+    }
+
+    .image3 {
+        bottom: 27%;
+        left: 82%;
+    }
+
+    .image4 {
+        display: block;
+        position: absolute;
+        top: -5%;
+        left: 0;
+    }
+    .case-card {
+        width: 70%;
+        display: inline-block;
+        align-items: center;
+    }
+    .case-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* 全体のスタイル */
+.contact-section {
+    background-image: url('/wp-content/themes/wp_Hiyoku/img/contact_mv.png');
+    background-size: cover;
+    background-position: center;
+    padding: 70px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.contact-container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 40px 20px;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+    font-family:  'Ryo Gothic PlusN', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.04em;
+    color: #579FBB;
+    margin-bottom: 15px;
+}
+.contact-title span {
+    color: #44585F;
+}
+.contact-heading {
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0.04em;
+    color: #4a4a4a;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-family:  'Ryo Gothic PlusN', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25.6px;
+    letter-spacing: 0.04em;
+    color: #44585F;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    padding: 0 5px;
+}
+
+/* ボタンコンテナ */
+.contact-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+  
+/* ボタンスタイル */
+.contact-button {
+    background-color: #579FBB;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;/
+}
+
+/* アイコンのスタイル */
+.button-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+}
+
+/* テキストのスタイル */
+.button-text {
+    flex: 1;
+    text-align: center;
+}
+
+/* ボタンホバー時のスタイル */
+.contact-button:hover {
+    background-color: #4f939e;
+}
+
+@media (min-width: 768px) {
+    .contact-container {
+        padding: 40px 80px;
+    }
+    .contact-title {
+        font-size: 33px;
+        font-weight: 500;
+        line-height: 52.8px;
+        letter-spacing: 0.04em;
+
+    }
+    .contact-heading {
+        margin-right: 80px;
+        font-size: 56px;
+        font-weight: 250;
+        line-height: 89.6px;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+    }
+    .contact-description {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 25.6px;
+        letter-spacing: 0.04em;
+        white-space: nowrap;
+    }
+    .contact-section {
+        background-image: url('/wp-content/themes/wp_Hiyoku/img/contant-mv-pc.png');
+    }
+    .contact-text {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+    .contact-container {
+        max-width: 945px;
+    }
+    
+    .sp-none {
+        display: block;
+    }
+}
+
+/* システムセクション全体 */
+.system-features-section {
+    background-color: #FFFFFF;
+    padding: 70px 20px;
+}
+  
+/* タイトル */
+.features-title {
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 64px;
+    letter-spacing: 0.04em;
+    color: #44585F;
+    margin: 30px 0 10px 0;
+    text-align: center;
+}
+
+/* サブタイトル */
+.features-subtitle {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28.8px;
+    letter-spacing: 0.04em;
+    color: #93C259;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+/* 各特徴アイテム */
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.feature-image {
+    width: 331px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.feature-number-box {
+    background-color: #FFFFFF;
+    color: #44585F; 
+    width: 49px;
+    height: 37px;
+    border-radius: 40px;
+    border: 1px solid #44585F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25.6px;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+
+.feature-description {
+    font-family: 'Ryo Gothic PlusN', sans-serif;
+    color: #44585F;
+    font-weight: 500;
+}
+/* 強調テキスト */
+.feature-description h2 {
+    font-size: 19px;
+    line-height: 30.4px;
+    letter-spacing: 0.04em;
+    padding-bottom: 20px;
+}
+
+.feature-description p {
+    font-size: 16px;
+    line-height: 25.6px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .feature-item {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+
+    .feature-image {
+        margin-right: 60px;
+    }
+}
+footer {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-container .logo {
+    width: 46px;
+    height: auto;
+}
+
+.company-name {
+    font-family: 'Avenir Next', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 2px;
+    color: #000000;
+}
+
+.footer-bottom {
+    font-family: 'Sukhumvit Set', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 19.2px;
+    letter-spacing: 0.04em;
+    color: #000000;
+    padding-top: 20px;
+}
+
+
+@media (max-width: 360px) {
+    .intro-text {
+        font-size: 20px;
+    }
+}
