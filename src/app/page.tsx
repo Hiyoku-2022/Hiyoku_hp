@@ -1,103 +1,116 @@
+import React from "react";
 import Image from "next/image";
+import { ButtonWithIcon } from "@/components/ui/ButtonWithIcon";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <main className="pt-20 px-4 max-w-4xl mx-auto">
+        <div>
+          <h1 className="text-3xl font-bold mb-6">メインページ</h1>
+          <p>SHAPING THE FUTURE<br />WITH TECHNOLOGY未来を翔ける<br />価値を造る。</p>
+          <p>私たちについて</p>
+          <p>教育で世界の貧困差をなくす</p>
+          <p>
+            私たちHiyoku合同会社は教育事業をベースに、<br />
+            「価値あるものを世の中に生み出していきたい」<br />
+            「本当に価値のある人材を育てていきたい」<br />
+            <br />
+            そんな想いで始まった、2022年11月に誕生したスタートアップ企業です。<br />
+            <br />
+            エンジニアとしての技術力を手に日本から海外に向けて、<br />
+            世界的な社会貢献が可能な人材の育成に本気で取り組んでいます。<br />
+          </p>
+        </div>
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center md:grid md:grid-cols-3 md:gap-8 md:items-start">
+          <div className="flex flex-col items-center text-center">
+            <p>What</p>
+            <Image src="/icon/favicon.ico" alt="Site logo icon" width={150} height={150} />
+            <p>本物のエンジニア育成で<br />IT業界を支えます</p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <p>Why</p>
+            <Image src="/icon/favicon.ico" alt="Site logo icon" width={150} height={150} />
+            <p>本当に価値のある技術者育成を<br />日本から世界へ広げていきます</p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <p>How</p>
+            <Image src="/icon/favicon.ico" alt="Site logo icon" width={150} height={150} />
+            <p>最新技術を活用して<br />最適な学び提供します</p>
+          </div>
+        </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <ButtonWithIcon
+            variant="primary"
+            iconSrc="/news/blogdetail.png"
+            iconAlt=""
+        >
+            採用についてのお問い合わせ
+            <span>
+                <Image
+                    aria-hidden
+                    src="/news/blogdetail.png"
+                    alt="Globe icon"
+                    width={16}
+                    height={16}
+                    className="ml-2 w-4 h-4"
+                />
+            </span>
+        </ButtonWithIcon>
+
+        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 md:items-start">
+          <div>
+            <h1 className="text-xl font-bold mb-6">プロダクト</h1>
+            <p className="text-gray-700">Re-Light LMS</p>
+            <Image src="/icon/favicon.ico" alt="Site logo icon" width={150} height={150} />
+          </div>
+          <div>
+            <p className="text-gray-700">シリコンバレーや世界的なIT企業ではマストな知識であるコンピュータサイエンスを 習得します。アルゴリズムを徹底的に鍛え、問題解決能力を飛躍的に向上させます。
+              LMSによる進捗管理はもちろん、AIによる質疑回答で24時間いつでも質問可能です。 各々のスタイルに合わせて学習できます。 また、多忙なスケジュールの担当者のリソースを割かず教育することが可能です。
+              詳しくみる</p>
+            <ButtonWithIcon
+                        variant="primary"
+                        iconSrc="/news/blogdetail.png"
+                        iconAlt=""
+                    >
+              採用についてのお問い合わせ
+            </ButtonWithIcon>
+          </div>
+        </div>
+        <div>
+          <p>NEWS</p>
+          <p>ニュース</p>
+          <ButtonWithIcon
+              variant="primary"
+              iconSrc="/news/blogdetail.png"
+              iconAlt=""
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            NEWS一覧を見る
+          </ButtonWithIcon>
+        </div>
+
+        <div>
+          <p>RECRUIT</p>
+          <p>採用情報</p>
+          <p>私たちと一緒に働いてくれる仲間を募集しています。</p>
+          <div>
+            <ButtonWithIcon
+                variant="primary"
+                iconSrc="/news/blogdetail.png"
+                iconAlt=""
+            >
+              詳しく見る
+            </ButtonWithIcon>
+            <ButtonWithIcon
+                variant="primary"
+                iconSrc="/news/blogdetail.png"
+                iconAlt=""
+            >
+              エントリーフォーム
+            </ButtonWithIcon>
+          </div>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    </>
+  )
 }
