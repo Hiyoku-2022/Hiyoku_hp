@@ -1,5 +1,6 @@
 import React from "react";
 import { HiyokuPhilosophy } from "./HiyokuPhilosophy";
+import { HiyokuPromise } from "./HiyokuPromise";
 
 export default function AboutUsPage() {
 return (
@@ -7,6 +8,7 @@ return (
         <div>
         <h1 className="text-3xl font-bold mb-6">私たちについて</h1>
         <HiyokuPhilosophy />
+        <HiyokuPromise />
         <p className="text-gray-700">これはメインコンテンツエリアです。</p>
         <p className="text-gray-700">これはメインコンテンツエリアです。</p>
         <p className="text-gray-700">これはメインコンテンツエリアです。</p>
