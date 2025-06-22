@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ButtonWithIcon } from "../ui/ButtonWithIcon";
+import { ChevronRight } from "lucide-react";
+import { ButtonWithIcon } from "../ui/button";
 
 const navLinks = [
     { label: "私たちについて", href: "/about-us" },
@@ -22,9 +23,8 @@ export const HeaderNav = () => (
             </Link>
         ))}
         <ButtonWithIcon
-            variant="primary"
-            iconSrc="/news/blogdetail.png"
-            iconAlt=""
+            variant="blue"
+            icon={<ChevronRight className="w-4 h-4 transition-colors" />}
         >
             お問い合わせ
         </ButtonWithIcon>

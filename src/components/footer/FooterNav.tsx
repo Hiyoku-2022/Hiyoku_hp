@@ -27,7 +27,7 @@ export const FooterNav = () => (
                 height={24}
             />
         </div>
-        <nav className="flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
+        <nav className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
             {navLinks.map((link) => (
                 <Link
                     href={link.href}
