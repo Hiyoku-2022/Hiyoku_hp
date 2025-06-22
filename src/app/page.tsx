@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { ButtonWithIcon } from "@/components/ui/ButtonWithIcon";
+import { ChevronRight } from "lucide-react"
+import { ButtonWithIcon } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
@@ -41,21 +42,10 @@ export default function HomePage() {
         </div>
 
         <ButtonWithIcon
-            variant="primary"
-            iconSrc="/news/blogdetail.png"
-            iconAlt=""
+            variant="blue"
+            icon={<ChevronRight className="w-4 h-4 transition-colors" />}
         >
             採用についてのお問い合わせ
-            <span>
-                <Image
-                    aria-hidden
-                    src="/news/blogdetail.png"
-                    alt="Globe icon"
-                    width={16}
-                    height={16}
-                    className="ml-2 w-4 h-4"
-                />
-            </span>
         </ButtonWithIcon>
 
         <div className="max-w-7xl mx-auto px-4 flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 md:items-start">
@@ -69,9 +59,8 @@ export default function HomePage() {
               LMSによる進捗管理はもちろん、AIによる質疑回答で24時間いつでも質問可能です。 各々のスタイルに合わせて学習できます。 また、多忙なスケジュールの担当者のリソースを割かず教育することが可能です。
               詳しくみる</p>
             <ButtonWithIcon
-                        variant="primary"
-                        iconSrc="/news/blogdetail.png"
-                        iconAlt=""
+                        variant="blue"
+                        icon={<ChevronRight className="w-4 h-4 transition-colors" />}
                     >
               採用についてのお問い合わせ
             </ButtonWithIcon>
@@ -81,9 +70,8 @@ export default function HomePage() {
           <p>NEWS</p>
           <p>ニュース</p>
           <ButtonWithIcon
-              variant="primary"
-              iconSrc="/news/blogdetail.png"
-              iconAlt=""
+              variant="blue"
+              icon={<ChevronRight className="w-4 h-4 transition-colors" />}
           >
             NEWS一覧を見る
           </ButtonWithIcon>
@@ -95,16 +83,14 @@ export default function HomePage() {
           <p>私たちと一緒に働いてくれる仲間を募集しています。</p>
           <div>
             <ButtonWithIcon
-                variant="primary"
-                iconSrc="/news/blogdetail.png"
-                iconAlt=""
+                variant="blue"
+                icon={<ChevronRight className="w-4 h-4 transition-colors" />}
             >
               詳しく見る
             </ButtonWithIcon>
             <ButtonWithIcon
-                variant="primary"
-                iconSrc="/news/blogdetail.png"
-                iconAlt=""
+                variant="blue"
+                icon={<ChevronRight className="w-4 h-4 transition-colors" />}
             >
               エントリーフォーム
             </ButtonWithIcon>
