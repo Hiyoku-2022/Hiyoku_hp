@@ -1,6 +1,6 @@
 import React from "react";
-import { BaseButton, BaseButtonProps } from "./BaseButton";
+import { BaseButton, BaseButtonProps } from "./base-button";
 
-export const Button = (props: BaseButtonProps) => {
+export function Button (props: BaseButtonProps) {
     return <BaseButton {...props} />;
 };

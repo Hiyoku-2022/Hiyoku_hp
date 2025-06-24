@@ -2,17 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
-import { HeaderLogo } from "./HeaderLogo";
-import { HeaderNav } from "./HeaderNav";
-import { HeaderMobileMenu } from "./HeaderMobileMenu";
+import { HiyokuLogo} from "../shared/logo";
+import { HeaderNav } from "./header-nav";
+import { HeaderMobileMenu } from "./header-mobile-menu";
 
-export const Header = () => {
+export function Header () {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <header className="w-full shadow-md bg-white fixed top-0 left-0 z-50">
             <div className="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-                <HeaderLogo />
+                <HiyokuLogo />
 
                 <HeaderNav />
 

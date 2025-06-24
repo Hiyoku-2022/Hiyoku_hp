@@ -1,20 +1,20 @@
-import React from "react";
-import Image from "next/image";
-import { BaseButton, BaseButtonProps } from "./BaseButton";
 
-type HoverShapeButtonWithIconProps = BaseButtonProps & {
-    icon?: React.ReactNode; // LucideなどReactコンポーネントで渡す
+import React from "react";
+import { BaseButton, BaseButtonProps } from "./base-button";
+
+type ButtonWithIconProps = BaseButtonProps & {
+    icon?: React.ReactNode;
     iconPosition?: "left" | "right";
 };
 
-export const HoverShapeButtonWithIcon = ({
+export function ButtonWithIcon ({
     icon,
     iconPosition = "right",
     children,
     ...props
-}: HoverShapeButtonWithIconProps) => {
+}: ButtonWithIconProps) {
     return (
-        <BaseButton {...props} shapeTransition>
+        <BaseButton {...props}>
             <span className="inline-flex items-center gap-2">
                 {icon && iconPosition === "left" && (
                     <span className="text-inherit">{icon}</span>

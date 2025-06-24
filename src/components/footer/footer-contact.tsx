@@ -1,6 +1,6 @@
 import React from "react";
 
-export const FooterContact = () => (
+export function FooterContact ()  {
     <div className="space-y-4 max-w-md">
         <p className="text-xl">CONTACT US</p>
         <p className="text-sm">
@@ -8,5 +8,5 @@ export const FooterContact = () => (
             <br />
             こちらよりお問い合わせください。
         </p>
-</div>
-)
+    </div>
+}

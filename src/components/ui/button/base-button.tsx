@@ -10,13 +10,13 @@ export type BaseButtonProps = {
     className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export const BaseButton = ({
+export function BaseButton ({
     variant,
     children,
     shapeTransition = false,
     className = "",
     ...props
-}: BaseButtonProps) => {
+}: BaseButtonProps) {
     const base = "inline-flex items-center justify-center px-4 py-2 text-sm font-medium";
     const shapeClass = shapeTransition ? "rounded-lg hover:rounded-full" : "rounded-lg";
 

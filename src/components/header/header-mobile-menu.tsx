@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { X, ChevronRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { HoverShapeButtonWithIcon } from "../ui/button";
+import { HiyokuLogo } from "../shared/logo";
 
 const navLinks = [
     { label: "私たちについて", href: "/about-us" },
@@ -17,7 +17,7 @@ type Props = {
     onClose: () => void;
 };
 
-export const HeaderMobileMenu = ({ onClose }: Props) => {
+export function HeaderMobileMenu({ onClose }: Props) {
     const [isVisible, setIsVisible] = useState(true);
     const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
@@ -30,11 +30,17 @@ export const HeaderMobileMenu = ({ onClose }: Props) => {
     };
 
     useEffect(() => {
+        document.body.style.overflow = "hidden";
+
         const handleEsc = (e: KeyboardEvent) => {
             if (e.key === "Escape") handleClose();
         };
         document.addEventListener("keydown", handleEsc);
-        return () => document.removeEventListener("keydown", handleEsc);
+
+        return () => {
+            document.body.style.overflow = "";
+            document.removeEventListener("keydown", handleEsc);
+        };
     }, []);
 
     if (!isVisible) return null;
@@ -50,8 +56,7 @@ export const HeaderMobileMenu = ({ onClose }: Props) => {
             </button>
 
             <div className="flex items-center space-x-2 mb-6">
-                <Image src="/icon/favicon.ico" alt="Site logo icon" width={24} height={24} />
-                <Image src="/icon/name.png" alt="Site name" width={100} height={24} />
+                <HiyokuLogo />
             </div>
 
             <nav className="flex flex-col items-center space-y-6 text-lg mb-6">
