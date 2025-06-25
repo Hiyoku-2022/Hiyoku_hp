@@ -3,8 +3,8 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
 import { HiyokuLogo} from "../shared/logo";
-import { HeaderNav } from "./header-nav";
-import { HeaderMobileMenu } from "./header-mobile-menu";
+import { HeaderNav } from "./HeaderNav";
+import { HeaderMobileMenu } from "./HeaderMobileMenu";
 
 export function Header () {
     const [isOpen, setIsOpen] = useState(false);

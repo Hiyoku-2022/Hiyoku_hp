@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { FooterContact } from "./footer-contact";
-import { FooterButtons } from "./footer-buttons";
-import { FooterNav } from "./footer-nav";
-import { FooterCopyright } from "./footer-copyright";
+import { FooterContact } from "./FooterContact";
+import { FooterButtons } from "./FooterButtons";
+import { FooterNav } from "./FooterNav";
+import { FooterCopyright } from "./FooterCopyright";
 
 export function Footer() {
     return (

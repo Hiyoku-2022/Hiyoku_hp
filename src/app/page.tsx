@@ -1,6 +1,6 @@
 import React from "react";
 import { TopMV, TopAboutUS, TopService, TopNews } from "@/components/top";
-import { RecruitArea } from "@/components/shared/recruit-area";
+import { RecruitArea } from "@/components/shared/RecruitArea";
 
 export default function HomePage() {
   return (

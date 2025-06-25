@@ -1,4 +1,4 @@
-export { TopMV } from "@/components/top/top-mv";
-export { TopAboutUS } from "@/components/top/top-about-us";
-export { TopNews} from  "@/components/top/top-news";
-export { TopService} from  "@/components/top/top-service";
+export { TopMV } from "@/components/top/TopMv";
+export { TopAboutUS } from "@/components/top/TopAboutUs";
+export { TopNews} from  "@/components/top/TopNews";
+export { TopService} from  "@/components/top/TopService";
