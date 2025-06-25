@@ -4,12 +4,12 @@ import { RecruitArea } from "@/components/shared/RecruitArea";
 
 export default function HomePage() {
   return (
-    <>
+    <div>
       <TopMV />
       <TopAboutUS />
       <TopService />
       <TopNews />
       <RecruitArea />
-    </>
+    </div>
   )
 }
