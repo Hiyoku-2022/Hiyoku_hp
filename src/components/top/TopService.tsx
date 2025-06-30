@@ -6,7 +6,7 @@ import { ChevronRight } from "lucide-react";
 
 export function TopService() {
     return (
-        <div className="max-w-7xl mx-auto px-4 flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 md:items-start">
+        <div className="relative max-w-7xl mx-auto px-4 flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 md:items-start z-40">
             <div>
                 <h1 className="text-xl font-bold mb-6">プロダクト</h1>
                 <p className="text-gray-700">Re-Light LMS</p>

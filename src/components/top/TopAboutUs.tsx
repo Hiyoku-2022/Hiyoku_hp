@@ -7,7 +7,7 @@ import { ChevronRight } from "lucide-react";
 export function TopAboutUS() {
     return (
         <>
-            <div className="pt-20 px-4 max-w-4xl mx-auto">
+            <div className="relative pt-20 px-4 max-w-4xl mx-auto z-40">
                 <p>私たちについて</p>
                 <p>教育で世界の貧困差をなくす</p>
                 <p>
