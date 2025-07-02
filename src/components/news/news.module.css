@@ -4,6 +4,7 @@
 /* マークダウンコンテンツ用のスタイルを追加 */
 .blogcontent{
 margin-top: 2em;
+text-align: left;
 }
 
 .blogcontent h1 {
@@ -11,6 +12,7 @@ margin-top: 2em;
   margin-top: 0.5em;
   margin-bottom: 0.8em;
   font-weight: bold;
+  text-align: left;
 }
 
 .blogcontent h2 {
@@ -19,6 +21,7 @@ margin-top: 2em;
   margin-bottom: 0.8em;
   font-weight: bold;
   padding-bottom: 0.3em;
+  text-align: left;
 }
 
 .blogcontent h3 {
@@ -96,6 +99,7 @@ margin-top: 2em;
 
 .blogcontent{
 margin-top: 5em;
+text-align: left;
 }
 
 .blogcontent h1 {

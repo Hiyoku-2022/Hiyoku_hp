@@ -105,12 +105,12 @@ export default function BlogTitleList({ onSelectBlog }: BlogTitleListProps) {
                 onMouseOut={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}>
  {/* <div className="bg-white border border-gray-100 w-auto"> */}
  <div className="mx-auto md:w-[70%]">
-                        <div className="h-20 flex justify-between bg-white border border-gray-100 py-auto mx-auto text-center" key={blog.id}>
+                        <div className="h-20 flex justify-between bg-white border border-gray-100 py-8 mx-auto text-center h-auto" key={blog.id}>
                           <ul className='flex items-center'>
-                            <li className="mx-10 text-bold">
+                            <li className="text-gray-300 font-Family_3 font-bold mx-10">
                               {format(new Date(blog.publishedAt),'yyyy.M.d')}
                             </li>
-                            <li className="text-left mx-10 text-bold w-full max-w-md break-words">
+                            <li className="font-Family_1 text-left mx-10 font-bold w-full max-w-md break-words">
                               {blog.title}
                                     {/* bodyの内容を表示する場合は、マークダウンをHTMLに変換するなど別途処理が必要 */}
                                     {/* リンクを追加する場合、Next.jsのLinkコンポーネントを使用 */}
@@ -119,8 +119,9 @@ export default function BlogTitleList({ onSelectBlog }: BlogTitleListProps) {
                             </ul>
                             <ul className='flex items-center'>
                             <li className="w-20 flex justify-center">
-                              <Image src="/common/iconNext.png" alt="blogdetail" width={20} height={20}/>
+                              {/* <Image src="/common/iconNext.png" alt="blogdetail" width={20} height={20}/> */}
                               {/* <span> {'>'} </span> */}
+                              <p className='font-bold'>{"〉"}</p>
                             </li>
                             </ul>
                         </div>
@@ -128,13 +129,6 @@ export default function BlogTitleList({ onSelectBlog }: BlogTitleListProps) {
  {/* </div> */}
                                   </Link>
                                           ))}
-                    
-                        
-                    
-
-        
-
-
       {totalPages > 1 && ( // 総ページ数が1より大きい場合のみ表示
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '25px', gap: '10px' }}>
           <button
