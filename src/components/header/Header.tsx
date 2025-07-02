@@ -12,7 +12,7 @@ export function Header () {
 
     useEffect(() => {
         const onScroll = () => {
-            setScrolled(window.scrollY > window.innerHeight - 50);
+            setScrolled(window.scrollY > window.innerHeight + 150);
         };
         window.addEventListener("scroll", onScroll);
         return () => window.removeEventListener("scroll", onScroll);
