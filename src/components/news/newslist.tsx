@@ -97,32 +97,43 @@ export default function BlogTitleList({ onSelectBlog }: BlogTitleListProps) {
 
   return (
     <div>
+                       {/* <div className="mx-auto w-9/10 md:w-auto"> */}
         {titles.map((blog) => (
            <Link key={blog.id} href="#"
                 onClick={() => onSelectBlog(blog.id)}
                 onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#f9f9f9')}
                 onMouseOut={(e) => (e.currentTarget.style.backgroundColor = 'transparent')}>
-                <table className="mx-auto w-9/10 md:w-250">
-                 <thead className="bg-white border border-gray-100">
-                 <tr className="h-20" key={blog.id}>
-                 <th className="w-40">
-                   {format(new Date(blog.publishedAt),'yyyy.M.d')}
-                 </th>
-                 <th className="text-left">
-                   {blog.title}
-                         {/* bodyの内容を表示する場合は、マークダウンをHTMLに変換するなど別途処理が必要 */}
-                         {/* リンクを追加する場合、Next.jsのLinkコンポーネントを使用 */}
-                         {/* <Link href={`/news/${blog.id}`}>Read More</Link> */}
-                 </th>
-                 <th className="w-10">
-                   <Image src="/common/iconNext.png" alt="blogdetail" width={20} height={20}/>
-                 </th>
-                 </tr>
-                 </thead>
-                 </table> 
-          </Link>
+ {/* <div className="bg-white border border-gray-100 w-auto"> */}
+ <div className="mx-auto md:w-[70%]">
+                        <div className="h-20 flex justify-between bg-white border border-gray-100 py-auto mx-auto text-center" key={blog.id}>
+                          <ul className='flex items-center'>
+                            <li className="mx-10 text-bold">
+                              {format(new Date(blog.publishedAt),'yyyy.M.d')}
+                            </li>
+                            <li className="text-left mx-10 text-bold w-full max-w-md break-words">
+                              {blog.title}
+                                    {/* bodyの内容を表示する場合は、マークダウンをHTMLに変換するなど別途処理が必要 */}
+                                    {/* リンクを追加する場合、Next.jsのLinkコンポーネントを使用 */}
+                                    {/* <Link href={`/news/${blog.id}`}>Read More</Link> */}
+                            </li>
+                            </ul>
+                            <ul className='flex items-center'>
+                            <li className="w-20 flex justify-center">
+                              <Image src="/common/iconNext.png" alt="blogdetail" width={20} height={20}/>
+                              {/* <span> {'>'} </span> */}
+                            </li>
+                            </ul>
+                        </div>
+                           </div>   
+ {/* </div> */}
+                                  </Link>
+                                          ))}
+                    
+                        
+                    
+
         
-        ))}
+
 
       {totalPages > 1 && ( // 総ページ数が1より大きい場合のみ表示
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '25px', gap: '10px' }}>

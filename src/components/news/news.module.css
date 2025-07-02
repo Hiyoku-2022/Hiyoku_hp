@@ -32,6 +32,15 @@ margin-top: 2em;
   font-size: 1em;
   line-height: 1.8;
   margin-bottom: 1em;
+
+  /* 改行関連 */
+  word-wrap: break-word;      /* IE対応 */
+  overflow-wrap: break-word;  /* 現代ブラウザ */
+  word-break: break-word;     /* より強制的な改行 */
+  
+  /* 追加の安全策 */
+  white-space: normal;        /* 改行を許可 */
+  overflow: visible;          /* テキストを隠さない */
 }
 
 .blogcontent img {

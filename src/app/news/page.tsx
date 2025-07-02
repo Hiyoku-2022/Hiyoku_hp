@@ -9,6 +9,8 @@ import React, { useState } from "react";
 // import { client } from '../../../lib/client'; // lib/client.ts のパスを正確に調整してください
 import NewsList from "@/components/news/newslist";
 import Article from "@/components/news/article";
+import { RecruitArea } from "@/components/shared/RecruitArea";
+import PageTitle from "@/components/shared/PageTitle";
 
 /*
 export default function BlogPage() {
@@ -80,10 +82,10 @@ export default function HomePage() {
   return (
     <div>
       <main> 
-            <div className="py-36">
-            <h1 className="text-2xl md:text-3xl text-center">お知らせ</h1>
-            <h2 className="text-base text-center">NEWS</h2>
-            </div>
+            <PageTitle
+            japaneseTitle="お知らせ"
+            englishTitle="NEWS"
+            />
         {selectedBlogId ? (
           // selectedBlogId が設定されている場合は、BlogDetail を表示
           <Article blogId={selectedBlogId} onBack={handleBackToList} />
@@ -91,6 +93,8 @@ export default function HomePage() {
           // selectedBlogId が null の場合は、BlogTitleList を表示
           <NewsList onSelectBlog={handleSelectBlog} />
         )}
+
+        <RecruitArea></RecruitArea>
       </main>
     </div>
   );

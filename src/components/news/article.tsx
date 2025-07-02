@@ -6,6 +6,9 @@
 import React, { useEffect, useState } from 'react';
 import styles from '../news/news.module.css';
 import { format } from 'date-fns';
+import { HoverShapeButtonWithIcon } from '../ui/button';
+import { ChevronRight } from 'lucide-react';
+
 
 import { getBlogDetailServer } from '../../actions/blogAction'; // ★Server Actionをインポート
 import DOMPurify from 'dompurify'; // もしクライアント側でHTMLサニタイズを行うなら
@@ -90,21 +93,25 @@ export default function BlogDetail({ blogId, onBack }: BlogDetailProps) {
   return (
     <>
       <div className="flex justify-center">
-          <div className="mx-auto w-9/10 bg-white md:w-3/5">
-              <div className="px-5 py-15 md:px-20 md:py-30">
-                  <h2 className="text-center text-3xl md:text-6xl">{article.title}</h2>
+          <div className="mx-auto bg-white md:w-3/5">
+              <div className="px-[5%] py-15 md:px-20 md:py-30 text-center">
+                  <h2 className="text-center mx-auto mt-20 text-3xl w-full max-w-md break-words md:text-6xl">{article.title}</h2>
                   <p className="text-center my-2 md:my-5">{format(new Date(article.publishedAt),'yyyy.M.d')}</p>
                   {/* 取得したHTML文字列をそのままDOMに挿入 */}
                   {/* ★セキュリティ: microCMSからのデータは信頼できるソースと仮定。
                      もしユーザーからの入力を含む場合は、サーバーサイドでサニタイズ処理を行うこと！ */}
-                  <div dangerouslySetInnerHTML={{ __html: article.content }} className={styles.blogcontent} />
+                  <div dangerouslySetInnerHTML={{ __html: article.content }} className={styles.blogcontent}/>
               </div>
           </div>
       </div>
       <div className="flex justify-center">
-              <button onClick={onBack} className='text-center'>
+              <HoverShapeButtonWithIcon 
+                variant="blue"
+                icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                className='mt-[4%]'
+              onClick={onBack} >
               NEWS一覧を見る
-              </button>
+              </HoverShapeButtonWithIcon>
       </div>
     </>
   );
