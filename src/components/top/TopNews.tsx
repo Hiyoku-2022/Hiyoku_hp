@@ -5,7 +5,7 @@ import { ChevronRight } from "lucide-react";
 
 export function TopNews() {
     return (
-        <div>
+        <div className="relative z-40">
             <p>NEWS</p>
             <p>ニュース</p>
             <Link href="/news">

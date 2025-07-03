@@ -13,7 +13,7 @@ const navLinks = [
 
 export function HeaderNav () {
     return (
-        <nav className="hidden md:flex items-center space-x-6">
+        <nav className="hidden lg:flex items-center space-x-3">
             {navLinks.map((link) => (
                 <Link
                     key={link.label}
