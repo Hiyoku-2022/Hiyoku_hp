@@ -1,14 +1,18 @@
-
-/* Medium screens */
+/*-----------------------------
+ news記事のCSS設定
+-----------------------------*/
+/* スマホ画面 */
 @media (max-width: 768px) {
 /* マークダウンコンテンツ用のスタイルを追加 */
 .blogcontent{
-margin-top: 2em;
+margin-block: 1.5em;
 text-align: left;
+word-wrap: break-word;
+padding-block: 1em;
 }
 
 .blogcontent h1 {
-  font-size: 1.5em; 
+  font-size: 18px; 
   margin-top: 0.5em;
   margin-bottom: 0.8em;
   font-weight: bold;
@@ -16,7 +20,8 @@ text-align: left;
 }
 
 .blogcontent h2 {
-  font-size: 1em;
+  font-family: Family_1;
+  font-size: 18px; 
   margin-top: 0.5em;
   margin-bottom: 0.8em;
   font-weight: bold;
@@ -25,14 +30,26 @@ text-align: left;
 }
 
 .blogcontent h3 {
-  font-size: 1.6em;
+  font-family: Family_1;
+  font-size: 16px;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  font-weight: bold;
+}
+
+.blogcontent h4 {
+  font-family: Family_3;
+  color: #ACC3CC;
+  font-weight: bold;
+  font-size: 16px;
   margin-top: 1.2em;
   margin-bottom: 0.6em;
   font-weight: bold;
 }
 
 .blogcontent p {
-  font-size: 1em;
+  font-family: Family_1;
+  font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1em;
 
@@ -76,7 +93,7 @@ text-align: left;
 
 .blogcontent code {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: 0.9em;
+  font-size: 16px;
   background-color: #e0e0e0; /* インラインコードの背景 */
   padding: 0.2em 0.4em;
   border-radius: 3px;
@@ -92,25 +109,26 @@ text-align: left;
 }
 }
 
-/* Large screens */
+/* PC画面 */
 @media (min-width: 768px) {
-
-  /* マークダウンコンテンツ用のスタイルを追加 */
-
 .blogcontent{
-margin-top: 5em;
+margin-block: 2em;
 text-align: left;
+word-wrap: break-word;
+padding-block: 1em;
 }
 
 .blogcontent h1 {
-  font-size: 1.5em; /* 見出しのサイズ */
+  font-family: Family_3;
+  font-size: 28px;
   margin-top: 1.5em;
   margin-bottom: 0.8em;
   font-weight: bold;
 }
 
 .blogcontent h2 {
-  font-size: 2em;
+  font-family: Family_3;
+  font-size: 23px;
   margin-top: 1.5em;
   margin-bottom: 0.8em;
   font-weight: bold;
@@ -118,14 +136,26 @@ text-align: left;
 }
 
 .blogcontent h3 {
-  font-size: 1.6em;
+  font-family: Family_3;
+  font-size: 19px;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  font-weight: bold;
+}
+
+.blogcontent h4 {
+  font-family: Family_3;
+  color: #ACC3CC;
+  font-weight: bold;
+  font-size: 16px;
   margin-top: 1.2em;
   margin-bottom: 0.6em;
   font-weight: bold;
 }
 
 .blogcontent p {
-  font-size: 1em;
+  font-family: Family_1;
+  font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1em;
 }
@@ -160,7 +190,7 @@ text-align: left;
 
 .blogcontent code {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: 0.9em;
+  font-size: 16px;
   background-color: #e0e0e0; /* インラインコードの背景 */
   padding: 0.2em 0.4em;
   border-radius: 3px;

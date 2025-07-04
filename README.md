@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+# microCMSサーバーサイド用
+MICROCMS_SERVICE_DOMAIN=   # microCMS のサービスドメイン（例: your-project）
+MICROCMS_API_KEY=          # 公開用 API キー（read-only）
+
+# microCMSクライアントサイド用
+NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN=${MICROCMS_SERVICE_DOMAIN}
+NEXT_PUBLIC_MICROCMS_API_KEY=${MICROCMS_API_KEY}
