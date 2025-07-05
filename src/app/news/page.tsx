@@ -1,51 +1,47 @@
-/*--------------------
-　お知らせ(news)
----------------------*/
+// app/news/page.tsx
 'use client';
 import React, { useState } from "react";
-import BlogTitleList from "@/components/news/BlogTitleList";
-import BlogDetail from "@/components/news/BlogDetail";
-import { RecruitArea } from "@/components/shared/RecruitArea";
-import PageTitle from "@/components/shared/PageTitle";
+import PageTitle from '@/components/shared/PageTitle';
+import BlogTitleList from '../../components/news/BlogTitleList';
+// 必要に応じて他のコンポーネントをインポート
 
-export default function HomePage() {
-  // 現在選択されているブログ記事のIDを管理するstate
-  // null の場合は一覧表示、IDがあれば詳細表示
-  const [selectedBlogId, setSelectedBlogId] = useState<string | null>(null);
-  const [visitedBlogIds, setVisitedBlogIds] = useState<string[]>([]);
+const VISITED_BLOG_IDS_KEY = 'visitedBlogIds'; // localStorage に保存するキー
 
-  // ブログタイトルがクリックされたときのハンドラ
-  const handleSelectBlog = (id: string) => {
-    setSelectedBlogId(id);
-        // 訪問済みIDに追加（重複を避ける）
-    if (!visitedBlogIds.includes(id)) {
-      setVisitedBlogIds(prev => [...prev, id]);
-    }
-    // console.log(`ブログID ${id} が選択されました。`); // デバッグ用
-  };
+export default function NewsPage() {
+    // localStorage から初期状態を読み込む
+    const [visitedBlogIds] = useState<string[]>(() => {
+        if (typeof window !== 'undefined') { // ブラウザ環境でのみ実行
+            const savedIds = localStorage.getItem(VISITED_BLOG_IDS_KEY);
+            return savedIds ? JSON.parse(savedIds) : [];
+        }
+        return [];
+    });
 
-  // 記事詳細から一覧に戻るボタンのハンドラ
-  const handleBackToList = () => {
-    setSelectedBlogId(null);
-    // console.log("一覧表示に戻ります。"); // デバッグ用
-  };
+    // visitedBlogIds が変更されても、ここでは特に保存する必要はない
+    // 閲覧状態の変更は記事詳細ページで行われるため
 
-  return (
-    <div>
-      <main> 
+    // 注意: BlogTitleList は onSelectBlog を必要としないが、
+    // TopNews との共通化のためにプロパティとしては残す
+    const handleSelectBlog = () => {
+        // News一覧ページでは通常、個別の記事IDを管理する必要はないが、
+        // BlogTitleList が共通で onSelectBlog を持つため、仮の関数を渡す。
+        // ここでvisitedBlogIdsを更新しても良いが、主な更新は記事詳細ページで行われる。
+    };
+
+    return (
+        <main>
             <PageTitle
-            titleJP="お知らせ"
-            subtilteEN="NEWS"
+                titleJP="お知らせ"
+                subtilteEN="NEWS"
             />
-        {selectedBlogId ? (
-          // selectedBlogId が設定されている場合は、BlogDetail を表示
-          <BlogDetail blogId={selectedBlogId} onBack={handleBackToList} />
-        ) : (
-          // selectedBlogId が null の場合は、BlogTitleList を表示
-          <BlogTitleList onSelectBlog={handleSelectBlog} visitedBlogIds={visitedBlogIds} />
-        )}
-        <RecruitArea/>
-      </main>
-    </div>
-  );
+            <div className="my-16">
+                <BlogTitleList
+                    onSelectBlog={handleSelectBlog} // ダミーまたは不要なら削除を検討
+                    visitedBlogIds={visitedBlogIds} // localStorageから読み込んだIDを渡す
+                    itemPerPage={10} // 例: ニュース一覧ページでは10件ずつ表示
+                />
+            </div>
+            {/* ページネーションなどの他の要素があればここに追加 */}
+        </main>
+    );
 }

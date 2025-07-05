@@ -5,7 +5,7 @@ type PageTitleProps = {
     as?: 'h1' | 'h2' | 'h3';
 }
 
-export default function ({titleJP,subtilteEN}:PageTitleProps) {
+export default function PageTitle({titleJP,subtilteEN}:PageTitleProps) {
     return(
         <>
         <header className="py-16 mt-32 md:py-32 text-center">
