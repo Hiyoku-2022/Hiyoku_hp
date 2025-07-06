@@ -12,9 +12,9 @@ const occupations: workDetail[] = [
 
 export default function WorkDetail(){
     return (
-        <div className="flex justify-around w-full">
+        <div className="flex justify-center mx-auto w-[70%]">
             {occupations.map((occupations)=>(
-                <div key={occupations.id} className="mx-full my-10 w-1/3 text-left">
+                <div key={occupations.id} className="mx-full my-10 text-left">
                     <p className="text-center">{occupations.occupation}</p>
                     <p className="mx-5 my-5">{occupations.sentence}</p>
                 </div>

@@ -18,7 +18,7 @@ const items: hiyouDetail[] = [
 
 export default function HiyokuDetail(){
     return (
-        <div className="flex justify-around mx-5 my-10 w-250">
+        <div className="flex justify-around mx-5 my-10 w-[70%]">
             {items.map((items)=>(
                 <div key={items.id} className="bg-white mx-2 rounded-lg p-8 w-1/3">
                         <Image src={items.src} alt={items.alt} width ={items.width} height={items.height} className="mx-auto"/>

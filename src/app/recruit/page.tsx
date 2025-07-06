@@ -3,14 +3,17 @@ import AboutWork from "@/components/recruit/about-work";
 import Interview from "@/components/recruit/interview";
 import Solicitation from "@/components/recruit/solicitation";
 import FAQ from "@/components/recruit/FAQ";
+import PageTitle from "@/components/shared/PageTitle";
+// import { Header } from "@/components/header/Header";
 
 export default function (){
     return(
     <main>
-    <div className="p-36">   
-    <h1 className="text-center text-3xl">採用情報</h1>
-    <h2 className="text-center text-base font-bold">RECRUIT</h2>
-    </div> 
+        {/* <Header /> */}
+    <PageTitle
+        japaneseTitle="採用情報"
+        englishTitle="RECRUIT"
+    />
 
     <div className="text-center">
         <p>ひよくでは一緒に働いてくれるメンバーを探しています。</p>

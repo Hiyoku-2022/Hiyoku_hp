@@ -12,23 +12,23 @@ export default function Solicitation(){
     return (
         <div className="bg-white overflow-hidden">
             <HeadTitle>募集要項</HeadTitle>
-            <div className="w-3/5 mx-auto">
+            <div className="w-[70%] mx-auto">
                 <div className="flex mx-auto">
                     <button
                     onClick={()=> setCurrentRecruitment('graduate')}
-                    className={`rounded-t-lg p-3 
+                    className={`rounded-t-lg py-4 px-8 font-Family_1 font-bold
                     ${ currentRecruitment === 'graduate'
-                        ? 'bg-blue-300' 
-                        : 'bg-blue-100'
+                        ? 'bg-main' 
+                        : 'bg-sub05'
                         }
                     `}
                     >新卒採用</button>
                     <button
                     onClick={()=> setCurrentRecruitment('midCareer')}
-                    className={` rounded-t-lg p-3 mx-2
+                    className={` rounded-t-lg py-4 px-8 mx-2 font-Family_1 font-bold
                     ${currentRecruitment === 'midCareer'
-                    ? 'bg-green-300'
-                    : 'bg-green-100'
+                    ? 'bg-sub01'
+                    : 'bg-sub06'
                     }
                         
                     `}
