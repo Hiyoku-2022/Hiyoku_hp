@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import PageTitle from '@/components/shared/PageTitle';
 import BlogTitleList from '../../components/news/BlogTitleList';
+import { Header } from "@/components/header/Header";
 // 必要に応じて他のコンポーネントをインポート
 
 const VISITED_BLOG_IDS_KEY = 'visitedBlogIds'; // localStorage に保存するキー
@@ -30,6 +31,7 @@ export default function NewsPage() {
 
     return (
         <main>
+            <Header />
             <PageTitle
                 titleJP="お知らせ"
                 subtilteEN="NEWS"
