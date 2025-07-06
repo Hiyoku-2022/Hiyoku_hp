@@ -52,7 +52,10 @@ export function HeaderMobileMenu({ onClose }: Props) {
             }`}
         >
             <button className="absolute top-4 right-4" onClick={handleClose}>
-                <X size={28} />
+                <X
+                    size={28}
+                    className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8"
+                />
             </button>
 
             <div className="flex items-center space-x-2 mb-6">
