@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { ButtonWithIcon } from "../ui/ButtonWithIcon";
+import { ChevronRight } from "lucide-react";
+import { ButtonWithIcon } from "../ui/button";
 
 const navLinks = [
     { label: "私たちについて", href: "/about-us" },
@@ -10,23 +11,24 @@ const navLinks = [
     { label: "採用情報", href: "/recruit" },
 ];
 
-export const HeaderNav = () => (
-    <nav className="hidden md:flex items-center space-x-6">
-        {navLinks.map((link) => (
-            <Link
-                key={link.label}
-                href={link.href}
-                className="text-gray-700 hover:text-blue-600 transition-colors"
+export function HeaderNav () {
+    return (
+        <nav className="hidden lg:flex items-center space-x-3">
+            {navLinks.map((link) => (
+                <Link
+                    key={link.label}
+                    href={link.href}
+                    className="text-gray-700 hover:text-blue-600 transition-colors"
+                >
+                    {link.label}
+                </Link>
+            ))}
+            <ButtonWithIcon
+                variant="blue"
+                icon={<ChevronRight className="w-4 h-4 transition-colors" />}
             >
-                {link.label}
-            </Link>
-        ))}
-        <ButtonWithIcon
-            variant="primary"
-            iconSrc="/news/blogdetail.png"
-            iconAlt=""
-        >
-            お問い合わせ
-        </ButtonWithIcon>
-    </nav>
-);
+                お問い合わせ
+            </ButtonWithIcon>
+        </nav>
+    )
+};

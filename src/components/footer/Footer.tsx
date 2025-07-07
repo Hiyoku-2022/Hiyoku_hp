@@ -6,9 +6,9 @@ import { FooterButtons } from "./FooterButtons";
 import { FooterNav } from "./FooterNav";
 import { FooterCopyright } from "./FooterCopyright";
 
-export const Footer = () => {
+export function Footer() {
     return (
-        <footer className="bg-gray-100 text-gray-700 pt-10 mt-16">
+        <footer className="bg-gradient-to-b from-[#8AB9C7] to-[#FFD1A8] text-foreground pt-10 mt-16">
             <div className="max-w-7xl mx-auto px-4 flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 md:items-start">
                 <div className="space-y-6 flex flex-col items-center md:items-start">
                     <FooterContact />
