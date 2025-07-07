@@ -4,7 +4,7 @@ type PageTitleProps = {
     englishTitle : string;
 }
 
-export default function ({japaneseTitle,englishTitle}:PageTitleProps) {
+export default function PageTitle({japaneseTitle,englishTitle}:PageTitleProps) {
     return(
         <div className="py-16 mt-32 md:py-32">
             <h3 className="font-Family_2 text-[23px] font-semibold text-center md:text-[33px]">{japaneseTitle}</h3>

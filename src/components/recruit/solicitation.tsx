@@ -4,9 +4,10 @@ import Graduate from "./graduate";
 import MidCareer from "./mid-career";
 // import { useState } from "react";
 import React, { useState } from 'react';
+import { HoverShapeButtonWithIcon } from "../ui/button";
+import { ChevronRight } from "lucide-react";
 
 export default function Solicitation(){
-    // const App = () => {
     const [currentRecruitment,setCurrentRecruitment] = useState('graduate');
     
     return (
@@ -38,8 +39,13 @@ export default function Solicitation(){
                     {currentRecruitment === "graduate" && <Graduate/>}
                     {currentRecruitment === "midCareer" && <MidCareer/>}
                 </div>
-                <div className="flex justify-center mx-5 my-5">
-                    <button>エントリーフォーム</button>
+                <div className="flex justify-center my-16">
+                <HoverShapeButtonWithIcon
+                  variant="orange"
+                  icon={<ChevronRight className="w-4 h-4 transition-colors m-[10px]" />}
+                >
+                    エントリーフォーム
+                </HoverShapeButtonWithIcon>
                 </div>
             </div>
         </div>

@@ -3,24 +3,29 @@ import AboutWork from "@/components/recruit/about-work";
 import Interview from "@/components/recruit/interview";
 import Solicitation from "@/components/recruit/solicitation";
 import FAQ from "@/components/recruit/FAQ";
-import PageTitle from "@/components/shared/PageTitle";
-// import { Header } from "@/components/header/Header";
+import Pankuzu from "@/components/shared/Pankuzu";
 
-export default function (){
+export default function RecruitPage(){
     return(
-    <main>
-        {/* <Header /> */}
-    <PageTitle
+    <div>
+    <Pankuzu
         japaneseTitle="採用情報"
         englishTitle="RECRUIT"
+        breadcrumbs={[
+            { label: "採用情報" }
+        ]}
     />
 
     <div className="text-center">
         <p>ひよくでは一緒に働いてくれるメンバーを探しています。</p>
-        <p>一緒に働きませんか？</p>
+        <p className="mx-auto w-[50%]">
+            一緒に働きませんか？テキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入ります
+        </p>
     </div>
 
+    <div className="my-32">
     <AboutHiyoku/>
+    </div>
 
     <AboutWork/>
     <div className="my-30">
@@ -31,6 +36,6 @@ export default function (){
 
     <FAQ/>
 
-    </main>
+    </div>
 );
 }
