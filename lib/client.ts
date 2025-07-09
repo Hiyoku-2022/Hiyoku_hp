@@ -1,6 +1,7 @@
 /*--------------------------------------------
  microCMS用のクライアントを生成する
 --------------------------------------------*/
+'use server'
 import { createClient } from 'microcms-js-sdk';
 
 export const client = createClient({
