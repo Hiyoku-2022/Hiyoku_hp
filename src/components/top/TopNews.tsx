@@ -1,43 +1,39 @@
-// TopNews.tsx
 'use client';
-import React, { useState, useEffect } from "react"; // useEffect をインポート
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import BlogTitleList from "../news/BlogTitleList";
+import BlogTitleList from '../news/BlogTitleList';
 import { ChevronRight } from 'lucide-react';
 import {HoverShapeButtonWithIcon} from "../ui/button/HoverShapeButtonWithIcon"
 
-const VISITED_BLOG_IDS_KEY = 'visitedBlogIds'; // localStorage に保存するキー
+const VISITED_BLOG_IDS_KEY = 'visitedBlogIds';
 
 export function TopNews() {
     const router = useRouter();
-    // localStorage から初期状態を読み込む
     const [visitedBlogIds, setVisitedBlogIds] = useState<string[]>(() => {
-        if (typeof window !== 'undefined') { // ブラウザ環境でのみ実行
+        if (typeof window !== 'undefined') { 
             const savedIds = localStorage.getItem(VISITED_BLOG_IDS_KEY);
             return savedIds ? JSON.parse(savedIds) : [];
         }
         return [];
     });
 
-    // visitedBlogIds が変更されたら localStorage に保存
     useEffect(() => {
-        if (typeof window !== 'undefined') { // ブラウザ環境でのみ実行
+        if (typeof window !== 'undefined') { 
             localStorage.setItem(VISITED_BLOG_IDS_KEY, JSON.stringify(visitedBlogIds));
         }
     }, [visitedBlogIds]);
 
     const handleSelectBlog = (id: string) => {
         console.log('--- TopNews (homepage section): handleSelectBlog が呼び出されました。ID:', id);
-        // 既に訪問済みでなければ追加
         if (!visitedBlogIds.includes(id)) {
             setVisitedBlogIds(prev => [...prev, id]);
         }
-        router.push(`/news/${id}`); // /news/[id] 形式のURLに遷移
+        router.push(`/news/${id}`);
         console.log('--- TopNews (homepage section): router.push を呼び出しました。パス:', `/news/${id}`);
     };
 
     const handleBackToList = () => {
-        router.push('/news'); // News一覧ページに戻る
+        router.push('/news');
     };
 
     return (
@@ -48,9 +44,9 @@ export function TopNews() {
             </div>
             <div className="my-16">
                 <BlogTitleList
-                    onSelectBlog={handleSelectBlog} // TopNews の handleSelectBlog を渡す
+                    onSelectBlog={handleSelectBlog} 
                     visitedBlogIds={visitedBlogIds}
-                    itemPerPage={4} // ホームページでは4件ずつ表示
+                    itemPerPage={4} //4件のみ表示するように設定
                 />
             </div>
             <div className="flex justify-center">

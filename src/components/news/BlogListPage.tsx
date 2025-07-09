@@ -1,8 +1,10 @@
-// components/news/BlogPagination.tsx
+/*--------------------------------------------
+ NEWS記事のページネーションのコンポーネント
+ (クライアント側で処理)
+--------------------------------------------*/
 'use client';
-
 import React from 'react';
-import Image from "next/image";
+import Image from 'next/image';
 
 interface BlogPaginationProps {
     currentPage: number;
@@ -21,7 +23,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange, 
                 onClick={() => onPageChange(currentPage - 1)}
                 disabled={currentPage === 1 || loading}
                 style={{
-                    padding: '8px 10px',
+                    padding: '10px 16px',
                     backgroundColor: 'white',
                     border: 'none',
                     borderRadius: '60px',
@@ -37,7 +39,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange, 
                     onClick={() => onPageChange(page)}
                     disabled={loading}
                     style={{
-                        padding: '8px 15px',
+                        padding: '10px 18px',
                         backgroundColor: currentPage === page ? '#F7F7F7' : 'white',
                         color: '#44585F',
                         border: currentPage === page ? 'none' : '#333',
@@ -54,7 +56,7 @@ export default function BlogPagination({ currentPage, totalPages, onPageChange, 
                 onClick={() => onPageChange(currentPage + 1)}
                 disabled={currentPage === totalPages || loading}
                 style={{
-                    padding: '8px 10px',
+                    padding: '10px 16px',
                     backgroundColor: 'white',
                     border: 'none',
                     borderRadius: '60px',

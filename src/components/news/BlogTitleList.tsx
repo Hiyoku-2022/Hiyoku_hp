@@ -1,23 +1,13 @@
-// components/news/BlogTitleList.tsx
+/*--------------------------------------------
+ NEWS記事のリスト表示するコンポーネント
+ (クライアント側で処理)
+--------------------------------------------*/
 'use client';
 import React, { useEffect, useState, useMemo } from 'react';
-import { createClient } from 'microcms-js-sdk'; // MicroCMS SDK をインポート
 import BlogArticleList from './BlogArticleList';
 import BlogPagination from './BlogListPage';
 
-// MicroCMSクライアントの初期化 (クライアントサイドで使用するため、NEXT_PUBLIC_ プレフィックスが必要)
-const serviceDomain = process.env.NEXT_PUBLIC_MICROCMS_SERVICE_DOMAIN;
-const apiKey = process.env.NEXT_PUBLIC_MICROCMS_API_KEY;
-
-if (!serviceDomain || !apiKey) {
-    console.error('Client-side: microCMS Service Domain or API Key is not set in environment variables.');
-}
-
-const microcmsClient = createClient({
-    serviceDomain: serviceDomain || '',
-    apiKey: apiKey || '',
-});
-
+//　コンポーネントで使用する変数の宣言
 interface BlogTitleProps {
     id: string;
     title: string;
@@ -25,7 +15,7 @@ interface BlogTitleProps {
 }
 
 interface BlogTitleListProps {
-    onSelectBlog?: (id: string) => void; // ホームページでは必須、ニュースページでは間接的
+    onSelectBlog?: (id: string) => void;
     visitedBlogIds: string[];
     itemPerPage: number;
 }
@@ -45,32 +35,30 @@ export default function BlogTitleList({ onSelectBlog, visitedBlogIds = [], itemP
     useEffect(() => {
         const fetchTitles = async () => {
             console.log('--- BlogTitleList: fetchTitles 開始 ---');
-            if (!serviceDomain || !apiKey) {
-                setError('MicroCMSの設定が不足しています。');
-                setLoading(false);
-                return;
-            }
             try {
                 setLoading(true);
                 setError(null);
                 const offset = (currentPage - 1) * itemPerPage;
-                console.log(`MicroCMS API を呼び出し中... (offset: ${offset}, limit: ${itemPerPage})`);
-                const data = await microcmsClient.get<{ contents: BlogTitleProps[]; totalCount: number; }>(
-                    {
-                        endpoint: 'blogs', 
-                        queries: {
-                            offset: offset,
-                            limit: itemPerPage,
-                            fields: 'id,title,publishedAt',
-                            orders: '-publishedAt',
-                        },
-                    }
-                );
-                console.log('MicroCMS API 応答:', data);
+                console.log(`API を呼び出し中... (offset: ${offset}, limit: ${itemPerPage})`);
+                
+                const params = new URLSearchParams({
+                    offset: offset.toString(),
+                    limit: itemPerPage.toString(),
+                    fields: 'id,title,publishedAt',
+                    orders: '-publishedAt',
+                });
+                
+                const response = await fetch(`/api/blogs?${params}`);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const data = await response.json();
+                console.log('API 応答:', data);
                 setTitles(data.contents);
                 setTotalCount(data.totalCount);
             } catch (err) {
-                console.error('ブログタイトルの取得に失敗しました（クライアント側）:', err);
+                console.error('ブログタイトルの取得に失敗しました:', err);
                 setError('記事一覧の読み込み中にエラーが発生しました。時間をおいてお試しください。');
             } finally {
                 setLoading(false);
@@ -78,7 +66,7 @@ export default function BlogTitleList({ onSelectBlog, visitedBlogIds = [], itemP
             }
         };
         fetchTitles();
-    }, [currentPage, itemPerPage]); // 依存配列からMicroCMS設定を削除
+    }, [currentPage, itemPerPage]);
 
     useEffect(() => {
         setVisitedIds(new Set(visitedBlogIds));
