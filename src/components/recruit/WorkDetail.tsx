@@ -1,10 +1,10 @@
-type workDetail={
+type workDetailProps={
     id:number;
     occupation: string;
     sentence: string;
 }
 
-const occupations: workDetail[] = [
+const occupations: workDetailProps[] = [
     {id:1,occupation:'システムエンジニア',sentence:'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'},
     {id:2,occupation:'職種１',sentence:'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'},
     {id:3,occupation:'職種２',sentence:'テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。'}

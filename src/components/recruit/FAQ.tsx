@@ -1,4 +1,4 @@
-import HeadTitle from "./head-tile";
+import HeadTitle from "./HeadTitle";
 
 type faq = {
     id: number;
@@ -20,14 +20,14 @@ export default function FAQ(){
             <HeadTitle>よくあるご質問</HeadTitle>
             <div>
                 {faqList.map((faqList)=>(
-                    <ul key={faqList.id} className="mx-auto my-2 w-200 text-left bg-white rounded-lg p-2">
+                    <ul key={faqList.id} className="w-[90%] md:w-[70%] mx-auto my-2 w-200 text-left bg-white rounded-lg p-2">
                         <li className="flex">
-                            <p className="bg-blue-200 rounded-full px-5.5 py-4 m-2">Q</p>
-                            <p key={faqList.id} className="my-auto">{faqList.question}</p>
+                            <p className="font-Family_3 font-bold text-white text-[16px] bg-sub03 rounded-full px-[21px] py-[15px] m-2">Q</p>
+                            <p key={faqList.id} className="my-auto text-sub03 font-Family_1 font-bold text-[16px]">{faqList.question}</p>
                         </li>
                         <li className="flex">
-                            <p className="bg-white border border-blue-200 rounded-full px-5.5 py-4 m-2">A</p>
-                            <p key={faqList.id} className="my-auto">{faqList.answer}</p>
+                            <p className="font-Family_3 font-bold text-sub03 text-[16px] bg-white border border-sub03 rounded-full px-[21px] py-[15px] m-2">A</p>
+                            <p key={faqList.id} className="my-auto font-Family_1 font-bold text-[16px]">{faqList.answer}</p>
                         </li>
                     </ul>
                 ))}

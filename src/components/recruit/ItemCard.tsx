@@ -15,54 +15,11 @@ type InterviewDetail= {
     description?: string;
 }
 
-// interface Item {
-//   id: number;
-//   title: string;
-//   description: string;
-//   content: string;
-// }
-
 // ItemCardコンポーネントのプロパティ型定義
 interface InterviewDetailProps {
   item: InterviewDetail;                    // 表示するアイテムのデータ
   onClick: (item: InterviewDetail) => void; // クリック時のコールバック関数
 }
-
-// interface InterviewDetailProps {
-//   onItemClick: (interviewDetail: InterviewDetail) => void;
-// }
-
-// const interviewDetail : InterviewDetail[] = [
-//     {id:1,src: '/recruit/responsive.png',alt:'member1' ,member: 'Gさん(2024年キャリア採用)',occupation:'エンジニア'},
-//     {id:2,src: '/recruit/responsive.png',alt:'member2' ,member: 'Nさん(2024年キャリア採用)',occupation:'エンジニア'},
-// ];
-
-// export default function InterviewDetail(){
-// const InterviewDetail :React.FC<InterviewDetailProps> = ({onItemClick}) =>{
-//     return(
-//         <button
-//         className="flex justify-around mx-50" 
-//         >
-//             {interviewDetail.map((interviewDetail)=>(
-//             <div key={interviewDetail.id} className="mx-10 w-1/4 h-full"
-//             onClick={() => onItemClick(interviewDetail)}
-//             >
-//              <Image
-//                 src={interviewDetail.src}
-//                 alt={interviewDetail.alt} 
-//                 width={3000} 
-//                 height={6000}
-//              />
-//              <p className="text-xl my-5">{interviewDetail.member}</p>
-//              <div className="flex my-5">
-//              <p className="border-2 p-2 w-15 text-center">職業</p>
-//              <p className="p-2 text-center">{interviewDetail.occupation}</p>
-//              </div>
-//              </div>
-//             ))}
-//         </button>
-//     );
-// }
 
 const ItemCard: React.FC<InterviewDetailProps> = ({ item, onClick }) => {
   return (

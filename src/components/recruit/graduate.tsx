@@ -1,11 +1,11 @@
 // 新卒画面
-type guraduate={
+type guraduateProps={
     id: number;
     colomun: string;
     detail: string;
 }
 
-const guraduateList:guraduate[]=[
+const guraduateList:guraduateProps[]=[
     {id:1,colomun: '応募資格',detail: ''},
     {id:2,colomun: '職種・仕事内容',detail: 'エンジニア'},
     {id:3,colomun: '雇用形態',detail: '正社員'},

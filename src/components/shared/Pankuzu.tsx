@@ -11,12 +11,12 @@ type BreadcrumbItem = {
 };
 
 type PankuzuProps = {
-    japaneseTitle: string;
-    englishTitle: string;
+    titleJP: string;
+    subtitleEN: string;
     breadcrumbs?: BreadcrumbItem[];
 }
 
-export default function Pankuzu({ japaneseTitle, englishTitle, breadcrumbs }: PankuzuProps) {
+export default function Pankuzu({ titleJP, subtitleEN, breadcrumbs }: PankuzuProps) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mounted, setMounted] = useState(false);
 
@@ -37,8 +37,8 @@ export default function Pankuzu({ japaneseTitle, englishTitle, breadcrumbs }: Pa
                     <Header />
                 </div>
                 <PageTitle
-                 japaneseTitle={japaneseTitle}
-                 englishTitle={englishTitle}
+                 titleJP={titleJP}
+                 subtitleEN={subtitleEN}
                 />
             </>
         );
@@ -50,12 +50,12 @@ export default function Pankuzu({ japaneseTitle, englishTitle, breadcrumbs }: Pa
                 <Header />
             </div>
             <PageTitle
-                 japaneseTitle={japaneseTitle}
-                 englishTitle={englishTitle}
+                 titleJP={titleJP}
+                 subtitleEN={subtitleEN}
             />
             {/* パンくずリスト（マウント後かつスクロール後のみ表示） */}
             {breadcrumbs && breadcrumbs.length > 0 && isScrolled && (
-                <nav className="flex bt-4 bx-8 text-sm text-gray-600 transition-all duration-300 fixed top-0 left-0 right-0 z-50 py-4 px-8">
+                <nav className="flex bt-4 bx-8 text-sm text-gray-600 transition-all duration-300 fixed top-0 left-0 right-0 py-4 px-8 bg-background">
                     <Link href="/" className="flex items-center hover:text-blue-600 transition-colors">
                         TOP
                     </Link>

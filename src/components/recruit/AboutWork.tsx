@@ -1,5 +1,5 @@
-import HeadTitle from "./head-tile";
-import WorkDetail from "./hiyoku-work-detail";
+import HeadTitle from "./HeadTitle";
+import WorkDetail from "./WorkDetail";
 
 export default function AboutWork(){
     return(

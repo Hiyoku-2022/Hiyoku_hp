@@ -1,7 +1,7 @@
 "use client";
-import HeadTitle from "./head-tile";
-import Graduate from "./graduate";
-import MidCareer from "./mid-career";
+import HeadTitle from "./HeadTitle";
+import Graduate from "./Graduate";
+import MidCareer from "./MidCareer";
 // import { useState } from "react";
 import React, { useState } from 'react';
 import { HoverShapeButtonWithIcon } from "../ui/button";
