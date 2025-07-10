@@ -29,7 +29,7 @@ export default function NewsPage() {
             <Header />
             <PageTitle
                 titleJP="お知らせ"
-                subtilteEN="NEWS"
+                subtitleEN="NEWS"
             />
             <div className="my-16">
                 <BlogTitleList
