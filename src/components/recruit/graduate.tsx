@@ -1,4 +1,5 @@
 // 新卒画面
+//ファイル名：Graduateに変更
 type guraduateProps={
     id: number;
     colomun: string;

@@ -1,3 +1,4 @@
+//ファイル名：Solicitationに変更
 "use client";
 import HeadTitle from "./HeadTitle";
 import Graduate from "./Graduate";
