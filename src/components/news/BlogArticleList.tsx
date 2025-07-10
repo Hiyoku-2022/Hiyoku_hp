@@ -28,7 +28,7 @@ export default function BlogArticleList({ id, title, publishedAt, isVisited, onS
         >
             <div className="mx-auto w-[90%] md:w-[70%]">
                 <div
-                    className={`flex justify-between bg-white border border-background py-8 mx-auto text-center min-h-20 ${
+                    className={`flex justify-between border border-background py-8 mx-auto text-center min-h-20 ${
                         isVisited ? 'bg-grayLight' : 'bg-white'
                     }`}
                 >

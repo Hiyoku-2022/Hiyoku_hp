@@ -65,7 +65,7 @@ export default function NewsDetailClient({ article }: { article: BlogArticleProp
             <Header />
             <PageTitle
                 titleJP="お知らせ"
-                subtilteEN="NEWS"
+                subtitleEN="NEWS"
             />
             <div className="flex justify-center">
                 <div className="mx-auto bg-white w-[90%] md:w-[70%]">
