@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { X, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { HoverShapeButtonWithIcon } from "../ui/button";
-import { HiyokuLogo } from "../shared/logo";
+import { Logo } from "../shared/logo";
 
 const navLinks = [
     { label: "私たちについて", href: "/about-us" },
@@ -51,15 +51,15 @@ export function HeaderMobileMenu({ onClose }: Props) {
                 isAnimatingOut ? "animate-fadeOutSoft" : "animate-fadeInSoft"
             }`}
         >
-            <button className="absolute top-4 right-4" onClick={handleClose}>
+            <button className="absolute top-3 right-6" onClick={handleClose}>
                 <X
                     size={28}
-                    className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8"
+                    className="w-8 h-8"
                 />
             </button>
 
             <div className="flex items-center space-x-2 mb-6">
-                <HiyokuLogo />
+                <Logo />
             </div>
 
             <nav className="flex flex-col items-center space-y-6 text-lg mb-6">
@@ -68,26 +68,34 @@ export function HeaderMobileMenu({ onClose }: Props) {
                         key={link.label}
                         href={link.href}
                         onClick={handleClose}
-                        className="text-gray-800 hover:text-blue-600"
+                        className="text-foreground group relative"
                     >
-                        {link.label}
+                        <span className="inline-block pb-1 after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[1px] after:w-0 after:bg-foreground after:transition-all after:duration-300 group-hover:after:w-full">
+                            {link.label}
+                        </span>
                     </Link>
                 ))}
             </nav>
 
-            <div className="flex flex-col space-y-4 w-4/5 max-w-sm">
-                <HoverShapeButtonWithIcon
-                    variant="softBlue"
-                    icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                >
-                    LMSについてのお問い合わせ
-                </HoverShapeButtonWithIcon>
-                <HoverShapeButtonWithIcon
-                    variant="softOrange"
-                    icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                >
-                    採用についてのお問い合わせ
-                </HoverShapeButtonWithIcon>
+            <div className="flex flex-col items-center space-y-5 w-4/5 max-w-sm">
+                <Link href="/">
+                    <HoverShapeButtonWithIcon
+                        variant="softBlue"
+                        icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                        className="w-80 py-3"
+                    >
+                        LMSについてのお問い合わせ
+                    </HoverShapeButtonWithIcon>
+                </Link>
+                <Link href="/">
+                    <HoverShapeButtonWithIcon
+                        variant="softOrange"
+                        icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                        className="w-80 py-3"
+                    >
+                        採用についてのお問い合わせ
+                    </HoverShapeButtonWithIcon>
+                </Link>
             </div>
         </div>
     );

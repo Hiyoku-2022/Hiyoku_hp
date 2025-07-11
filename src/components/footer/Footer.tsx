@@ -8,17 +8,38 @@ import { FooterCopyright } from "./FooterCopyright";
 
 export function Footer() {
     return (
-        <footer className="bg-gradient-to-b from-[#8AB9C7] to-[#FFD1A8] text-foreground pt-10 mt-16">
-            <div className="max-w-7xl mx-auto px-4 flex flex-col items-center md:grid md:grid-cols-2 md:gap-8 md:items-start">
-                <div className="space-y-6 flex flex-col items-center md:items-start">
+        <footer className={`
+            min-h-[500px] md:min-h-[400px]
+            bg-gradient-to-b from-[#8AB9C7] to-[#FFD1A8]
+            flex items-center
+            pt-[50px] pb-[50px]
+        `}>
+            <div className={`
+                max-w-7xl mx-auto w-full px-8
+                md:flex md:flex-col md:items-center
+            `}>
+                <div className={`
+                    flex flex-col  md:flex-row
+                    items-center md: items-start
+                    md:w-[80%]
+                    justify-center md:justify-between
+                    space-y-5 md:space-y-0
+                    mb-[50px]
+                `}>
                     <FooterContact />
                     <FooterButtons />
                 </div>
-                <div className="space-y-6 flex flex-col items-center md:items-start">
+                <div className={`
+                    flex flex-col md:flex-row
+                    items-center md:items-end
+                    md:w-[80%]
+                    justify-center md:justify-between
+                    space-y-10 md:space-y-0
+                `}>
                     <FooterNav />
+                    <FooterCopyright />
                 </div>
             </div>
-            <FooterCopyright />
         </footer>
     );
 };
