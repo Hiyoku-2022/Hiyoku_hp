@@ -17,12 +17,15 @@ export default function HomePage() {
     <div>
       {showHeader && <Header />}
       <TopMV />
-      <div className="mt-[100px] md:mt-[100px] lg:mt-[200px]" />
+      <div className="mt-[150px] lg:mt-[200px]" />
       <TopAboutUS />
-      <div className="mt-[100px]"/>
+      <div className="mt-[50px] md:mt-[100px]"/>
       <TopService />
+      <div className="mt-[50px] md:mt-[100px]"/>
       <TopNews />
+      <div className="mt-[50px] md:mt-[100px]"/>
       <RecruitArea />
+      <div className="mt-[50px] md:mt-[100px]"/>
     </div>
   )
 }
