@@ -8,7 +8,7 @@ export function TopMV() {
         <div className="relative w-full h-screen bg-background z-0">
             {/* 左上の画像 */}
             <Image
-                src="/top/topBack1.png"
+                src="/top/topBack1.svg"
                 alt="①"
                 width={600}
                 height={250}
@@ -22,7 +22,7 @@ export function TopMV() {
 
             {/* 右下の画像 */}
             <Image
-                src="/top/topBack2.png"
+                src="/top/topBack2.svg"
                 alt="②"
                 width={800}
                 height={550}
@@ -36,7 +36,7 @@ export function TopMV() {
 
             {/* 左下の画像 */}
             <Image
-                src="/top/topBack3.png"
+                src="/top/topBack3.svg"
                 alt="③"
                 width={600}
                 height={200}
@@ -50,7 +50,7 @@ export function TopMV() {
 
             {/* 右上の画像 */}
             <Image
-                src="/top/topBack4.png"
+                src="/top/topBack4.svg"
                 alt="④"
                 width={800}
                 height={350}
@@ -64,7 +64,7 @@ export function TopMV() {
 
             {/* 中央の画像 */}
             <Image
-                src="/top/topBackCent.png"
+                src="/top/topBackCent.svg"
                 alt="最後に右下から中央に移動するアイコン"
                 width={1000}
                 height={500}
@@ -88,14 +88,14 @@ export function TopMV() {
                 `}
             >
                 <Image
-                    src="/top/backCircleLeft.png"
+                    src="/top/backCircleLeft.svg"
                     alt="右上から左下に移動する円"
                     width={500}
                     height={500}
                     className="absolute inset-0 w-full h-full"
                 />
                 <Image
-                    src="/top/backLine.png"
+                    src="/top/backLine.svg"
                     alt="右上から左下に移動する線"
                     width={400}
                     height={400}
@@ -117,14 +117,14 @@ export function TopMV() {
                 `}
             >
                 <Image
-                    src="/top/backCircleLeft.png"
+                    src="/top/backCircleLeft.svg"
                     alt="中央上に移動する円"
                     width={500}
                     height={500}
                     className="absolute inset-0 w-full h-full"
                 />
                 <Image
-                    src="/top/backLine.png"
+                    src="/top/backLine.svg"
                     alt="線"
                     width={400}
                     height={400}
@@ -148,14 +148,14 @@ export function TopMV() {
                 `}
             >
                 <Image
-                    src="/top/backCircleRight.png"
+                    src="/top/backCircleRight.svg"
                     alt="右下に移動する円"
                     width={500}
                     height={500}
                     className="absolute inset-0 w-full h-full"
                 />
                 <Image
-                    src="/top/backLine.png"
+                    src="/top/backLine.svg"
                     alt="線"
                     width={400}
                     height={400}
