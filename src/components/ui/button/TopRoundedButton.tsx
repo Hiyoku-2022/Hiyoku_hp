@@ -1,24 +1,21 @@
-// components/ui/button/BaseButton.tsx
 import React from "react";
 import clsx from "clsx";
 import { variantClasses, Variant } from "./variants";
 
-export type BaseButtonProps = {
+export type TopRoundedButtonProps = {
     variant: Variant;
     children: React.ReactNode;
-    shapeTransition?: boolean;
     className?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-export function BaseButton ({
+export function TopRoundedButton({
     variant,
     children,
-    shapeTransition = false,
     className = "",
     ...props
-}: BaseButtonProps) {
-    const base = "inline-flex items-center justify-center px-4 py-2 text-sm font-bold py-3";
-    const shapeClass = shapeTransition ? "rounded-lg hover:rounded-full" : "rounded-lg";
+}: TopRoundedButtonProps) {
+    const base = "inline-flex items-center justify-center px-4 py-2 text-sm font-bold";
+    const shapeClass = "rounded-t-lg rounded-b-none";
 
     return (
         <button
@@ -28,4 +25,4 @@ export function BaseButton ({
             {children}
         </button>
     );
-};
+}

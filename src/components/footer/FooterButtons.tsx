@@ -1,23 +1,30 @@
 import React from "react";
+import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { HoverShapeButtonWithIcon } from "../ui/button";
 
 export function FooterButtons () {
     return (
-        <div className="flex flex-col space-y-4 md:space-y-0 md:flex-row md:space-x-4">
-            <HoverShapeButtonWithIcon
-                variant="softBlue"
-                icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-            >
-                LMSについてのお問い合わせ
+        <div className="flex flex-col items-center space-y-5">
+            <Link href="/" className="mt-4" >
+                <HoverShapeButtonWithIcon
+                    variant="softBlue"
+                    icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                    className="w-64 py-3"
+                >
+                    LMSについてのお問い合わせ
 
-            </HoverShapeButtonWithIcon>
-            <HoverShapeButtonWithIcon
-                variant="softOrange"
-                icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-            >
-                採用についてのお問い合わせ
-            </HoverShapeButtonWithIcon>
+                </HoverShapeButtonWithIcon>
+            </Link>
+            <Link href="/" className="mt-4">
+                <HoverShapeButtonWithIcon
+                    variant="softOrange"
+                    icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                    className="w-64 py-3"
+                >
+                    採用についてのお問い合わせ
+                </HoverShapeButtonWithIcon>
+            </Link>
         </div>
     )
 };
