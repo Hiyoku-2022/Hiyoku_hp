@@ -26,7 +26,7 @@ interface InterviewDetail {
 const items: InterviewDetail[] = [
   {
     id: 1,
-    src: "/recruit/interview.png", // 画像パスを設定
+    src: "/recruit/interview.svg", // 画像パスを設定
     alt: "picture",
     member: "Aさん",
     name: "Aさん",
@@ -40,7 +40,7 @@ const items: InterviewDetail[] = [
   },
   {
     id: 2,
-    src: "/recruit/interview.png",
+    src: "/recruit/interview.svg",
     alt: "picture",
     member: "Bさん",
     name: "Bさん",
@@ -81,8 +81,8 @@ const ItemList: React.FC = () => {
       
       {/* アイテム一覧のグリッドレイアウト */}
       {/* レスポンシブ対応：モバイル1列、タブレット2列、デスクトップ3列 */}
-      <div className="flex justify-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="flex justify-center mx-auto w-[90%] md:w-[70%] pb-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {/* 各アイテムに対してItemCardコンポーネントを生成 */}
         {items.map((item) => (
           <ItemCard
