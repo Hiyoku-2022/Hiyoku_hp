@@ -3,7 +3,6 @@ import { HiyokuPhilosophy } from "./HiyokuPhilosophy";
 import { HiyokuPromise } from "./HiyokuPromise";
 import { RecruitArea } from "@/components/shared/RecruitArea";
 import CompanyOverview from "./CompanyOverview";
-import { HiyokuPromise } from "./HiyokuPromise";
 
 export default function AboutUsPage() {
 return (
@@ -13,6 +12,8 @@ return (
         <HiyokuPhilosophy />
         <HiyokuPromise />
         <HiyokuPromise />
+        <CompanyOverview />
+        <RecruitArea />
         <CompanyOverview />
         <RecruitArea />
         </div>
