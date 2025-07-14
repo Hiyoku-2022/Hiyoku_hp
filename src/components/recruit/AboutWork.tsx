@@ -1,3 +1,4 @@
+// 「仕事について」コンポーネント
 import HeadTitle from "./HeadTitle";
 import WorkDetail from "./WorkDetail";
 

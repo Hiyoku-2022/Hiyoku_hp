@@ -1,3 +1,4 @@
+// 「仕事について」の詳細コンポーネント
 type WorkDetailItem={
     id:number;
     occupation: string;

@@ -1,10 +1,17 @@
-// import React from "react";
+//  「hiyokuについて」コンポーネント
+'use client'
 import HeadTitle from "./HeadTitle";
 import HiyokuDetail from "./HiyokuDetail";
 import { HoverShapeButtonWithIcon } from "../ui/button";
 import { ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function AboutHiyoku(){
+    const router = useRouter();
+
+    const handleClick = () => {
+      router.push('/about-us')
+    }
 
     return(
         <>
@@ -21,6 +28,7 @@ export default function AboutHiyoku(){
                 <HoverShapeButtonWithIcon
                   variant="blue"
                   icon={<ChevronRight className="w-4 h-4 transition-colors m-[10px]" />}
+                  onClick={handleClick}
                 >
                     会社について詳しくみる
                 </HoverShapeButtonWithIcon>

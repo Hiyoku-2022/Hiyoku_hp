@@ -1,3 +1,4 @@
+// 「よくあるご質問」コンポーネント
 import HeadTitle from "./HeadTitle";
 
 type FAQ = {
@@ -18,7 +19,7 @@ export default function FAQ(){
     return(
         <div>
             <HeadTitle>よくあるご質問</HeadTitle>
-            <div>
+            <div className="mb-16">
                 {faqList.map((item)=>(
                     <ul key={item.id} className="w-[90%] md:w-[70%] mx-auto my-2 w-200 text-left bg-white rounded-lg p-2">
                         <li className="flex">
