@@ -1,6 +1,8 @@
 import React from "react";
 import { HiyokuPhilosophy } from "./HiyokuPhilosophy";
 import { HiyokuPromise } from "./HiyokuPromise";
+import { RecruitArea } from "@/components/shared/RecruitArea";
+import CompanyOverview from "./CompanyOverview";
 
 export default function AboutUsPage() {
 return (
@@ -9,30 +11,8 @@ return (
         <h1 className="text-3xl font-bold mb-6">私たちについて</h1>
         <HiyokuPhilosophy />
         <HiyokuPromise />
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        </div>
-        <div>
-        <h1 className="text-xl font-bold mb-6">サブコンテンツ</h1>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        </div>
-        <div>
-        <h1 className="text-xl font-bold mb-6">サブコンテンツ</h1>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
+        <CompanyOverview />
+        <RecruitArea />
         </div>
     </main>
     )
