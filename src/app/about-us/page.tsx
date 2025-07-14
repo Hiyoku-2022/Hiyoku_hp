@@ -1,22 +1,36 @@
 import React from "react";
-import { HiyokuPhilosophy } from "./HiyokuPhilosophy";
-import { HiyokuPromise } from "./HiyokuPromise";
+import { HiyokuPhilosophy } from "../../components/about-us/HiyokuPhilosophy";
+import { HiyokuPromise } from "../../components/about-us/HiyokuPromise";
+import {CompanyOverview} from "../../components/about-us/CompanyOverview";
+
 import { RecruitArea } from "@/components/shared/RecruitArea";
-import CompanyOverview from "./CompanyOverview";
+import PageTitle from '@/components/shared/PageTitle';
+import Pankuzu from "@/components/shared/Pankuzu";
 
 export default function AboutUsPage() {
 return (
-    <main className="pt-20 px-4 max-w-4xl mx-auto">
-        <div>
-        <h1 className="text-3xl font-bold mb-6">私たちについて</h1>
+    <main>
+        <Pankuzu
+                titleJP="私たちについて"
+                subtitleEN="about-us"
+                breadcrumbs={[
+                    { label: "私たちについて" }
+                ]}
+            />
+
+    {/* Hiyokuの想い */}
         <HiyokuPhilosophy />
+
+    {/* Hiyokuの約束 */}
         <HiyokuPromise />
-        <HiyokuPromise />
+
+    {/* 会社概要 */}
         <CompanyOverview />
+
+    {/* 採用情報 */}
         <RecruitArea />
-        <CompanyOverview />
-        <RecruitArea />
-        </div>
+
     </main>
-    )
+
+)
 }
