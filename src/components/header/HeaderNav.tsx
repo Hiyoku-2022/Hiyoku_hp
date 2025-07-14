@@ -59,21 +59,25 @@ export function HeaderNav () {
                         flex flex-col items-center
                         z-50
                     `}>
-                        <TopRoundedButton
-                            variant="ghostBlue"
-                            className="w-[150px] z-20"
-                        >
-                            <p className="whitespace-pre-line">LMSについての{'\n'}お問い合わせ</p>
-                        </TopRoundedButton>
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSe16SRGMa40iGYzQFxmUkW_7G3LgIjJ_n9F83eDSH1nAkObHg/viewform?usp=sharing&ouid=103342829539540884944">
+                            <TopRoundedButton
+                                variant="ghostBlue"
+                                className="w-[150px] z-20"
+                            >
+                                <p className="whitespace-pre-line">LMSについての{'\n'}お問い合わせ</p>
+                            </TopRoundedButton>
+                        </Link>
 
                         <div className="w-[150px] h-px bg-grayMiddle" />
 
-                        <BottomRoundedButton
-                            variant="ghostBlue"
-                            className="w-[150px] z-30"
-                        >
-                            <p className="whitespace-pre-line">採用についての{'\n'}お問い合わせ</p>
-                        </BottomRoundedButton>
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeLNJ7LVm7ITzvnTyiEWzsd40LMbp0nRtgqGJkjSabq02IHgQ/viewform?usp=sharing&ouid=103342829539540884944">
+                            <BottomRoundedButton
+                                variant="ghostBlue"
+                                className="w-[150px] z-30"
+                            >
+                                <p className="whitespace-pre-line">採用についての{'\n'}お問い合わせ</p>
+                            </BottomRoundedButton>
+                        </Link>
                     </div>
                 )}
             </div>
