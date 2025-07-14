@@ -9,13 +9,14 @@ export function RecruitArea() {
         <div className={`
             flex flex-col md:flex-row-reverse
             justify-center items-center md:items-stretch
-            mx-auto px-4 w-[70%] md:w-[60%]
+            mx-auto px-4 w-[90%] md:w-[60%]
         `}>
             <div className={`
-                w-full min-h-[250px] md:w-2/5 md:min-h-[350px]
+                w-full min-h-[250px]
+                md:w-2/5 md:min-h-[350px]
                 flex justify-center items-center
                 bg-[url('/common/SharedRecruitBg.svg')]
-                bg-center
+                bg-center bg-contain bg-cover
                 rounded-t-xl md:rounded-t-none md:rounded-tr-xl md:rounded-br-xl
             `}>
                 <Image
@@ -23,13 +24,14 @@ export function RecruitArea() {
                     alt="recruit"
                     width={500}
                     height={500}
-                    className="object-contain w-[75%] h-[60%]"
+                    className="object-contain w-[60%] h-[55%] md:w-[75%] md:h-[60%]"
                 />
             </div>
 
             <div className={`
+                w-full min-h-[300px]
+                md:min-h-[350px] md:w-3/5
                 flex flex-col justify-center items-center
-                w-full min-h-[300px] md:min-h-[350px] md:w-3/5
                 bg-white p-4
                 rounded-b-xl md:rounded-b-none md:rounded-tl-xl md:rounded-bl-xl
             `}>
@@ -56,7 +58,7 @@ export function RecruitArea() {
                         </HoverShapeButtonWithIcon>
                     </Link>
                     <Link
-                        href=""
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeLNJ7LVm7ITzvnTyiEWzsd40LMbp0nRtgqGJkjSabq02IHgQ/viewform?usp=sharing&ouid=103342829539540884944"
                         className="w-full xl:w-auto mt-4 xl:mt-0"
                     >
                         <HoverShapeButtonWithIcon
