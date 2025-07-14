@@ -1,62 +1,68 @@
-
-/* Medium screens */
-@media (max-width: 768px) {
-/* マークダウンコンテンツ用のスタイルを追加 */
-.blogcontent{
-margin-top: 2em;
-text-align: left;
+/*-----------------------------
+ NEWS記事のCSS設定
+-----------------------------*/
+/* 基本スタイル (モバイルファースト) */
+.blogcontent {
+  margin-block: 1.5em;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-block: 1em;
 }
 
 .blogcontent h1 {
-  font-size: 1.5em; 
+  font-size: 18px; 
   margin-top: 0.5em;
   margin-bottom: 0.8em;
   font-weight: bold;
-  text-align: left;
 }
 
 .blogcontent h2 {
-  font-size: 1em;
+  font-family: Family_1;
+  font-size: 18px; 
   margin-top: 0.5em;
   margin-bottom: 0.8em;
   font-weight: bold;
   padding-bottom: 0.3em;
-  text-align: left;
 }
 
 .blogcontent h3 {
-  font-size: 1.6em;
+  font-family: Family_1; 
+  font-size: 16px;
   margin-top: 1.2em;
   margin-bottom: 0.6em;
   font-weight: bold;
 }
 
+.blogcontent h4 {
+  font-family: Family_3;
+  color: #ACC3CC;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
 .blogcontent p {
-  font-size: 1em;
+  font-family: Family_1;
+  font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1em;
-
-  /* 改行関連 */
-  word-wrap: break-word;      /* IE対応 */
-  overflow-wrap: break-word;  /* 現代ブラウザ */
-  word-break: break-word;     /* より強制的な改行 */
-  
-  /* 追加の安全策 */
-  white-space: normal;        /* 改行を許可 */
-  overflow: visible;          /* テキストを隠さない */
+  white-space: normal;
+  overflow: visible;
 }
 
 .blogcontent img {
-  max-width: 100%; /* 画像が親要素からはみ出さないように */
-  height: auto;    /* アスペクト比を維持 */
-  display: block;  /* 下の余白をなくし、中央寄せしやすく */
-  margin: 1.5em auto; /* 中央寄せと上下の余白 */
-  border-radius: 8px; /* 例: 角丸 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 例: 影 */
+  max-width: 100%; 
+  height: auto;  
+  display: block; 
+  margin: 1.5em auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blogcontent ul,
-.blog-content ol {
+.blogcontent ol {
   margin-left: 2em;
   margin-bottom: 1em;
 }
@@ -70,108 +76,47 @@ text-align: left;
   background-color: #f6f8fa;
   padding: 1em;
   border-radius: 5px;
-  overflow-x: auto; /* コードがはみ出す場合にスクロールバーを表示 */
+  overflow-x: auto;
   margin-bottom: 1em;
 }
 
 .blogcontent code {
   font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: 0.9em;
-  background-color: #e0e0e0; /* インラインコードの背景 */
+  font-size: 16px;
+  background-color: #e0e0e0;
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
 
-/* リンクのスタイル */
 .blogcontent a {
-  color: #0070f3; /* リンクの色 */
+  color: #0070f3;
   text-decoration: underline;
 }
+
 .blogcontent a:hover {
   text-decoration: none;
 }
-}
 
-/* Large screens */
+/* PC画面向けのスタイル (768px以上) */
 @media (min-width: 768px) {
+  .blogcontent {
+    margin-block: 2em;
+  }
 
-  /* マークダウンコンテンツ用のスタイルを追加 */
+  .blogcontent h1 {
+    font-family: Family_3;
+    font-size: 28px;
+    margin-top: 1.5em;
+  }
 
-.blogcontent{
-margin-top: 5em;
-text-align: left;
-}
+  .blogcontent h2 {
+    font-family: Family_3;
+    font-size: 23px;
+    margin-top: 1.5em;
+  }
 
-.blogcontent h1 {
-  font-size: 1.5em; /* 見出しのサイズ */
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
-  font-weight: bold;
-}
-
-.blogcontent h2 {
-  font-size: 2em;
-  margin-top: 1.5em;
-  margin-bottom: 0.8em;
-  font-weight: bold;
-  padding-bottom: 0.3em;
-}
-
-.blogcontent h3 {
-  font-size: 1.6em;
-  margin-top: 1.2em;
-  margin-bottom: 0.6em;
-  font-weight: bold;
-}
-
-.blogcontent p {
-  font-size: 1em;
-  line-height: 1.8;
-  margin-bottom: 1em;
-}
-
-.blogcontent img {
-  max-width: 100%; /* 画像が親要素からはみ出さないように */
-  height: auto;    /* アスペクト比を維持 */
-  display: block;  /* 下の余白をなくし、中央寄せしやすく */
-  margin: 1.5em auto; /* 中央寄せと上下の余白 */
-  border-radius: 8px; /* 例: 角丸 */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 例: 影 */
-}
-
-.blogcontent ul,
-.blog-content ol {
-  margin-left: 2em;
-  margin-bottom: 1em;
-}
-
-.blogcontent li {
-  margin-bottom: 0.5em;
-  line-height: 1.6;
-}
-
-.blogcontent pre {
-  background-color: #f6f8fa;
-  padding: 1em;
-  border-radius: 5px;
-  overflow-x: auto; /* コードがはみ出す場合にスクロールバーを表示 */
-  margin-bottom: 1em;
-}
-
-.blogcontent code {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
-  font-size: 0.9em;
-  background-color: #e0e0e0; /* インラインコードの背景 */
-  padding: 0.2em 0.4em;
-  border-radius: 3px;
-}
-
-/* リンクのスタイル */
-.blogcontent a {
-  color: #0070f3; /* リンクの色 */
-  text-decoration: underline;
-}
-.blogcontent a:hover {
-  text-decoration: none;
-}
+  .blogcontent h3 {
+    font-family: Family_3;
+    font-size: 19px;
+  }
 }

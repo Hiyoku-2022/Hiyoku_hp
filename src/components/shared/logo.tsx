@@ -3,19 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export function HiyokuLogo () {
+export function Logo () {
     return (
         <Link href="/">
             <div className="flex items-center space-x-2">
                 <Image
-                    src="/icon/favicon.ico"
+                    src="/icon/logo.svg"
                     alt="Site logo icon"
                     width={24}
                     height={24}
-                    className="w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8"
+                    className="w-10 h-10 md:w-12 md:h-12"
                 />
                 <Image
-                    src="/icon/name.png"
+                    src="/icon/name.svg"
                     alt="Site name"
                     width={100}
                     height={24}

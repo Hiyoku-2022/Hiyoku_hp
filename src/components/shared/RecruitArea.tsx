@@ -1,46 +1,74 @@
 import React from "react";
-import { ChevronRight, Fullscreen } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { HoverShapeButtonWithIcon } from "../ui/button/HoverShapeButtonWithIcon";
 
 export function RecruitArea() {
     return (
-        <div className="bg-white flex justify-center mb:justify-center mx-auto w-[60%] my-[100px] mb:my-[100px] h-96 mb:h-96">
-            <div className="rounded-l-xl h-full  px-[50px] py-[50px]">
-                <div className="text-center">
-                    <h2 className="font-Family_3 font-bold mt-[10px] text-[56px]">RECRUIT</h2>
-                    <p className="font-Family_1 font-bold my-[10px] text-[16px]">採用情報</p>
-                    <p className="font-Family_3 my-[50px]">私たちと一緒に働いてくれる仲間を募集しています。</p>
+        <div className={`
+            flex flex-col md:flex-row-reverse
+            justify-center items-center md:items-stretch
+            mx-auto px-4 w-[70%] md:w-[60%]
+        `}>
+            <div className={`
+                w-full min-h-[250px] md:w-2/5 md:min-h-[350px]
+                flex justify-center items-center
+                bg-[url('/common/SharedRecruitBg.svg')]
+                bg-center
+                rounded-t-xl md:rounded-t-none md:rounded-tr-xl md:rounded-br-xl
+            `}>
+                <Image
+                    src="/top/topBackCent.svg"
+                    alt="recruit"
+                    width={500}
+                    height={500}
+                    className="object-contain w-[75%] h-[60%]"
+                />
+            </div>
+
+            <div className={`
+                flex flex-col justify-center items-center
+                w-full min-h-[300px] md:min-h-[350px] md:w-3/5
+                bg-white p-4
+                rounded-b-xl md:rounded-b-none md:rounded-tl-xl md:rounded-bl-xl
+            `}>
+                <div className="text-center ont-Family_1">
+                    <h2 className="font-bold mt-[10px] text-3xl">RECRUIT</h2>
+                    <p className="font-bold my-[10px] text-xl">採用情報</p>
+                    <p className="w-60 md:w-full text-base md:mt-[50px]">私たちと一緒に働いてくれる仲間を募集しています。</p>
                 </div>
-                <div className="flex justify-center">
-                    <Link href="/recruit" className="mx-[10px]">
+                <div className={`
+                    flex flex-col xl:flex-row
+                    xl:space-y-0 xl:space-x-4
+                    xl:mt-[50px]
+                `}>
+                    <Link
+                        href="/recruit"
+                        className="w-full xl:w-auto mt-4 xl:mt-0"
+                    >
                         <HoverShapeButtonWithIcon
                             variant="blue"
-                            icon={<ChevronRight className="w-4 h-4 transition-colors font-Family_1 font-bold m-[10px]" />}
+                            icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                            className="w-[200px]"
                         >
                             詳しく見る
                         </HoverShapeButtonWithIcon>
                     </Link>
-                    <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeLNJ7LVm7ITzvnTyiEWzsd40LMbp0nRtgqGJkjSabq02IHgQ/viewform?usp=sharing&ouid=103342829539540884944">
+                    <Link
+                        href=""
+                        className="w-full xl:w-auto mt-4 xl:mt-0"
+                    >
                         <HoverShapeButtonWithIcon
                             variant="orange"
-                            icon={<ChevronRight className="w-4 h-4 transition-colors font-Family_1 m-[10px]" />}
+                            icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                            className="w-[200px]"
                         >
                             エントリーフォーム
                         </HoverShapeButtonWithIcon>
                     </Link>
                 </div>
             </div>
-           <div className="w-full max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
-  <Image 
-    src="/common/RecruitArea.png" 
-    alt="recruit" 
-    width={100} 
-    height={100} 
-    className="w-full h-full object-contain"
-  />
-</div>
         </div>
     )
 }

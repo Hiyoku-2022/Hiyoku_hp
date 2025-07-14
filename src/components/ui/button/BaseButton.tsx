@@ -17,7 +17,7 @@ export function BaseButton ({
     className = "",
     ...props
 }: BaseButtonProps) {
-    const base = "inline-flex items-center justify-center px-4 py-2 text-sm font-medium";
+    const base = "inline-flex items-center justify-center px-4 py-2 text-sm font-bold py-3";
     const shapeClass = shapeTransition ? "rounded-lg hover:rounded-full" : "rounded-lg";
 
     return (
