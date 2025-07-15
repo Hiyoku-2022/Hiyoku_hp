@@ -6,7 +6,10 @@ import { HoverShapeButtonWithIcon } from "../ui/button";
 export function FooterButtons () {
     return (
         <div className="flex flex-col items-center space-y-5">
-            <Link href="/" className="mt-4" >
+            <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe16SRGMa40iGYzQFxmUkW_7G3LgIjJ_n9F83eDSH1nAkObHg/viewform?usp=sharing&ouid=103342829539540884944"
+                className="mt-4"
+            >
                 <HoverShapeButtonWithIcon
                     variant="softBlue"
                     icon={<ChevronRight className="w-4 h-4 transition-colors" />}
@@ -16,7 +19,10 @@ export function FooterButtons () {
 
                 </HoverShapeButtonWithIcon>
             </Link>
-            <Link href="/" className="mt-4">
+            <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeLNJ7LVm7ITzvnTyiEWzsd40LMbp0nRtgqGJkjSabq02IHgQ/viewform?usp=sharing&ouid=103342829539540884944"
+                className="mt-4"
+            >
                 <HoverShapeButtonWithIcon
                     variant="softOrange"
                     icon={<ChevronRight className="w-4 h-4 transition-colors" />}

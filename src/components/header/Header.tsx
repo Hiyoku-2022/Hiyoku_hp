@@ -9,6 +9,7 @@ import { HeaderMobileMenu } from "./HeaderMobileMenu";
 export function Header () {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isAtBottom, setIsAtBottom] = useState(false);
 
     useEffect(() => {
         const onScroll = () => {
@@ -18,9 +19,24 @@ export function Header () {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    useEffect(() => {
+        const onScroll = () => {
+            const scrollTop = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const pageHeight = document.body.scrollHeight;
+
+            setScrolled(scrollTop > viewportHeight + 150);
+            setIsAtBottom(scrollTop + viewportHeight >= pageHeight - 50);
+        }
+
+            window.addEventListener("scroll", onScroll);
+            return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     return (
         <header className={`
             w-full fixed top-0 left-0 z-50 transition-colors duration-300
+            ${isAtBottom ? "opacity-0 pointer-events-none" : "opacity-100"}
             ${ scrolled ? "bg-white shadow-md" : "bg-transparent"}
         `}>
             <div className="w-full px-6 py-3 flex justify-between items-center">
