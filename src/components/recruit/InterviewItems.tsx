@@ -1,27 +1,12 @@
-// 　インタビューした各メンバーのコンポーネント
-'use client'; 
+// インタビューした各メンバーのコンポーネント
+'use client';
 
 import { useState } from 'react';
-import InterviewDetail from './InterviewDetail';
+import InterviewDetail, { InterviewDetailType }  from './InterviewDetail';
 import Modal from './Modal';
-
 import HeadTitle from "./HeadTitle";
 
-interface InterviewItem {
-    id: number;
-    alt: string;
-    member: string;
-    name: string;
-    join: string;
-    joiningReason: string;
-    workAttraction: string;
-    companyAttraction: string;
-    target: string;
-    occupation: string;
-    description?: string;
-}
-
-const interviewItems: InterviewItem[] = [
+const interviewItems: InterviewDetailType[] = [
     {
         id: 1,
         alt: "picture",
@@ -48,16 +33,15 @@ const interviewItems: InterviewItem[] = [
         occupation: "UI/UXデザイナー",
         description: "東京都出身。ユーザー体験の向上を目指したデザイン設計を担当"
     }
-
 ];
 
-const InterviewItems: React.FC = () => {
+export default function InterviewItems() {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedItem, setSelectedItem] = useState<InterviewDetail | null>(null);
+    const [selectedItem, setSelectedItem] = useState<InterviewDetailType | null>(null);
 
     // モーダルを表示する
-    const openModal = (interviewItems: InterviewDetail) => {
-        setSelectedItem(interviewItems);
+    const openModal = (item: InterviewDetailType) => {
+        setSelectedItem(item);
         setIsModalOpen(true);
     };
 
@@ -70,7 +54,6 @@ const InterviewItems: React.FC = () => {
     return (
         <>
             <HeadTitle>メンバーインタビュー</HeadTitle>
-
             <div className="flex justify-center mx-auto w-[90%] md:w-[70%] pb-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                     {interviewItems.map((item) => (
@@ -82,7 +65,6 @@ const InterviewItems: React.FC = () => {
                     ))}
                 </div>
             </div>
-
             {/* モーダルコンポーネント */}
             <Modal
                 isOpen={isModalOpen}
@@ -91,6 +73,4 @@ const InterviewItems: React.FC = () => {
             />
         </>
     );
-};
-
-export default InterviewItems;
+}

@@ -9,8 +9,8 @@ import { HoverShapeButtonWithIcon } from '../../../components/ui/button/HoverSha
 import { ChevronRight } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import styles from '../../../components/news/news.module.css';
-import PageTitle from '@/components/shared/PageTitle';
-import { Header } from '@/components/header/Header';
+import { RecruitArea } from '@/components/shared/RecruitArea';
+import Pankuzu from '@/components/shared/Pankuzu';
 
 interface BlogArticleProps {
     id: string;
@@ -62,10 +62,13 @@ export default function NewsDetailClient({ article }: { article: BlogArticleProp
 
     return (
         <main>
-            <Header />
-            <PageTitle
+            <Pankuzu
                 titleJP="お知らせ"
                 subtitleEN="NEWS"
+                breadcrumbs={[
+                    { label: "お知らせ", href: "/news" },
+                    { label: article.title}
+                ]}
             />
             <div className="flex justify-center">
                 <div className="mx-auto bg-white w-[90%] md:w-[70%]">
@@ -84,6 +87,9 @@ export default function NewsDetailClient({ article }: { article: BlogArticleProp
                     onClick={handleBackToList}>
                     NEWS一覧を見る
                 </HoverShapeButtonWithIcon>
+            </div>
+            <div className='my-16'>
+                <RecruitArea></RecruitArea>
             </div>
         </main>
     );

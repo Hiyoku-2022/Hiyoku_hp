@@ -1,59 +1,39 @@
 // インタビューのモーダルコンポーネント
 import Image from "next/image";
 import { useEffect } from 'react';
-
-type InterviewDetail= {
-    id:number;
-    alt: string;
-    member: string;
-    name: string;
-    join:string;
-    joiningReason:string;
-    workAttraction:string;
-    companyAttraction:string;
-    target:string;
-    occupation: string;
-    description?: string;
-}
+import { InterviewDetailType } from './InterviewDetail';
 
 interface ModalProps {
     isOpen: boolean;
-    item: InterviewDetail | null;
+    item: InterviewDetailType | null;
     onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, item, onClose }) => {
+export default function Modal({ isOpen, item, onClose }: ModalProps) {
     useEffect(() => {
-        // モーダルを閉じる処理
         const handleEscape = (e: KeyboardEvent) => {
             if (e.key === 'Escape') {
                 onClose();
             }
         };
-
-        // モーダルが開いている場合の処理
         if (isOpen) {
             document.addEventListener('keydown', handleEscape);
             document.body.style.overflow = 'hidden';
         }
-
-        // クリーンアップ関数
         return () => {
             document.removeEventListener('keydown', handleEscape);
             document.body.style.overflow = 'unset';
         };
     }, [isOpen, onClose]);
 
-    // モーダルが閉じているか、アイテムデータがない場合は何も表示しない
     if (!isOpen || !item) return null;
 
     return (
         <div className="fixed inset-0 z-10 flex items-center justify-center bg-black/50">
             <div 
-                className="fixed inset-0 ransition-opacity"
+                className="fixed inset-0 transition-opacity"
                 onClick={onClose}
             />
-            
             <div className="relative bg-white rounded-lg shadow-xl w-[90%] md:w-[70%] mx-4 p-6 z-10 transform transition-all overflow-y-auto h-[90vh] md:h-[70vh]">
                 <button
                     onClick={onClose}
@@ -62,7 +42,6 @@ const Modal: React.FC<ModalProps> = ({ isOpen, item, onClose }) => {
                 >
                     ×
                 </button>
-                
                 <div className="w-full md:w-[90%] mx-auto my-2 md:my-8">
                     <div className="flex my-4">
                         <Image src="/recruit/interviewIcon.svg" alt="popup" width={100} height={100} />
@@ -72,12 +51,11 @@ const Modal: React.FC<ModalProps> = ({ isOpen, item, onClose }) => {
                                 <p className="mx-2 font-bold text-[16px]">{item.join}</p>
                             </div>
                             <div className="flex items-center my-2">
-                                <p className="border text-center mx-2  my-2 p-2 text-[12px]">職業</p>
+                                <p className="border text-center mx-2 my-2 p-2 text-[12px]">職業</p>
                                 <p className="font-bold text-[16px] md:mx-2 my-2">{item.occupation}</p>
                             </div>
                         </div>
                     </div>
-                    
                     <div className="bg-gray-100 p-4 relative rounded-md
                         before:content-[''] 
                         before:absolute 
@@ -90,8 +68,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, item, onClose }) => {
                         before:border-r-transparent 
                         before:border-b-gray-100
                         before:-top-[15px]
-                        before:left-[38px]
-                    ">
+                        before:left-[38px]">
                         <p className="text-[16px]">{item.description}</p>
                     </div>
                     <div className="border-b">
@@ -110,15 +87,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, item, onClose }) => {
                         <p className="text-sub03 text-[19px] mt-8 my-4">今後の目標</p>
                         <p className="py-4 text-[16px]">{item.target}</p>
                     </div>
-                    <div className="border-b">
-                        <p className="text-sub03 text-[19px] mt-8 my-4">今後の目標</p>
-                        <p className="py-4 text-[16px]">{item.target}</p>
-                    </div>
                 </div>
             </div>
         </div>
-        
     );
-};
-
-export default Modal;
+}

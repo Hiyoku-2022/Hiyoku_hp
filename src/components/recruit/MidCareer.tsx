@@ -21,7 +21,7 @@ const midCareerList: MidCareerItem[] = [
     { id: 11, column: '選考フロー', detail: '' },
 ];
 
-const midCareer: React.FC = () => {
+export default function MidCareer() {
     return (
         <div className="border w-full">
             <h1 className="text-center mt-10 font-bold font-Family_1 text-[23px]">
@@ -45,6 +45,4 @@ const midCareer: React.FC = () => {
             </div>
         </div>
     );
-};
-
-export default midCareer;
+}

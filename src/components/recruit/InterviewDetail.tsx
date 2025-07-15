@@ -1,7 +1,7 @@
 // インタビューのメンバー全員を表示するコンポーネント
 import Image from "next/image";
 
-type InterviewDetail = {
+export type InterviewDetailType = {
     id: number;
     alt: string;
     member: string;
@@ -16,22 +16,21 @@ type InterviewDetail = {
 };
 
 interface InterviewDetailProps {
-    item: InterviewDetail;
-    onClick: (item: InterviewDetail) => void;
+    item: InterviewDetailType;
+    onClick: (item: InterviewDetailType) => void;
 }
 
-const InterviewDetail: React.FC<InterviewDetailProps> = ({ item, onClick }) => {
+export default function InterviewDetail({ item, onClick }: InterviewDetailProps) {
     return (
         <div
             onClick={() => onClick(item)}
             className="group cursor-pointer"
         >
-
             {/* PC用画像（md以上で表示） */}
             <div className="relative hidden md:block">
                 <Image
                     src="/recruit/interview.svg"
-                    alt={item.alt}
+                    alt={item.alt || 'インタビューメンバー画像'}
                     width={400}
                     height={800}
                 />
@@ -46,7 +45,7 @@ const InterviewDetail: React.FC<InterviewDetailProps> = ({ item, onClick }) => {
             <div className="relative block md:hidden">
                 <Image
                     src="/recruit/interview_md.svg"
-                    alt={item.alt}
+                    alt={item.alt || 'インタビューメンバー画像'}
                     width={800}
                     height={1600}
                     className="rounded-xl"
@@ -70,4 +69,3 @@ const InterviewDetail: React.FC<InterviewDetailProps> = ({ item, onClick }) => {
     );
 };
 
-export default InterviewDetail;
