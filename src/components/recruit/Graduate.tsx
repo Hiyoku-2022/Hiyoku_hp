@@ -21,7 +21,7 @@ const graduateList: GraduateItem[] = [
     { id: 11, column: '選考フロー', detail: 'テキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入ります' },
 ];
 
-const graduate: React.FC = () => {
+export default function Graduate() {
     return (
         <div className="border w-full">
             <h1 className="text-center mt-10 font-bold font-Family_1 text-[23px]">
@@ -45,6 +45,4 @@ const graduate: React.FC = () => {
             </div>
         </div>
     );
-};
-
-export default graduate;
+}

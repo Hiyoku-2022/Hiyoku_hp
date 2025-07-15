@@ -4,9 +4,9 @@
 --------------------------------------------*/
 'use client';
 import React, { useState } from "react";
-import PageTitle from '@/components/shared/PageTitle';
 import BlogTitleList from '../../components/news/BlogTitleList';
-import { Header } from "@/components/header/Header";
+import { RecruitArea } from "@/components/shared/RecruitArea";
+import Pankuzu from "@/components/shared/Pankuzu";
 
 //NEWS記事の閲覧状況を格納
 const VISITED_BLOG_IDS_KEY = 'visitedBlogIds';
@@ -26,10 +26,12 @@ export default function NewsPage() {
 
     return (
         <main>
-            <Header />
-            <PageTitle
+            <Pankuzu
                 titleJP="お知らせ"
                 subtitleEN="NEWS"
+                breadcrumbs={[
+                    { label: "お知らせ" }
+                ]}
             />
             <div className="my-16">
                 <BlogTitleList
@@ -37,6 +39,9 @@ export default function NewsPage() {
                     visitedBlogIds={visitedBlogIds} 
                     itemPerPage={10} 
                 />
+            </div>
+            <div className="my-16">
+                 <RecruitArea></RecruitArea>
             </div>
         </main>
     );

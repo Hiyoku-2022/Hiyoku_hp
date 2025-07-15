@@ -1,5 +1,5 @@
 // 採用募集コンポーネント
-"use client";
+'use client';
 import React, { useState } from 'react';
 import { useRouter } from "next/navigation";
 import { HoverShapeButtonWithIcon } from "../ui/button";
@@ -10,7 +10,7 @@ import MidCareer from "./MidCareer";
 
 type RecruitmentType = 'graduate' | 'midCareer';
 
-const solicitation: React.FC = () => {
+export default function Solicitation() {
     const [currentRecruitment, setCurrentRecruitment] = useState<RecruitmentType>('graduate');
     const router = useRouter();
 
@@ -50,12 +50,10 @@ const solicitation: React.FC = () => {
                         中途採用
                     </button>
                 </div>
-                
                 <div className="mx-auto h-auto">
                     {currentRecruitment === "graduate" && <Graduate />}
                     {currentRecruitment === "midCareer" && <MidCareer />}
                 </div>
-                
                 <div className="flex justify-center my-16">
                     <HoverShapeButtonWithIcon
                         variant="orange"
@@ -68,6 +66,4 @@ const solicitation: React.FC = () => {
             </div>
         </div>
     );
-};
-
-export default solicitation;
+}
