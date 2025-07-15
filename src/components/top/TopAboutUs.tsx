@@ -98,7 +98,7 @@ export function TopAboutUS() {
                         icon={<ChevronRight className="w-4 h-4 transition-colors" />}
                         className="w-[200px]"
                     >
-                        テキスト
+                        私たちについて
                     </ButtonWithIcon>
                 </Link>
             </div>
