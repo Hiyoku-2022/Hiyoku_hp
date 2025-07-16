@@ -89,7 +89,7 @@ export default function NewsDetailClient({ article }: { article: BlogArticleProp
                 </HoverShapeButtonWithIcon>
             </div>
             <div className='my-16'>
-                <RecruitArea></RecruitArea>
+                <RecruitArea />
             </div>
         </main>
     );

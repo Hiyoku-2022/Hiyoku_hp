@@ -41,7 +41,7 @@ export default function NewsPage() {
                 />
             </div>
             <div className="my-16">
-                 <RecruitArea></RecruitArea>
+                 <RecruitArea />
             </div>
         </main>
     );
