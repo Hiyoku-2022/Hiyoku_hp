@@ -26,7 +26,7 @@ export const PromiseCard: React.FC<PromiseCardProps> = ({
       />
       
       {/*中間タイトルの設定*/}
-      <h3 className="mt-5 text-xl tracking-wider leading-8 text-center text-gray-600">
+      <h3 className="mt-5 text-xl tracking-wider leading-8 text-center text-gray-700">
         {title.split("\n").map((line, index) => (
           <React.Fragment key={index}>
             {line}
@@ -36,7 +36,7 @@ export const PromiseCard: React.FC<PromiseCardProps> = ({
       </h3>
       
       {/*詳細文の設定*/}
-      <p className="mt-5 text-base tracking-wider leading-7 text-gray-600">
+      <p className="mt-5 text-base tracking-wider leading-7 text-gray-700">
         {description}
       </p>
     </article>

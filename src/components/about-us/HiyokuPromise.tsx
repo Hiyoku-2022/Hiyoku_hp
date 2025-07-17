@@ -38,7 +38,7 @@ const promiseData: PromiseData[] = [
 
 export const HiyokuPromise: React.FC = () => {
   return (
-    <section className="flex flex-col justify-center items-center px-64 py-24 font-medium text-gray-600 max-md:px-5">
+    <section className="flex flex-col justify-center items-center px-64 py-24 font-medium text-gray-700 max-md:px-5">
       <HeadTitle>Hiyokuの約束</HeadTitle>
       <div className="flex flex-wrap gap-8 justify-center mt-16 max-md:mt-10 max-md:max-w-full">
         {promiseData.map((promise, index) => (
