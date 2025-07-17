@@ -1,10 +1,8 @@
 import React from "react";
-import { HiyokuPhilosophy } from "../../components/about-us/HiyokuPhilosophy";
+import { HiyokuThoughts } from "../../components/about-us/HiyokuThoughts";
 import { HiyokuPromise } from "../../components/about-us/HiyokuPromise";
 import {CompanyOverview} from "../../components/about-us/CompanyOverview";
-
 import { RecruitArea } from "@/components/shared/RecruitArea";
-import PageTitle from '@/components/shared/PageTitle';
 import Pankuzu from "@/components/shared/Pankuzu";
 
 export default function AboutUsPage() {
@@ -19,7 +17,7 @@ return (
             />
 
     {/* Hiyokuの想い */}
-        <HiyokuPhilosophy />
+        <HiyokuThoughts />
 
     {/* Hiyokuの約束 */}
         <HiyokuPromise />

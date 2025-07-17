@@ -1,6 +1,6 @@
-"use client";
 import * as React from "react";
 import { PromiseCard } from "./PromiseCard";
+import HeadTitle from "./HeadTitle";
 
 interface PromiseData {
   id: string;
@@ -10,6 +10,7 @@ interface PromiseData {
 }
 
 const promiseData: PromiseData[] = [
+    // 活躍できるエンジニアを育てるの設定詳細
   {
     id: "engineer-development",
     imageUrl: "/about-us/left.png",
@@ -17,6 +18,7 @@ const promiseData: PromiseData[] = [
     description:
       "シリコンバレーや世界的なIT企業では マストな知識であるコンピュータサイエンス も習得します。 アルゴリズムを徹底的に鍛え、 問題解決能力を飛躍的に向上させます。 新人研修から既存エンジニアのリスキリングまで、 御社の人材をさらに価値ある存在に引き上げます。",
   },
+  //革新的な技術でエンジニア採用の常識を変えるの設定詳細
   {
     id: "recruitment-innovation",
     imageUrl: "/about-us/center.png",
@@ -24,6 +26,7 @@ const promiseData: PromiseData[] = [
     description:
       "現在は、採用基準をどうしてもスキルシートに 頼らざるを得ない状況となっています。 果たしてそれで本当に良いのでしょうか？ 企業と人にミスマッチが生じない。経験値だけではなく 将来性や問題解決能力、コミュニケーション能力などを 総合的に判断でき、より費用対効果の高い リクルートシステムをクリエイティブしていきます。",
   },
+  // 世界の貧困差をなくすの設定詳細
   {
     id: "poverty-elimination",
     imageUrl: "/about-us/right.png",
@@ -36,17 +39,14 @@ const promiseData: PromiseData[] = [
 export const HiyokuPromise: React.FC = () => {
   return (
     <section className="flex flex-col justify-center items-center px-64 py-24 font-medium text-gray-600 max-md:px-5">
-      <header className="gap-2.5 pb-1.5 text-3xl font-medium tracking-wider leading-10 text-center text-gray-600 border-b-2 border-solid border-b-gray-600 max-md:text-2xl max-md:tracking-wider max-sm:text-xl max-sm:tracking-wider">
-        <h1>Hiyokuの約束</h1>
-      </header>
-
+      <HeadTitle>Hiyokuの約束</HeadTitle>
       <div className="flex flex-wrap gap-8 justify-center mt-16 max-md:mt-10 max-md:max-w-full">
         {promiseData.map((promise, index) => (
           <PromiseCard
             key={promise.id}
-            imageUrl={promise.imageUrl}
-            title={promise.title}
-            description={promise.description}
+            imageUrl={promise.imageUrl}         // 画像
+            title={promise.title}               // 中間タイトル
+            description={promise.description}   // 詳細文
             className={
               index === 1 ? "flex flex-col justify-center my-auto" : ""
             }

@@ -1,15 +1,23 @@
 import * as React from "react";
-import { PhilosophySection } from "./PhilosophySection";
 
-export function PhilosophyContent() {
+export function ThoughtsContent() {
+  const baseClasses =
+    "self-stretch tracking-wider max-md:tracking-wide max-sm:tracking-wide max-sm:text-sm max-sm:leading-6";
+
   const sections = [
     {
-      title: "社名の由来ー『比翼の翼と連理の枝』",
-      isTitle: true,
+      content: (
+        <>
+          社名の由来ー『比翼の翼と連理の枝』
+        </>
+      ),
     },
     {
-      content:
-        "「天にあっては比翼の鳥となり、地にあっては連理の枝とならん」という、中国の長編叙事詩の中に有名な一節があります。",
+      content: (
+        <>
+          「天にあっては比翼の鳥となり、地にあっては連理の枝とならん」という、中国の長編叙事詩の中に有名な一節があります。
+        </>
+      ),
     },
     {
       content: (
@@ -84,14 +92,13 @@ export function PhilosophyContent() {
 
   return (
     <article className="flex flex-col gap-8 justify-between items-start self-stretch">
-      {sections.map((section, index) => (
-        <PhilosophySection
-          key={index}
-          title={section.title}
-          content={section.content}
-          isTitle={section.isTitle}
-        />
-      ))}
+      {sections.map((section, index) =>
+        section.content ? (
+          <section key={index} className={baseClasses}>
+            {section.content}
+          </section>
+        ) : null
+      )}
     </article>
   );
 }
