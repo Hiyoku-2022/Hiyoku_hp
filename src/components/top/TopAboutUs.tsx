@@ -6,7 +6,7 @@ import { ButtonWithIcon } from "../ui/button";
 import { ChevronRight } from "lucide-react";
 
 export function TopAboutUS() {
-    const [visibleIndex, setVisibleIndex] = useState<number[]>([]);
+    const [visibleIndex] = useState<number[]>([]);
     const refs = useRef<(HTMLDivElement | null)[]>([]);
     const visibleSet = useRef<Set<number>>(new Set());
 
@@ -25,12 +25,13 @@ export function TopAboutUS() {
             { threshold: 0.3 }
         );
 
-        refs.current.forEach((ref) => {
+        const currentRefs = refs.current;
+        currentRefs.forEach((ref) => {
             if (ref) observer.observe(ref);
         });
 
         return () => {
-            refs.current.forEach((ref) => {
+            currentRefs.forEach((ref) => {
                 if (ref) observer.unobserve(ref);
             });
         };
