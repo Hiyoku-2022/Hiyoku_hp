@@ -8,8 +8,8 @@ export function TopService() {
     return (
         <div className="relative">
             <div className="relative pt-20 px-4 max-w-4xl mx-auto text-center mb-5 z-40">
-                <h1 className="text-foreground text-lg underline underline-offset-4 pb-5">プロダクト</h1>
-                <p className="text-foreground text-3xl pb-5">Re-Light LMS</p>
+                <h1 className="md:text-xl underline underline-offset-4 pb-5">プロダクト</h1>
+                <p className="font-Family_2 text-3xl md:text-4xl pb-5">Re-Light LMS</p>
             </div>
             <div
                 className={`

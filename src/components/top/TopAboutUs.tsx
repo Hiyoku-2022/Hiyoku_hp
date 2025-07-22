@@ -44,10 +44,10 @@ export function TopAboutUS() {
 
     return (
         <div className="relative">
-            <div className="relative pt-20 px-4 max-w-4xl mx-auto text-center mb-5 z-40">
-                <p className="text-foreground text-lg underline underline-offset-4 pb-5">私たちについて</p>
-                <p className="text-foreground text-3xl pb-5">教育で世界の貧困差をなくす</p>
-                <div className="text-foreground text-lg pb-5">
+            <div className="relative pt-20 px-4 max-w-4xl mx-auto text-center mb-5 space-y-5 z-40">
+                <p className="md:text-xl underline underline-offset-4">私たちについて</p>
+                <p className="text-3xl md:text-4xl">教育で世界の貧困差をなくす</p>
+                <div className="pb-5 md:text-xl leading-relaxed">
                     <p className="mb-5">私たちHiyoku合同会社は教育事業をベースに、</p>
                     <p>「価値あるものを世の中に生み出していきたい」</p>
                     <p>「本当に価値のある人材を育てていきたい」</p>
@@ -77,7 +77,7 @@ export function TopAboutUS() {
                         `}
                         style={{ animationDelay: `${i * 0.5}s` }}
                     >
-                        <p className="rounded-full bg-white text-base px-6 font-medium">{label}</p>
+                        <p className="rounded-full bg-white px-6">{label}</p>
                         <div className="w-[50%] md:w-[75%] aspect-square rounded-[80px] md:rounded-[100px] overflow-hidden z-10">
                             <Image
                                 src={src}
@@ -87,7 +87,7 @@ export function TopAboutUS() {
                                 className="w-full h-full object-cover  z-20"
                             />
                         </div>
-                        <p className="text-foreground text-base whitespace-pre-line">{text}</p>
+                        <p className="md:text-xl whitespace-pre-line leading-relaxed">{text}</p>
                     </div>
                 ))}
             </div>
