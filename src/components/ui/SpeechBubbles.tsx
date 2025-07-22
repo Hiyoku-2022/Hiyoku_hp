@@ -39,7 +39,7 @@ export const SpeechBubble = ({ bgImage, text }: SpeechBubbleProps) => (
         style={{ backgroundImage: `url(${bgImage})` }}
         >
             <div className="flex items-center text-center">
-                <span className="text-base leading-snug font-bold">{text}</span>
+                <span className="text-base leading-snug font-bold pb-[30px] md:pb-[20px]">{text}</span>
             </div>
     </div>
 );

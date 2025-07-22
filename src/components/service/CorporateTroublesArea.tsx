@@ -5,10 +5,10 @@ import { SpeechBubble, texts } from "../ui/SpeechBubbles";
 export function CorporateTroublesArea () {
     return (
         <div className="bg-background">
-            <div className="flex justify-center items-center text-center mb-[100px]">
-                <p className="relative text-3xl text-sub03">
+            <div className="flex justify-center items-center text-center py-[100px]">
+                <p className="relative text-3xl md:text-4xl text-sub03 tracking-widest font-semibold">
                     企業でこのようなお悩みを<span className="md:hidden"><br /></span>抱えていませんか？
-                    <span className="absolute bottom-0 left-0 w-full border-b-[1.5px] border-dashed border-black translate-y-[5px]"></span>
+                    <span className="absolute bottom-0 left-0 w-full border-b-[2px] border-dashed border-foreground translate-y-[5px]"></span>
                 </p>
             </div>
             <div className={`

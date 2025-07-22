@@ -9,26 +9,18 @@ import { SystemFeaturesArea } from "@/components/service/SystemFeaturesArea";
 
 export default function ServicePage() {
 return (
-    <div className="bg-white">
+    <div>
         <Header />
 
         <TopArea />
-
-        <div className="mt-[150px] md:mt-[200px]" />
 
         <CorporateTroublesArea />
 
         <IntroductionEffectArea />
 
-        <div className="mt-[150px] md:mt-[200px]" />
-
         <CaseStudyArea />
 
-        <div className="mt-[150px] md:mt-[200px]" />
-
         <FormArea />
-
-        <div className="mt-[150px] md:mt-[200px]" />
 
         <SystemFeaturesArea />
 

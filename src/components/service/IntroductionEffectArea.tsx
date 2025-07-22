@@ -47,13 +47,13 @@ export function IntroductionEffectArea () {
                             className="w-[400px]"
                         />
                     </div>
-                    <div className="text-4xl md:text-5xl leading-relaxed tracking-wide">
+                    <div className="font-Family_2 text-4xl md:text-5xl leading-relaxed tracking-wide">
                         <p>INTRODUCTION</p>
                         <p>EFFECTS</p>
                     </div>
-                    <p className="text-xl tracking-wide">導入するメリット</p>
+                    <p className="text-xl md:text-2xl tracking-wide">導入するメリット</p>
                 </div>
-            <div className="flex flex-col md:flex-row items-center w-[90%] justify-center gap-6 mt-10">
+            <div className="flex flex-col md:flex-row items-center w-[90%] justify-center gap-6 mt-10 z-30">
                 {contents.map(({ id, img, title, text }) => (
                     <div
                         key={id}
@@ -62,15 +62,17 @@ export function IntroductionEffectArea () {
                         {/* 数字エリア（中央上に重ねる） */}
                         <div className={`
                             absolute
-                            top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10 w-20 h-20 rounded-full bg-white border border-white
+                            top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10
+                            w-[50px] h-[50px] md:w-[70px] md:h-[70px]
+                            rounded-full bg-white border border-white
                             flex items-center justify-center
                         `}>
-                            <p className="text-sub03 text-3xl font-bold">{id}</p>
+                            <p className="text-sub03 text-2xl md:text-3xl font-bold">{id}</p>
                         </div>
 
                         {/* コンテンツエリア */}
                         <div className="flex flex-col w-full overflow-hidden rounded-lg shadow-md">
-                            <div className="w-full h-[250px] bg-sub05 flex justify-center items-center">
+                            <div className="w-full h-[275px] bg-sub05 flex justify-center items-center">
                                 <Image
                                     src={img}
                                     alt=""
@@ -81,8 +83,8 @@ export function IntroductionEffectArea () {
                             </div>
 
                             {/* テキストエリア */}
-                            <div className="w-full h-[250px] bg-white flex flex-col justify-center items-center p-4 text-center">
-                                <p className="text-center text-xl font-semibold text-sub03 mb-3">{title}</p>
+                            <div className="w-full h-[275px] bg-white flex flex-col justify-center items-center p-4">
+                                <p className="text-center text-lg md:text-xl font-semibold text-sub03 mb-3">{title}</p>
                                 <p className="text-start">{text}</p>
                             </div>
                         </div>

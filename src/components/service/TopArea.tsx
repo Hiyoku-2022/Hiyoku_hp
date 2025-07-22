@@ -15,7 +15,7 @@ export function TopArea () {
                 text-white text-center
             `}>
                 <div className="md:w-[50%] text-center">
-                    <p className="text-5xl md:text-6xl tracking-widest">Re-Light LMS</p>
+                    <p className="font-Family_2 text-5xl md:text-6xl tracking-widest">Re-Light LMS</p>
                 </div>
                 <div className="md:w-[50%] text-center md:text-start leading-relaxed">
                     <div className="text-3xl md:text-4xl tracking-wide font-bold space-y-3 mb-5">

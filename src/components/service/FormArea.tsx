@@ -19,7 +19,7 @@ export function FormArea() {
                 <p className="text-xl font-bold mb-[20px]"><span className="text-sub03">お申し込み・お問い合わせ</span>はこちら</p>
                 <div className="flex flex-col md:flex-row justify-center items-center md:space-x-10 mb-[20px]">
                     <div className="w-[90%] md:w-[40%] text-center">
-                        <p className="text-4xl tracking-widest mb-[20px] md:mb-0">Re-Light LMS</p>
+                        <p className="font-Family_2 text-4xl md:text-5xl tracking-widest mb-[20px] md:mb-0">Re-Light LMS</p>
                     </div>
                     <div className="w-[90%] md:w-[40%] flex flex-col text-start">
                         <p className="font-sm">まずはこちらからお問い合わせをお願い致します。</p>

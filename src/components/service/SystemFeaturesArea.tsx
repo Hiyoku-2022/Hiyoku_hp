@@ -31,9 +31,9 @@ export function SystemFeaturesArea () {
     ];
 
     return (
-        <div className="w-full min:h-screen flex flex-col justify-center items-center text-center space-y-5">
+        <div className="w-full min:h-screen flex flex-col justify-center items-center text-center bg-white space-y-5 py-[100px]">
             <div className="space-y-5">
-                <p className="text-4xl md:text-5xl leading-relaxed">SYSTEM<span className="md:hidden"><br /></span>FEATURES</p>
+                <p className="font-Family_2 text-4xl md:text-5xl tracking-widest">SYSTEM<span className="md:hidden"><br /></span>FEATURES</p>
                 <p className="text-base font-semibold text-sub01">システムの特徴</p>
             </div>
             <div className="flex flex-col space-y-5">

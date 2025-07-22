@@ -37,10 +37,10 @@ export function CaseStudyArea() {
     const numberTextKeys = ["type1", "type2", "type3"];
 
     return (
-        <div className="relative flex flex-col justify-center items-center space-y-10">
+        <div className="relative flex flex-col justify-center items-center bg-white space-y-10 py-[100px]">
             <div className="flex flex-col justify-center items-center space-y-3">
-                <p className="text-4xl md:text-5xl tracking-wide">CASE STUDY</p>
-                <p className="text-xl text-sub01 tracking-wide">導入事例</p>
+                <p className="font-Family_2 text-4xl md:text-5xl tracking-widest">CASE STUDY</p>
+                <p className="text-xl md:text-2xl text-sub01 tracking-wide">導入事例</p>
             </div>
             <div className="space-y-5">
                 {stepGroups.map((group, groupIndex) => {
