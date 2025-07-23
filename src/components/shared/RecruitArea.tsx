@@ -36,8 +36,8 @@ export function RecruitArea() {
                 rounded-b-xl md:rounded-b-none md:rounded-tl-xl md:rounded-bl-xl
             `}>
                 <div className="text-center ont-Family_1">
-                    <h2 className="font-bold mt-[10px] text-3xl">RECRUIT</h2>
-                    <p className="font-bold my-[10px] text-xl">採用情報</p>
+                    <h2 className="font-bold mt-[10px] text-5xl md:text-6xl">RECRUIT</h2>
+                    <p className="font-bold my-[10px]">採用情報</p>
                     <p className="w-60 md:w-full text-base md:mt-[50px]">私たちと一緒に働いてくれる仲間を募集しています。</p>
                 </div>
                 <div className={`

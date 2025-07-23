@@ -1,36 +1,30 @@
 import React from "react";
+import { Header } from "@/components/header/Header";
+import { TopArea } from "@/components/service/TopArea";
+import { CorporateTroublesArea } from "@/components/service/CorporateTroublesArea";
+import { IntroductionEffectArea } from "@/components/service/IntroductionEffectArea";
+import { CaseStudyArea } from "@/components/service/CaseStudyArea";
+import { FormArea } from "@/components/service/FormArea";
+import { SystemFeaturesArea } from "@/components/service/SystemFeaturesArea";
 
 export default function ServicePage() {
 return (
-    <main className="pt-20 px-4 max-w-4xl mx-auto">
-        <div>
-        <h1 className="text-3xl font-bold mb-6">サービス</h1>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        </div>
-        <div>
-        <h1 className="text-xl font-bold mb-6">サブコンテンツ</h1>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        </div>
-        <div>
-        <h1 className="text-xl font-bold mb-6">サブコンテンツ</h1>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        </div>
-    </main>
+    <div>
+        <Header />
+
+        <TopArea />
+
+        <CorporateTroublesArea />
+
+        <IntroductionEffectArea />
+
+        <CaseStudyArea />
+
+        <FormArea />
+
+        <SystemFeaturesArea />
+
+
+    </div>
     )
 }

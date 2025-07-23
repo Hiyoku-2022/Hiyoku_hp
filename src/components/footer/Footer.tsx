@@ -19,8 +19,8 @@ export function Footer() {
                 md:flex md:flex-col md:items-center
             `}>
                 <div className={`
-                    flex flex-col  md:flex-row
-                    items-center md: items-start
+                    flex flex-col md:flex-row
+                    items-center md:items-start
                     md:w-[80%]
                     justify-center md:justify-between
                     space-y-5 md:space-y-0
