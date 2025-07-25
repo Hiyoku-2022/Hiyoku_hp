@@ -40,9 +40,9 @@ export function CaseStudyArea() {
         <div className="relative flex flex-col justify-center items-center bg-white space-y-10 py-[100px]">
             <div className="flex flex-col justify-center items-center space-y-3">
                 <p className="font-Family_2 text-4xl md:text-5xl tracking-widest">CASE STUDY</p>
-                <p className="text-xl md:text-2xl text-sub01 tracking-wide">導入事例</p>
+                <p className="text-xl md:text-2xl text-sub01 tracking-wide font-semibold">導入事例</p>
             </div>
-            <div className="space-y-5">
+            <div className="space-y-5 md:space-y-10">
                 {stepGroups.map((group, groupIndex) => {
                     const numberTextKey = numberTextKeys[groupIndex] || "type1";
                     const numberText = NumberTexts[numberTextKey];

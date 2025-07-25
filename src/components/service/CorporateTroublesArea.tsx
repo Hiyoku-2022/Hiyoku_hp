@@ -4,7 +4,7 @@ import { SpeechBubble, texts } from "../ui/SpeechBubbles";
 
 export function CorporateTroublesArea () {
     return (
-        <div className="bg-background">
+        <div className="bg-background md:py-[100px] w-full">
             <div className="flex justify-center items-center text-center py-[100px]">
                 <p className="relative text-3xl md:text-4xl text-sub03 tracking-widest font-semibold">
                     企業でこのようなお悩みを<span className="md:hidden"><br /></span>抱えていませんか？
@@ -14,13 +14,13 @@ export function CorporateTroublesArea () {
             <div className={`
                 relative
                 flex flex-col justify-center items-center
-                gap-y-5
+                w-full gap-y-5
             `}>
                 <div className={`
                     flex flex-col md:flex-row
                     justify-center items-center
                     w-full gap-y-5
-                    md:gap-x-[300px] md:gap-y-0
+                    md:gap-x-[200px] md:gap-y-0
                 `}>
                     <SpeechBubble bgImage="/service/speechBubbleLeft.svg" text={texts.type1} />
                     <SpeechBubble bgImage="/service/speechBubbleRight.svg" text={texts.type2}  />
@@ -32,7 +32,7 @@ export function CorporateTroublesArea () {
                     flex flex-col md:flex-row
                     justify-center items-center
                     w-full gap-y-5
-                    md:gap-x-[200px] md:gap-y-0
+                    md:gap-x-[100px] md:gap-y-0
                 `}>
                     <SpeechBubble bgImage="/service/speechBubbleLeft.svg" text={texts.type3}  />
                     <SpeechBubble bgImage="/service/speechBubbleRight.svg" text={texts.type4}  />

@@ -51,28 +51,17 @@ export function IntroductionEffectArea () {
                         <p>INTRODUCTION</p>
                         <p>EFFECTS</p>
                     </div>
-                    <p className="text-xl md:text-2xl tracking-wide">導入するメリット</p>
+                    <p className="text-xl md:text-2xl tracking-wide font-semibold">導入するメリット</p>
                 </div>
-            <div className="flex flex-col md:flex-row items-center w-[90%] justify-center gap-6 mt-10 z-30">
+            <div className="flex flex-col md:flex-row items-center w-full justify-center gap-6 md:space-x-10 mt-10 z-30">
                 {contents.map(({ id, img, title, text }) => (
                     <div
                         key={id}
-                        className="flex flex-col items-center w-[90%] md:w-[300px] mb-[50px] relative"
+                        className="flex flex-col items-center w-[80%] md:w-[300px] mb-[50px] relative"
                     >
-                        {/* 数字エリア（中央上に重ねる） */}
-                        <div className={`
-                            absolute
-                            top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-10
-                            w-[50px] h-[50px] md:w-[70px] md:h-[70px]
-                            rounded-full bg-white border border-white
-                            flex items-center justify-center
-                        `}>
-                            <p className="text-sub03 text-2xl md:text-3xl font-bold">{id}</p>
-                        </div>
-
                         {/* コンテンツエリア */}
                         <div className="flex flex-col w-full overflow-hidden rounded-lg shadow-md">
-                            <div className="w-full h-[275px] bg-sub05 flex justify-center items-center">
+                            <div className="relative w-full h-[275px] bg-sub05 flex justify-center items-center">
                                 <Image
                                     src={img}
                                     alt=""
@@ -80,11 +69,25 @@ export function IntroductionEffectArea () {
                                     height={200}
                                     className="w-[80%] h-[80%]"
                                 />
+                                {/* 数字エリア（中央上に重ねる） */}
+                                <div className={`
+                                    absolute bottom-0 left-1/2 -translate-x-1/2 z-10
+                                    w-[100px] h-[50px]
+                                    rounded-t-full bg-white border border-white
+                                    flex items-end justify-center
+                                `}>
+                                    <p className="text-sub03 text-3xl leading-none">{id}</p>
+                                </div>
                             </div>
 
                             {/* テキストエリア */}
-                            <div className="w-full h-[275px] bg-white flex flex-col justify-center items-center p-4">
-                                <p className="text-center text-lg md:text-xl font-semibold text-sub03 mb-3">{title}</p>
+                            <div className={`
+                                w-full h-[275px]
+                                bg-white
+                                text-lg md:text-lg font-semibold
+                                flex flex-col justify-center items-center p-4 max-md:space-y-5
+                            `}>
+                                <p className="text-center text-sub03 mb-3">{title}</p>
                                 <p className="text-start">{text}</p>
                             </div>
                         </div>

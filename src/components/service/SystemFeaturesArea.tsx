@@ -31,33 +31,33 @@ export function SystemFeaturesArea () {
     ];
 
     return (
-        <div className="w-full min:h-screen flex flex-col justify-center items-center text-center bg-white space-y-5 py-[100px]">
+        <div className="w-full min:h-screen flex flex-col justify-center items-center text-center bg-white space-y-20 py-[100px]">
             <div className="space-y-5">
                 <p className="font-Family_2 text-4xl md:text-5xl tracking-widest">SYSTEM<span className="md:hidden"><br /></span>FEATURES</p>
-                <p className="text-base font-semibold text-sub01">システムの特徴</p>
+                <p className="text-xl md:text-2xl text-sub01 tracking-wide font-semibold">システムの特徴</p>
             </div>
-            <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-10">
                 {data.map(({ label, src, title, text }) => (
                     <div
                         key={label}
-                        className="flex flex-col md:flex-row items-center justify-center space-y-5 md:space-x-10"
+                        className="flex flex-col md:flex-row items-center justify-center space-y-10 md:space-y-0 md:space-x-20"
                     >
                         <div className={`
                             flex justify-center items-center
-                            w-[250px]
-                            aspect-square rounded-[100px] overflow-hidden bg-sub05 z-10
+                            w-[80%] md:w-[20%]
+                            aspect-square rounded-[180px] md:rounded-[125px] overflow-hidden bg-sub05 z-10
                         `}>
                             <Image
                                 src={src}
                                 alt={`${label} image`}
                                 width={200}
                                 height={200}
-                                className="w-[200px] h-[200px] object-cover z-20"
+                                className="w-full h-full object-cover z-20"
                             />
                         </div>
-                        <div className="w-[90%] md:w-[35%] space-y-3">
-                            <p className="rounded-full bg-white text-sm border border-black text-center w-[50px]">{label}</p>
-                            <p className="text-start text-xl leading-relaxed">{title}</p>
+                        <div className="w-[90%] md:w-[35%] space-y-3 md:space-y-5">
+                            <p className="rounded-full bg-white text-sm border border-black text-center w-[50px] font-semibold">{label}</p>
+                            <p className="text-start text-2xl leading-relaxed">{title}</p>
                             <p className="text-start leading-relaxed">{text}</p>
                         </div>
                     </div>

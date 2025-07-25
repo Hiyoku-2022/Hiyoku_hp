@@ -22,7 +22,7 @@ export function TopArea () {
                         <p>世界を舞台に活躍できる</p>
                         <p>エンジニアを育成する</p>
                     </div>
-                    <div className="leading-relaxed">
+                    <div className="leading-relaxed font-semibold">
                         <p>Hiyokuは2022年に“Re-Light”というLMSをリリースしました。</p>
                         <p className="mb-5 md:mb-0">それから現在まで様々なクライアント様にご好評頂いております。</p>
                         <p className="mb-5 md:mb-0">私たちHiyokuは現場の多忙な教育担当者の業務のリソースを割かず、”本物のエンジニアを育てる”ことに特化した実績のあるLMSです。</p>
