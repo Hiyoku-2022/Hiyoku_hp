@@ -11,8 +11,8 @@ export type Variant =
 export const variantClasses: Record<Variant, string> = {
     blue: "bg-sub03 text-white hover:bg-main",
     orange: "bg-orange text-white hover:bg-sub02",
-    ghostBlue: "bg-white text-black hover:text-sub03",
-    ghostOrange: "bg-white text-black hover:text-sub",
+    ghostBlue: "bg-white text-foreground hover:text-sub03",
+    ghostOrange: "bg-white text-foreground hover:text-sub",
     softBlue: "bg-white text-sub03 hover:text-main",
     softOrange: "bg-white text-sub hover:text-sub02",
     green: "bg-sub01 text-text hover:bg-sub04",
