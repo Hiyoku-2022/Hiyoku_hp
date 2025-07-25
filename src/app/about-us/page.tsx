@@ -1,36 +1,36 @@
 import React from "react";
+import { HiyokuThoughts } from "../../components/about-us/HiyokuThoughts";
+import { HiyokuPromise } from "../../components/about-us/HiyokuPromise";
+import {CompanyOverview} from "../../components/about-us/CompanyOverview";
+import { RecruitArea } from "@/components/shared/RecruitArea";
+import Pankuzu from "@/components/shared/Pankuzu";
 
 export default function AboutUsPage() {
 return (
-    <main className="pt-20 px-4 max-w-4xl mx-auto">
-        <div>
-        <h1 className="text-3xl font-bold mb-6">私たちについて</h1>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        <p className="text-gray-700">これはメインコンテンツエリアです。</p>
-        </div>
-        <div>
-        <h1 className="text-xl font-bold mb-6">サブコンテンツ</h1>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        </div>
-        <div>
-        <h1 className="text-xl font-bold mb-6">サブコンテンツ</h1>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        <p className="text-gray-700">これはサブコンテンツエリアです。</p>
-        </div>
+    <main>
+        <Pankuzu
+                titleJP="私たちについて"
+                subtitleEN="about-us"
+                breadcrumbs={[
+                    { label: "私たちについて" }
+                ]}
+            />
+
+        {/* Hiyokuの想い */}
+        <HiyokuThoughts />
+
+        {/* Hiyokuの約束 */}
+        <HiyokuPromise />
+
+        {/* 会社概要 */}
+        <CompanyOverview />
+
+        {/* 採用情報 */}
+        <RecruitArea />
+
+        <div className="mt-[50px] md:mt-[100px]"/>
+
     </main>
-    )
+
+)
 }
