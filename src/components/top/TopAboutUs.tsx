@@ -45,23 +45,24 @@ export function TopAboutUS() {
 
     return (
         <div className="relative">
-            <div className="relative pt-20 px-4 max-w-4xl mx-auto text-center mb-5 space-y-5 z-40">
+            <div className="relative pt-20 px-4 max-w-4xl mx-auto text-center mb-5 space-y-10 z-40">
                 <p className="md:text-xl underline underline-offset-4">私たちについて</p>
                 <p className="text-3xl md:text-4xl">教育で世界の貧困差をなくす</p>
-                <div className="pb-5 md:text-xl leading-relaxed">
-                    <p className="mb-5">私たちHiyoku合同会社は教育事業をベースに、</p>
-                    <p>「価値あるものを世の中に生み出していきたい」</p>
+                <div className="pb-5 text-lg md:text-xl leading-relaxed space-y-3 md:space-y-5">
+                    <p className="mb-5">私たちHiyoku合同会社は<span className="md:hidden"><br /></span>教育事業をベースに、</p>
+                    <p>「価値あるもの<span className="md:hidden"><br /></span>を世の中に生み出していきたい」</p>
                     <p>「本当に価値のある人材を育てていきたい」</p>
-                    <p className="mb-5">そんな想いで始まった、2022年11月に誕生したスタートアップ企業です。</p>
-                    <p>エンジニアとしての技術力を手に日本から海外に向けて、</p>
-                    <p>世界的な社会貢献が可能な人材の育成に本気で取り組んでいます。</p>
+                    <p className="mb-5">そんな想いで始まった、<span className="md:hidden"><br /></span>2022年11月に誕生した<span className="md:hidden"><br /></span>スタートアップ企業です。</p>
+                    <p>エンジニアとしての技術力を手に<span className="md:hidden"><br /></span>日本から海外に向けて、</p>
+                    <p>世界的な社会貢献が可能な人材の育成に<span className="md:hidden"><br /></span>本気で取り組んでいます。</p>
                 </div>
             </div>
             <div
                 className={`
                     z-40
-                    max-w-5xl mx-auto px-4 mb-5
+                    max-w-5xl mx-auto
                     flex flex-col items-center
+                    space-y-10 md:space-y-0
                     md:grid md:grid-cols-3 md:gap-5 md:items-start
                 `}
             >
@@ -72,32 +73,32 @@ export function TopAboutUS() {
                         data-index={i}
                         className={`
                             flex flex-col items-center text-center
-                            w-full max-w-sm mx-auto space-y-3 mb-3
+                            w-full max-w-sm mx-auto space-y-5 mb-3
                             opacity-0
                             ${visibleIndex.includes(i) ? "animate-fadeInMoreSoft" : ""}
                         `}
                         style={{ animationDelay: `${i * 0.5}s` }}
                     >
-                        <p className="rounded-full bg-white px-6">{label}</p>
-                        <div className="w-[50%] md:w-[75%] aspect-square rounded-[80px] md:rounded-[100px] overflow-hidden z-10">
+                        <p className="text-xl rounded-full bg-white px-6">{label}</p>
+                        <div className="w-[75%] aspect-square rounded-[120px] md:rounded-[100px] overflow-hidden z-10">
                             <Image
                                 src={src}
                                 alt={`${label} image`}
                                 width={275}
                                 height={275}
-                                className="w-full h-full object-cover  z-20"
+                                className="w-full h-full object-cover z-20"
                             />
                         </div>
-                        <p className="md:text-xl whitespace-pre-line leading-relaxed">{text}</p>
+                        <p className="text-xl whitespace-pre-line leading-relaxed">{text}</p>
                     </div>
                 ))}
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center pt-10">
                 <Link href="/about-us">
                     <ButtonWithIcon
                         variant="blue"
                         icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                        className="w-[200px]"
+                        className="w-48 py-4"
                     >
                         私たちについて
                     </ButtonWithIcon>

@@ -9,11 +9,11 @@ export function RecruitArea() {
         <div className={`
             flex flex-col md:flex-row-reverse
             justify-center items-center md:items-stretch
-            mx-auto px-4 w-[90%] md:w-[60%]
+            mx-auto px-4 w-[90%] md:w-[65%]
         `}>
             <div className={`
-                w-full min-h-[250px]
-                md:w-2/5 md:min-h-[350px]
+                w-full min-h-[300px]
+                md:w-2/5 md:min-h-[400px]
                 flex justify-center items-center
                 bg-[url('/common/SharedRecruitBg.svg')]
                 bg-center bg-contain bg-cover
@@ -29,19 +29,20 @@ export function RecruitArea() {
             </div>
 
             <div className={`
-                w-full min-h-[300px]
-                md:min-h-[350px] md:w-3/5
+                w-full min-h-[400px]
+                md:min-h-[400px] md:w-3/5
                 flex flex-col justify-center items-center
                 bg-white p-4
                 rounded-b-xl md:rounded-b-none md:rounded-tl-xl md:rounded-bl-xl
             `}>
                 <div className="text-center ont-Family_1">
                     <h2 className="font-bold mt-[10px] text-5xl md:text-6xl">RECRUIT</h2>
-                    <p className="font-bold my-[10px]">採用情報</p>
-                    <p className="w-60 md:w-full text-base md:mt-[50px]">私たちと一緒に働いてくれる仲間を募集しています。</p>
+                    <p className="font-bold text-xl my-[10px]">採用情報</p>
+                    <p className="w-60 md:w-full text-lg md:mt-[50px]">私たちと一緒に働いてくれる仲間を募集しています。</p>
                 </div>
                 <div className={`
                     flex flex-col xl:flex-row
+                    space-y-5
                     xl:space-y-0 xl:space-x-4
                     xl:mt-[50px]
                 `}>
@@ -52,7 +53,7 @@ export function RecruitArea() {
                         <HoverShapeButtonWithIcon
                             variant="blue"
                             icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                            className="w-[200px]"
+                            className="w-[200px] py-4"
                         >
                             詳しく見る
                         </HoverShapeButtonWithIcon>
@@ -64,7 +65,7 @@ export function RecruitArea() {
                         <HoverShapeButtonWithIcon
                             variant="orange"
                             icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                            className="w-[200px]"
+                            className="w-[200px] py-4"
                         >
                             エントリーフォーム
                         </HoverShapeButtonWithIcon>
