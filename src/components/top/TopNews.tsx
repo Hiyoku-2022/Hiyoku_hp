@@ -39,8 +39,8 @@ export function TopNews() {
     return (
         <>
             <div className="relative z-40 my-16 w-auto">
-                <p className="text-center font-Family_3 font-bold text-[56px]">NEWS</p>
-                <p className="text-center font-bold font-Family_1 text-[16px]">ニュース</p>
+                <p className="text-center font-Family_3 font-bold text-6xl">NEWS</p>
+                <p className="text-center font-bold text-base">ニュース</p>
             </div>
             <div className="my-16">
                 <BlogTitleList

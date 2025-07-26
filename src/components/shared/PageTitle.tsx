@@ -9,9 +9,9 @@ export default function PageTitle({titleJP,subtitleEN}:PageTitleProps) {
     return(
         <>
         <header className="py-16 mt-32 md:py-32 text-center">
-            <h1 className="font-Family_2 text-[23px] font-semibold md:text-[33px]">{titleJP}</h1>
+            <h1 className="font-Family_2 text-2xl font-semibold md:text-3xl">{titleJP}</h1>
             {subtitleEN && (
-                <p className="font-Family_3 font-bold text-[16px] text-center m-4">{subtitleEN}</p>
+                <p className="font-Family_3 font-bold text-base text-center m-4">{subtitleEN}</p>
             )}
         </header>
         </>

@@ -10,9 +10,7 @@ const interviewItems: InterviewDetailType[] = [
     {
         id: 1,
         alt: "picture",
-        member: "Aさん",
-        name: "Aさん",
-        join: "2024年キャリア採用",
+        member: "未経験からエンジニアへ！ Aさん",
         joiningReason: "友人からの紹介で興味を持ち、会社説明会に参加したことがきっかけでした。",
         workAttraction: "チームワークを重視した開発環境と、新しい技術にチャレンジできる機会が豊富なところです。",
         companyAttraction: "社員一人ひとりの成長を大切にし、働きやすい環境作りに力を入れているところです。",
@@ -23,9 +21,7 @@ const interviewItems: InterviewDetailType[] = [
     {
         id: 2,
         alt: "picture",
-        member: "Bさん",
-        name: "Bさん",
-        join: "2024年キャリア採用",
+        member: "更なるスキルアップを追求する！ Bさん",
         joiningReason: "転職活動中に求人サイトで見つけ、事業内容に共感したためです。",
         workAttraction: "自分のアイデアを形にできる環境と、ユーザーの声を直接聞ける機会があることです。",
         companyAttraction: "多様性を重視し、個人の強みを活かせる職場環境が整っているところです。",
@@ -65,12 +61,12 @@ export default function InterviewItems() {
                     ))}
                 </div>
             </div>
-            {/* モーダルコンポーネント */}
-            <Modal
+            {/* モーダルコンポーネント (インタビュー完了まで非表示にしておく)*/}
+            {/* <Modal
                 isOpen={isModalOpen}
                 item={selectedItem}
                 onClose={closeModal}
-            />
+            /> */}
         </>
     );
 }
