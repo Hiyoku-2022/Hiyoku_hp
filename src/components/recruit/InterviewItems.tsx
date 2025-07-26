@@ -1,9 +1,9 @@
 // インタビューした各メンバーのコンポーネント
 'use client';
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import InterviewDetail, { InterviewDetailType }  from './InterviewDetail';
-import Modal from './Modal';
+// import Modal from './Modal';
 import HeadTitle from "./HeadTitle";
 
 const interviewItems: InterviewDetailType[] = [
@@ -32,20 +32,27 @@ const interviewItems: InterviewDetailType[] = [
 ];
 
 export default function InterviewItems() {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedItem, setSelectedItem] = useState<InterviewDetailType | null>(null);
+    // モーダル機能は将来的に実装予定
+    // const [isModalOpen, setIsModalOpen] = useState(false);
+    // const [selectedItem, setSelectedItem] = useState<InterviewDetailType | null>(null);
 
     // モーダルを表示する
     const openModal = (item: InterviewDetailType) => {
-        setSelectedItem(item);
-        setIsModalOpen(true);
+        // モーダル機能は将来的に実装予定
+        console.log('Modal would open for:', item);
     };
+    // モーダルを表示する(モーダルを表示させるときにコメントアウト外す）
+    // const openModal = (item: InterviewDetailType) => {
+    //     setSelectedItem(item);
+    //     setIsModalOpen(true);
+    // };
 
-    // モーダルを閉じる
-    const closeModal = () => {
-        setIsModalOpen(false);
-        setSelectedItem(null);
-    };
+
+    // モーダルを閉じる（将来的に使用予定）
+    // const closeModal = () => {
+    //     setIsModalOpen(false);
+    //     setSelectedItem(null);
+    // };
 
     return (
         <>
