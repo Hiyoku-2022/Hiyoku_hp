@@ -41,7 +41,7 @@ export default function BlogArticleList({ id, title, publishedAt, isVisited, onS
                             {format(new Date(publishedAt), 'yyyy.M.d')}
                         </li>
                         <li
-                            className={`font-Family_1 text-left font-bold flex-1 min-w-0 break-words overflow-hidden transition-colors duration-200 ${
+                            className={`text-left font-bold flex-1 min-w-0 break-words overflow-hidden transition-colors duration-200 ${
                                 isVisited ? 'text-sub03' : 'text-foreground'
                             }`}
                         >

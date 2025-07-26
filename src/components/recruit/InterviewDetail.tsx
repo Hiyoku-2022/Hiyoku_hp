@@ -5,8 +5,6 @@ export type InterviewDetailType = {
     id: number;
     alt: string;
     member: string;
-    name: string;
-    join: string;
     joiningReason: string;
     workAttraction: string;
     companyAttraction: string;
@@ -57,13 +55,8 @@ export default function InterviewDetail({ item, onClick }: InterviewDetailProps)
                 </div>
             </div>
 
-            <div className="flex font-Family_1 text-[19px]">
+            <div className="flex text-xl">
                 <p className="text-xl my-5">{item.member}</p>
-                <p className="text-l mx-2 my-5 py-auto">({item.join})</p>
-            </div>
-            <div className="flex items-center font-Family_1">
-                <p className="flex items-center justify-center border border-foreground font-bold text-[12px] p-2 w-[55px] mx-1 h-[35px]">職業</p>
-                <p className="p-2 font-bold text-[16px] text-center mx-2 md:mx-2">{item.occupation}</p>
             </div>
         </div>
     );

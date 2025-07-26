@@ -73,8 +73,8 @@ export default function NewsDetailClient({ article }: { article: BlogArticleProp
             <div className="flex justify-center">
                 <div className="mx-auto bg-white w-[90%] md:w-[70%]">
                     <div className="px-[5%] py-15 md:py-30 text-center">
-                        <p className="font-Family_1 text-center mx-auto mt-16 text-[20px] font-semibold w-full break-words md:text-[28px] md:mt-[6rem]">{article.title}</p>
-                        <p className="font-Family_3 text-bold text-gray-300 text-center text-[16px] my-2 md:my-5">{format(new Date(article.publishedAt), 'yyyy.M.d')}</p>
+                        <p className="text-center mx-auto mt-16 text-xl font-semibold w-full break-words md:text-3xl md:mt-[6rem]">{article.title}</p>
+                        <p className="font-Family_3 text-bold text-gray-300 text-center text-base my-2 md:my-5">{format(new Date(article.publishedAt), 'yyyy.M.d')}</p>
                         <div dangerouslySetInnerHTML={{ __html: sanitizedContent }} className={styles.blogcontent} />
                     </div>
                 </div>

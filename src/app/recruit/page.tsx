@@ -16,10 +16,14 @@ export default function RecruitPage() {
                 ]}
             />
 
-            <div className="font-Family_1 mx-auto text-center w-[90%]">
-                <p>ひよくでは一緒に働いてくれるメンバーを探しています。</p>
-                <p className="font-Family_1 mx-auto w-[90%] md:w-[70%]">
-                    一緒に働きませんか？テキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入りますテキスト入ります
+            <div className="mx-auto text-center w-[90%]">
+                <p className="text-3xl my-8 font-bold">あなたの「やってみたい」が、未来を創る。
+                    <br />Hiyokuで、次世代のITエンジニア・ビジネスパーソンを目指しませんか？
+                </p>
+                <p className="mx-auto w-[90%] md:w-[70%]">
+                    「IT業界で活躍したい」「もっとスキルを磨きたい」—その熱い想い、Hiyokuが全力で応援します！
+                    <br />未経験からプロを目指す方も、キャリアをさらに加速させたい経験者の方も、Hiyokuにはあなたの可能性を広げるステージがあります。
+                    <br />私たちと一緒に、挑戦し、学び、成長し続ける仲間を心からお待ちしています。
                 </p>
             </div>
 

@@ -37,7 +37,7 @@ export default function Modal({ isOpen, item, onClose }: ModalProps) {
             <div className="relative bg-white rounded-lg shadow-xl w-[90%] md:w-[70%] mx-4 p-6 z-10 transform transition-all overflow-y-auto h-[90vh] md:h-[70vh]">
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl z-20"
+                    className="sticky top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl z-20 float-right"
                     aria-label="モーダルを閉じる"
                 >
                     ×
@@ -47,12 +47,7 @@ export default function Modal({ isOpen, item, onClose }: ModalProps) {
                         <Image src="/recruit/interviewIcon.svg" alt="popup" width={100} height={100} />
                         <div className="my-auto mx-2 md:mx-8">
                             <div className="flex flex-col items-start my-2">
-                                <p className="text-[23px] mx-2 font-bold ">{item.name}</p>
-                                <p className="mx-2 font-bold text-[16px]">{item.join}</p>
-                            </div>
-                            <div className="flex items-center my-2">
-                                <p className="border text-center mx-2 my-2 p-2 text-[12px]">職業</p>
-                                <p className="font-bold text-[16px] md:mx-2 my-2">{item.occupation}</p>
+                                <p className="text-2xl mx-2 font-bold ">{item.member}</p>
                             </div>
                         </div>
                     </div>
@@ -69,23 +64,23 @@ export default function Modal({ isOpen, item, onClose }: ModalProps) {
                         before:border-b-gray-100
                         before:-top-[15px]
                         before:left-[38px]">
-                        <p className="text-[16px]">{item.description}</p>
+                        <p className="text-base">{item.description}</p>
                     </div>
                     <div className="border-b">
-                        <p className="text-sub03 text-[19px] mt-8 my-4">入社のきっかけ</p>
-                        <p className="py-4 text-[16px]">{item.joiningReason}</p>
+                        <p className="text-sub03 text-lg mt-8 my-4">入社のきっかけ</p>
+                        <p className="py-4 text-base">{item.joiningReason}</p>
                     </div>
                     <div className="border-b">
-                        <p className="text-sub03 text-[19px] mt-8 my-4">仕事の魅力</p>
-                        <p className="py-4 text-[16px]">{item.workAttraction}</p>
+                        <p className="text-sub03 text-lg mt-8 my-4">仕事の魅力</p>
+                        <p className="py-4 text-base">{item.workAttraction}</p>
                     </div>
                     <div className="border-b">
-                        <p className="text-sub03 text-[19px] mt-8 my-4">Hiyokuの魅力</p>
-                        <p className="py-4 text-[16px]">{item.companyAttraction}</p>
+                        <p className="text-sub03 text-lg mt-8 my-4">Hiyokuの魅力</p>
+                        <p className="py-4 text-base">{item.companyAttraction}</p>
                     </div>
                     <div className="border-b">
-                        <p className="text-sub03 text-[19px] mt-8 my-4">今後の目標</p>
-                        <p className="py-4 text-[16px]">{item.target}</p>
+                        <p className="text-sub03 text-lg mt-8 my-4">今後の目標</p>
+                        <p className="py-4 text-base">{item.target}</p>
                     </div>
                 </div>
             </div>

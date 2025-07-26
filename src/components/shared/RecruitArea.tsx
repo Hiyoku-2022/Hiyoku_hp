@@ -59,7 +59,7 @@ export function RecruitArea() {
                         </HoverShapeButtonWithIcon>
                     </Link>
                     <Link
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeLNJ7LVm7ITzvnTyiEWzsd40LMbp0nRtgqGJkjSabq02IHgQ/viewform?usp=sharing&ouid=103342829539540884944"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfUidtB9U4ej59HjuD4elSTcJk2_Ff-5VlYNYRcxHugXw3NzQ/viewform?usp=dialog"
                         className="w-full xl:w-auto mt-4 xl:mt-0"
                     >
                         <HoverShapeButtonWithIcon

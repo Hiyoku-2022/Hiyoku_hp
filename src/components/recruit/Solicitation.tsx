@@ -19,7 +19,7 @@ export default function Solicitation() {
     };
 
     const handleEntryFormClick = () => {
-        router.push('/');
+        router.push('https://docs.google.com/forms/d/e/1FAIpQLSfUidtB9U4ej59HjuD4elSTcJk2_Ff-5VlYNYRcxHugXw3NzQ/viewform?usp=dialog');
     };
 
     return (
@@ -29,25 +29,25 @@ export default function Solicitation() {
                 <div className="flex mx-auto">
                     <button
                         onClick={() => handleTabClick('graduate')}
-                        className={`rounded-t-lg py-4 px-8 font-Family_1 font-bold transition-colors
+                        className={`rounded-t-lg py-4 px-8 font-bold transition-colors
                             ${currentRecruitment === 'graduate'
                                 ? 'bg-main' 
                                 : 'bg-sub05'
                             }
                         `}
                     >
-                        新卒採用
+                        エンジニア未経験の方
                     </button>
                     <button
                         onClick={() => handleTabClick('midCareer')}
-                        className={`rounded-t-lg py-4 px-8 mx-2 font-Family_1 font-bold transition-colors
+                        className={`rounded-t-lg py-4 px-8 mx-2 font-bold transition-colors
                             ${currentRecruitment === 'midCareer'
                                 ? 'bg-sub01'
                                 : 'bg-sub06'
                             }
                         `}
                     >
-                        中途採用
+                        エンジニア経験者の方
                     </button>
                 </div>
                 <div className="mx-auto h-auto">
