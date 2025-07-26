@@ -16,7 +16,7 @@ export const PromiseCard: React.FC<PromiseCardProps> = ({
 }) => {
     return (
         <article
-            className={`p-8 bg-white rounded-xl max-md:w-[90%] md:w-[310px] space-y-5 ${className}`}
+            className={`p-8 bg-white rounded-xl w-[90%] md:w-[50%] xl:w-[300px] space-y-5 ${className}`}
         >
             {/*画像の設定*/}
             <img

@@ -45,8 +45,8 @@ return (
     `}>
         <HeadTitle>Hiyokuの約束</HeadTitle>
         <div className={`
-            flex flex-col md:flex-row justify-center max-md:items-center
-            space-y-10 md:space-y-0 space-x-0 md:space-x-20
+            flex flex-col md:flex-wrap xl:flex-row justify-center max-xl:items-center
+            space-y-10 xl:space-y-0 space-x-0 xl:space-x-20
         `}>
             {promiseData.map((promise, index) => (
             <PromiseCard

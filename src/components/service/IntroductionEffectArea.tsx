@@ -30,8 +30,8 @@ export function IntroductionEffectArea () {
             flex flex-col justify-center items-center
             bg-[url('/service/introductionEffectAreaBgSp.svg')]
             bg-top bg-no-repeat bg-cover
-            md:bg-[url('/service/introductionEffectAreaBgPc.svg')]
-            md:max-md:bg-contain md:max-md:bg-no-repeat md:max-md:bg-top
+            xl:bg-[url('/service/introductionEffectAreaBgPc.svg')]
+            xl:max-xl:bg-contain xl:max-xl:bg-no-repeat xl:max-xl:bg-top
             overflow-hidden
         `}>
             {/* 逆三角形 */}
@@ -53,11 +53,11 @@ export function IntroductionEffectArea () {
                     </div>
                     <p className="text-xl md:text-2xl tracking-wide font-semibold">導入するメリット</p>
                 </div>
-            <div className="flex flex-col md:flex-row items-center w-full justify-center gap-6 md:space-x-10 mt-10 z-30">
+            <div className="flex flex-col md:flex-wrap xl:flex-row items-center w-full justify-center gap-6 xl:space-x-10 mt-10 z-30">
                 {contents.map(({ id, img, title, text }) => (
                     <div
                         key={id}
-                        className="flex flex-col items-center w-[80%] md:w-[300px] mb-[50px] relative"
+                        className="flex flex-col items-center w-[80%] md:w-[50%] xl:w-[300px] mb-[50px] relative"
                     >
                         {/* コンテンツエリア */}
                         <div className="flex flex-col w-full overflow-hidden rounded-lg shadow-md">

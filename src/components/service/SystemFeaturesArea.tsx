@@ -44,7 +44,7 @@ export function SystemFeaturesArea () {
                     >
                         <div className={`
                             flex justify-center items-center
-                            w-[80%] md:w-[20%]
+                            w-[80%] md:w-[40%] xl:w-[20%]
                             aspect-square rounded-[180px] md:rounded-[125px] overflow-hidden bg-sub05 z-10
                         `}>
                             <Image

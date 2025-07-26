@@ -9,7 +9,7 @@ export function RecruitArea() {
         <div className={`
             flex flex-col md:flex-row-reverse
             justify-center items-center md:items-stretch
-            mx-auto px-4 w-[90%] md:w-[65%]
+            mx-auto px-4 w-[90%] xl:w-[65%]
         `}>
             <div className={`
                 w-full min-h-[300px]

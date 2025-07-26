@@ -53,7 +53,7 @@ export function CaseStudyArea() {
                             key={groupIndex}
                             className="relative flex justify-center items-center"
                         >
-                            <div className="w-[90%] md:w-[60%] bg-grayLight p-10 rounded-xl z-30">
+                            <div className="w-[90%] md:w-[75%] xl:w-[60%] bg-grayLight p-10 rounded-xl z-30">
                                 {/* ヘッダー */}
                                 <div className="md:flex md:justify-between md:items-center mb-6">
                                     <div className="flex items-center space-x-3">
@@ -126,8 +126,8 @@ export function CaseStudyArea() {
                 height={200}
                 className={`
                     absolute
-                    hidden md:block
-                    top-[-20%] left-[0%] w-[300px] h-[300px]
+                    hidden xl:block
+                    top-[-5%] left-[0%] w-[300px] h-[300px]
                 `}
             />
 
@@ -138,20 +138,22 @@ export function CaseStudyArea() {
                 height={500}
                 className={`
                     absolute
-                    right-[0%] top-[-10%] w-[300px] h-[300px]
-                    md:top-[-20%] md:w-[500px] md:h-[500px]
+                    right-[0%] top-[-3%] w-[300px] h-[300px]
+                    md:right-[-10%] md:w-[400px] md:h-[400px]
+                    xl:top-[-5%] xl:right-[0%] xl:w-[500px] xl:h-[500px]
                 `}
             />
 
             <Image
                 src="/service/cloudGreen.svg"
                 alt="左下"
-                width={400}
-                height={400}
+                width={500}
+                height={500}
                 className={`
                     absolute
-                    left-[20%] bottom-[55%] w-[300px] h-[300px]
-                    md:left-[5%] md:bottom-[-10%] md:w-[400px] md:h-[400px]
+                    left-[25%] bottom-[55%] w-[300px] h-[300px]
+                    md:left-[25%] md:bottom-[45%] md:w-[400px] md:h-[400px]
+                    xl:left-[0%] xl:bottom-[0%] xl:w-[500px] md:h-[500px]
                 `}
             />
 
@@ -162,8 +164,9 @@ export function CaseStudyArea() {
                 height={300}
                 className={`
                     absolute
-                    right-[60%] bottom-[-5%] w-[250px] h-[250px]
-                    md:right-[0%] md:bottom-[20%] md:w-[300] md:h-[300px]
+                    right-[60%] bottom-[0%] w-[250px] h-[250px]
+                    md:right-[70%] md:bottom-[0%] md:w-[275px] md:h-[275px]
+                    xl:right-[0%] xl:bottom-[20%] xl:w-[300] xl:h-[300px]
                 `}
             />
 

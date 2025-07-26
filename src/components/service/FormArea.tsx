@@ -12,7 +12,7 @@ export function FormArea() {
             bg-top bg-no-repeat bg-cover
         `}>
             <div className={`
-                w-[90%] md:w-[70%] h-[600px] md:h-[400px]
+                w-[90%] md:w-[85%] xl:w-[70%] h-[600px] md:h-[450px] xl:h-[400px]
                 bg-white rounded-xl my-10 max-md:space-y-10
                 flex flex-col justify-center items-center
             `}>
