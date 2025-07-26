@@ -29,17 +29,19 @@ export const texts: Record<string, React.ReactNode> = {
 };
 
 export const SpeechBubble = ({ bgImage, text }: SpeechBubbleProps) => (
-    <div
-        className={`
-            w-[90%] md:w-[400px]
-            min-h-[200px] md:min-h-[150px]
-            flex justify-center
-            bg-center bg-no-repeat bg-contain
-        `}
-        style={{ backgroundImage: `url(${bgImage})` }}
-        >
-            <div className="flex items-center text-center">
-                <span className="text-base leading-snug font-bold pb-[30px] md:pb-[20px]">{text}</span>
-            </div>
+    <div className="w-full flex justify-center">
+        <div
+            className={`
+                w-[90%] md:w-[500px]
+                min-h-[200px]
+                flex justify-center
+                bg-center bg-no-repeat bg-contain
+            `}
+            style={{ backgroundImage: `url(${bgImage})` }}
+            >
+                <div className="flex items-center text-center">
+                    <span className="text-xl leading-snug font-bold pb-[30px]">{text}</span>
+                </div>
+        </div>
     </div>
 );

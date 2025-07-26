@@ -44,7 +44,7 @@ export function TopNews() {
             </div>
             <div className="my-16">
                 <BlogTitleList
-                    onSelectBlog={handleSelectBlog} 
+                    onSelectBlog={handleSelectBlog}
                     visitedBlogIds={visitedBlogIds}
                     itemPerPage={4} //4件のみ表示するように設定
                 />
@@ -53,7 +53,9 @@ export function TopNews() {
                 <HoverShapeButtonWithIcon
                     variant="blue"
                     icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                    onClick={handleBackToList}>
+                    onClick={handleBackToList}
+                    className="w-48 py-4"
+                >
                     NEWS一覧を見る
                 </HoverShapeButtonWithIcon>
             </div>

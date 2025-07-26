@@ -13,7 +13,7 @@ export function FooterButtons () {
                 <HoverShapeButtonWithIcon
                     variant="softBlue"
                     icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                    className="w-64 py-3"
+                    className="w-64 py-4"
                 >
                     LMSについてのお問い合わせ
 
@@ -26,7 +26,7 @@ export function FooterButtons () {
                 <HoverShapeButtonWithIcon
                     variant="softOrange"
                     icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                    className="w-64 py-3"
+                    className="w-64 py-4"
                 >
                     採用についてのお問い合わせ
                 </HoverShapeButtonWithIcon>
