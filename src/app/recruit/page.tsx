@@ -5,6 +5,7 @@ import Solicitation from "@/components/recruit/Solicitation";
 import FAQ from "@/components/recruit/FAQ";
 import Pankuzu from "@/components/shared/Pankuzu";
 
+
 export default function RecruitPage() {
     return (
         <div>
