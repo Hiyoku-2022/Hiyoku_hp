@@ -18,7 +18,6 @@
 }
 
 .blogcontent h2 {
-  font-family: Family_1;
   font-size: 18px; 
   margin-top: 0.5em;
   margin-bottom: 0.8em;
@@ -27,7 +26,6 @@
 }
 
 .blogcontent h3 {
-  font-family: Family_1; 
   font-size: 16px;
   margin-top: 1.2em;
   margin-bottom: 0.6em;
@@ -44,7 +42,6 @@
 }
 
 .blogcontent p {
-  font-family: Family_1;
   font-size: 16px;
   line-height: 1.8;
   margin-bottom: 1em;

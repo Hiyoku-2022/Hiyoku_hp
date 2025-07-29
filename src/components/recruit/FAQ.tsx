@@ -22,12 +22,12 @@ export default function FAQ() {
             <div className="mb-16">
                 {faqList.map((item) => (
                     <ul key={item.id} className="w-[90%] md:w-[70%] mx-auto my-2 text-left bg-white rounded-lg p-2">
-                        <li className="flex">
-                            <p className="font-Family_3 font-bold text-white text-base bg-sub03 rounded-full px-[21px] py-[15px] m-2">Q</p>
+                        <li className="flex items-center">
+                            <p className="font-Family_3 font-bold text-white text-base bg-sub03 rounded-full px-[21px] py-[15px] m-2 h-14">Q</p>
                             <p className="my-auto text-sub03 font-bold text-base mx-4">{item.question}</p>
                         </li>
-                        <li className="flex">
-                            <p className="font-Family_3 font-bold text-sub03 text-base bg-white border border-sub03 rounded-full px-[21px] py-[15px] m-2">A</p>
+                        <li className="flex items-center">
+                            <p className="font-Family_3 font-bold text-sub03 text-base bg-white border border-sub03 rounded-full px-[21px] py-[15px] m-2 h-14">A</p>
                             <p className="my-auto font-bold text-base mx-4 whitespace-pre-line">{item.answer}</p>
                         </li>
                     </ul>
