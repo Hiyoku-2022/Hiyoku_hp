@@ -32,11 +32,12 @@ export default function InterviewDetail({ item, onClick }: InterviewDetailProps)
                     width={400}
                     height={800}
                 />
-                <div className="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                {/* インタビューモーダルを追加する時にコメントアウト外す */}
+                {/* <div className="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
                     <span className="text-gray-800 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         VIEW MORE
                     </span>
-                </div>
+                </div> */}
             </div>
 
             {/* スマホ用画像（md未満で表示） */}
@@ -48,11 +49,12 @@ export default function InterviewDetail({ item, onClick }: InterviewDetailProps)
                     height={1600}
                     className="rounded-xl"
                 />
-                <div className="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center rounded-xl">
+                {/* インタビューモーダルを追加する時にコメントアウト外す */}
+                {/* <div className="absolute inset-0 bg-white bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center rounded-xl">
                     <span className="text-gray-800 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         VIEW MORE
                     </span>
-                </div>
+                </div> */}
             </div>
 
             <div className="flex text-xl">
