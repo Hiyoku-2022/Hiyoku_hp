@@ -15,7 +15,7 @@ const businessOverview = (
         </div>
         <div>
             • 受託業務
-        </div>        
+        </div>
     </div>
 );
 
@@ -24,7 +24,7 @@ return (
     <section className="flex flex-col gap-0.5 items-start w-full">
     <CompanyInfoRow label="社名"     value="Hiyoku合同会社" />
     <CompanyInfoRow label="設立"     value="2022年11月4日" />
-    <CompanyInfoRow label="代表者"   value="代表社員　藤岡　忠彦" />
+    <CompanyInfoRow label="代表者"   value="代表社員　藤岡 忠彦" />
     {/* 今後追加する可能性があるためコメントアウト */}
     {/* <CompanyInfoRow label="資本金"   value="〇〇円" /> */}
     {/* <CompanyInfoRow label="従業員数" value="◯名" /> */}

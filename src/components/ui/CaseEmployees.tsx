@@ -30,7 +30,7 @@ export const CaseEmployees = ({ text }: CaseEmployeesProps) => (
             bg-center bg-no-repeat bg-contain
             px-4 py-4
         `}
-        style={{ backgroundImage: `url("service/CaseEmployees.svg")` }}
+        style={{ backgroundImage: `url("service/caseStudyArea/CaseEmployees.svg")` }}
         >
             <div className="flex flex-col items-center justify-center h-full">
                 <span className="text-sm font-bold leading-snug pl-5">{text}</span>

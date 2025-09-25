@@ -5,8 +5,8 @@ export function TopArea () {
         <div className={`
             w-full h-screen
             flex justify-center items-center
-            bg-[url('/service/topBgSp.svg')]
-            xl:bg-[url('/service/topBgPc.svg')]
+            bg-[url('/service/topArea/topBgSp.png')]
+            xl:bg-[url('/service/topArea/topBgPc.png')]
             bg-center bg-contain bg-cover
         `}>
             <div className={`
