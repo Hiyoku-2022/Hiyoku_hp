@@ -9,6 +9,8 @@ import HeadTitle from "./HeadTitle";
 const interviewItems: InterviewDetailType[] = [
     {
         id: 1,
+        src: "/recruit/experienced_engineer.webp",
+        src_md: "/recruit/experienced_engineer.webp",
         alt: "picture",
         member: "未経験からエンジニアへ！ Aさん",
         joiningReason: "友人からの紹介で興味を持ち、会社説明会に参加したことがきっかけでした。",
@@ -20,6 +22,8 @@ const interviewItems: InterviewDetailType[] = [
     },
     {
         id: 2,
+        src: "/recruit/inexperienced_engineer.webp",
+        src_md: "/recruit/inexperienced_engineer.webp",
         alt: "picture",
         member: "更なるスキルアップを追求する！ Bさん",
         joiningReason: "転職活動中に求人サイトで見つけ、事業内容に共感したためです。",

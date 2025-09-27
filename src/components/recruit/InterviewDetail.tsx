@@ -3,6 +3,8 @@ import Image from "next/image";
 
 export type InterviewDetailType = {
     id: number;
+    src: string;
+    src_md: string;
     alt: string;
     member: string;
     joiningReason: string;
@@ -27,7 +29,7 @@ export default function InterviewDetail({ item, onClick }: InterviewDetailProps)
             {/* PC用画像（md以上で表示） */}
             <div className="relative hidden md:block">
                 <Image
-                    src="/recruit/interview.svg"
+                    src={item.src}
                     alt={item.alt || 'インタビューメンバー画像'}
                     width={400}
                     height={800}
@@ -43,7 +45,7 @@ export default function InterviewDetail({ item, onClick }: InterviewDetailProps)
             {/* スマホ用画像（md未満で表示） */}
             <div className="relative block md:hidden">
                 <Image
-                    src="/recruit/interview_md.svg"
+                    src={item.src_md}
                     alt={item.alt || 'インタビューメンバー画像'}
                     width={800}
                     height={1600}
