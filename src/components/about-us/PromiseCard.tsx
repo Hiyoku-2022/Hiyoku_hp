@@ -30,7 +30,7 @@ export const PromiseCard: React.FC<PromiseCardProps> = ({
                 {title.split("\n").map((line, index) => (
                     <React.Fragment key={index}>
                         {line}
-                        {index < title.split("\n").length - 1 && <br />}
+                        {index < title.split("\n").length - 1 && <br className="hidden md:block" />}
                     </React.Fragment>
                 ))}
             </h3>

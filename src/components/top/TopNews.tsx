@@ -10,7 +10,7 @@ const VISITED_BLOG_IDS_KEY = 'visitedBlogIds';
 export function TopNews() {
     const router = useRouter();
     const [visitedBlogIds, setVisitedBlogIds] = useState<string[]>(() => {
-        if (typeof window !== 'undefined') { 
+        if (typeof window !== 'undefined') {
             const savedIds = localStorage.getItem(VISITED_BLOG_IDS_KEY);
             return savedIds ? JSON.parse(savedIds) : [];
         }
@@ -18,7 +18,7 @@ export function TopNews() {
     });
 
     useEffect(() => {
-        if (typeof window !== 'undefined') { 
+        if (typeof window !== 'undefined') {
             localStorage.setItem(VISITED_BLOG_IDS_KEY, JSON.stringify(visitedBlogIds));
         }
     }, [visitedBlogIds]);

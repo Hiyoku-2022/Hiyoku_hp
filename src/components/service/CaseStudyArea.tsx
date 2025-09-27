@@ -66,7 +66,7 @@ export function CaseStudyArea() {
                                 {/* タイトル行 */}
                                 <div className="flex items-center space-x-2 mb-8">
                                     <Image
-                                        src="/service/CasePurpose.svg"
+                                        src="/service/caseStudyArea/CasePurpose.svg"
                                         alt=""
                                         width={20}
                                         height={20}
@@ -74,7 +74,7 @@ export function CaseStudyArea() {
                                     />
                                     <span className="font-semibold">導入目的</span>
                                     <Image
-                                        src="/service/HorizontalDottedLine.svg"
+                                        src="/service/caseStudyArea/HorizontalDottedLine.svg"
                                         alt=""
                                         width={20}
                                         height={5}
@@ -98,7 +98,7 @@ export function CaseStudyArea() {
                                                     <div
                                                         className={`
                                                             w-[5px] h-[100px] md:h-[40px]
-                                                            bg-[url('/service/VerticalDottedLine.svg')]
+                                                            bg-[url('/service/caseStudyArea/VerticalDottedLine.svg')]
                                                             bg-repeat-y bg-center bg-contain
                                                         `}
                                                     />
@@ -120,7 +120,7 @@ export function CaseStudyArea() {
             </div>
 
             <Image
-                src="/service/cloudOrange.svg"
+                src="/service/caseStudyArea/cloudOrange.svg"
                 alt="左上"
                 width={200}
                 height={200}
@@ -132,7 +132,7 @@ export function CaseStudyArea() {
             />
 
             <Image
-                src="/service/cloudGreen.svg"
+                src="/service/caseStudyArea/cloudGreen.svg"
                 alt="右上"
                 width={500}
                 height={500}
@@ -145,7 +145,7 @@ export function CaseStudyArea() {
             />
 
             <Image
-                src="/service/cloudGreen.svg"
+                src="/service/caseStudyArea/cloudGreen.svg"
                 alt="左下"
                 width={500}
                 height={500}
@@ -158,7 +158,7 @@ export function CaseStudyArea() {
             />
 
             <Image
-                src="/service/cloudOrange.svg"
+                src="/service/caseStudyArea/cloudOrange.svg"
                 alt="右下"
                 width={300}
                 height={300}
@@ -169,10 +169,6 @@ export function CaseStudyArea() {
                     xl:right-[0%] xl:bottom-[20%] xl:w-[300] xl:h-[300px]
                 `}
             />
-
-
-
-
         </div>
     );
 }

@@ -38,18 +38,18 @@ export function TopAboutUS() {
     }, [visibleIndex]);
 
     const data = [
-        { label: "What", src: "/top/what.svg", text:"本物のエンジニア育成で\nIT業界を支えます" },
-        { label: "Why", src: "/top/why.svg", text:"本当に価値のある技術者育成を\n日本から世界へ広げていきます" },
-        { label: "How", src: "/top/how.svg", text:"最新技術を活用して\n最適な学び提供します" },
+        { label: "What", src: "/top/topAboutUS/what.svg", text:"本物のエンジニア育成で\nIT業界を支えます" },
+        { label: "Why", src: "/top/topAboutUS/why.svg", text:"本当に価値のある技術者育成を\n日本から世界へ広げていきます" },
+        { label: "How", src: "/top/topAboutUS/how.svg", text:"最新技術を活用して\n最適な学びを提供します" },
     ];
 
     return (
         <div className="relative">
             <div className="relative pt-20 px-4 max-w-4xl mx-auto text-center mb-5 space-y-10 z-40">
                 <p className="md:text-xl underline underline-offset-4">私たちについて</p>
-                <p className="text-3xl md:text-4xl">教育で世界の貧困差をなくす</p>
+                <p className="text-2xl md:text-3xl">教育で世界の貧困差をなくす</p>
                 <div className="pb-5 text-lg md:text-xl leading-relaxed space-y-3 md:space-y-5">
-                    <p className="mb-5">私たちHiyoku合同会社は<span className="md:hidden"><br /></span>教育事業をベースに、</p>
+                    <p className="mb-5">私たちHiyoku合同会社は、<span className="md:hidden"><br /></span>教育事業をベースに</p>
                     <p>「価値あるもの<span className="md:hidden"><br /></span>を世の中に生み出していきたい」</p>
                     <p>「本当に価値のある人材を育てていきたい」</p>
                     <p className="mb-5">そんな想いで始まった、<span className="md:hidden"><br /></span>2022年11月に誕生した<span className="md:hidden"><br /></span>スタートアップ企業です。</p>
@@ -107,7 +107,7 @@ export function TopAboutUS() {
 
 
             <Image
-                src="/top/topAboutUsRight.svg"
+                src="/top/topAboutUS/topAboutUsRight.svg"
                 alt="右"
                 width={600}
                 height={200}
@@ -121,7 +121,7 @@ export function TopAboutUS() {
                 `}
             />
             <Image
-                src="/top/topAboutUsLeft.svg"
+                src="/top/topAboutUS/topAboutUsLeft.svg"
                 alt="左"
                 width={600}
                 height={200}
@@ -143,7 +143,7 @@ export function TopAboutUS() {
                 `}
             >
                 <Image
-                    src="/top/topAboutUsCircle.svg"
+                    src="/top/topAboutUS/topAboutUsCircle.svg"
                     alt="右下の円"
                     width={500}
                     height={500}

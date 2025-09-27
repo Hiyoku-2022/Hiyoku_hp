@@ -20,7 +20,7 @@ export function TopService() {
             >
                 <div className="w-full flex justify-center">
                     <Image
-                        src="/top/topService.svg"
+                        src="/top/topService/topService.svg"
                         alt="Service image"
                         width={500}
                         height={500}
@@ -30,10 +30,10 @@ export function TopService() {
 
                 <div className="w-[80%] md:w-full mx-auto text-left space-y-5">
                     <p className="text-lg leading-relaxed">
-                    シリコンバレーや世界的なIT企業ではマストな知識であるコンピュータサイエンスを 習得します。アルゴリズムを徹底的に鍛え、問題解決能力を飛躍的に向上させます。
+                        シリコンバレーや世界的なIT企業ではマストな知識であるコンピュータサイエンスを習得します。アルゴリズムを徹底的に鍛え、問題解決能力を飛躍的に向上させます。
                     </p>
                     <p className="text-lg leading-relaxed">
-                    LMSによる進捗管理はもちろん、AIによる質疑回答で24時間いつでも質問可能です。 各々のスタイルに合わせて学習できます。 また、多忙なスケジュールの担当者のリソースを割かず教育することが可能です。
+                        LMSによる進捗管理はもちろん、AIによる質疑応答で24時間いつでも質問可能です。各々のスタイルに合わせて学習できます。また、多忙なスケジュールの担当者のリソースを割かず教育することが可能です。
                     </p>
                 </div>
             </div>
@@ -52,7 +52,7 @@ export function TopService() {
 
 
             <Image
-                src="/top/topServiceRight.svg"
+                src="/top/topService/topServiceRight.svg"
                 alt="右"
                 width={600}
                 height={200}
@@ -77,7 +77,7 @@ export function TopService() {
                 `}
             >
                 <Image
-                    src="/top/topAboutUsCircle.svg"
+                    src="/top/topService/topServiceCircle.svg"
                     alt="左の円"
                     width={500}
                     height={500}
