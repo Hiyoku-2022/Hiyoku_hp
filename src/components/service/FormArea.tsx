@@ -7,8 +7,8 @@ export function FormArea() {
     return (
         <div className={`
             w-full flex justify-center items-center
-            bg-[url('/service/FormAreaBgSp.svg')]
-            md:bg-[url('/service/FormAreaBgPc.svg')]
+            bg-[url('/service/formArea/FormAreaBgSp.png')]
+            md:bg-[url('/service/formArea/FormAreaBgPc.png')]
             bg-top bg-no-repeat bg-cover
         `}>
             <div className={`

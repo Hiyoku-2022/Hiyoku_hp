@@ -22,8 +22,8 @@ export function CorporateTroublesArea () {
                     w-full gap-y-5
                     xl:gap-x-[200px] xl:gap-y-0
                 `}>
-                    <SpeechBubble bgImage="/service/speechBubbleLeft.svg" text={texts.type1} />
-                    <SpeechBubble bgImage="/service/speechBubbleRight.svg" text={texts.type2}  />
+                    <SpeechBubble bgImage="/service/corporateTroublesArea/speechBubbleLeft.svg" text={texts.type1} />
+                    <SpeechBubble bgImage="/service/corporateTroublesArea/speechBubbleRight.svg" text={texts.type2}  />
                 </div>
 
 
@@ -34,12 +34,12 @@ export function CorporateTroublesArea () {
                     w-full gap-y-5
                     xl:gap-x-[100px] xl:gap-y-0
                 `}>
-                    <SpeechBubble bgImage="/service/speechBubbleLeft.svg" text={texts.type3}  />
-                    <SpeechBubble bgImage="/service/speechBubbleRight.svg" text={texts.type4}  />
+                    <SpeechBubble bgImage="/service/corporateTroublesArea/speechBubbleLeft.svg" text={texts.type3}  />
+                    <SpeechBubble bgImage="/service/corporateTroublesArea/speechBubbleRight.svg" text={texts.type4}  />
 
                     <div className="xl:hidden mt-6">
                         <Image
-                            src="/service/imagePeople.svg"
+                            src="/service/corporateTroublesArea/imagePeople.svg"
                             alt=""
                             width={200}
                             height={400}
@@ -49,7 +49,7 @@ export function CorporateTroublesArea () {
                 </div>
 
                 <Image
-                    src="/service/imagePeople.svg"
+                    src="/service/corporateTroublesArea/imagePeople.svg"
                     alt=""
                     width={250}
                     height={500}

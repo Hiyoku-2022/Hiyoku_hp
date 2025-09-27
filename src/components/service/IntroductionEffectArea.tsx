@@ -4,19 +4,19 @@ import Image from "next/image";
 const contents = [
     {
         id: 1,
-        img: "/service/imagePc.svg",
+        img: "/service/introductionEffectArea/imagePc.svg",
         title:"活躍できるエンジニアを育てる",
         text: "シリコンバレーや世界的なIT企業ではマストな知識であるコンピュータサイエンスも習得します。\nアルゴリズムを徹底的に鍛え、問題解決能力を飛躍的に向上させます。"
     },
     {
         id: 2,
-        img: "/service/imageHourGrass.svg",
+        img: "/service/introductionEffectArea/imageHourGrass.svg",
         title:"教育担当者の負担が激減する",
         text: "LMSによる進捗管理はもちろん、AIによる質疑回答で24時間いつでも質問可能です。各々のスタイルに合わせて学習できます。\nまた、多忙なスケジュールの担当者のリソースを割かず教育することが可能です。"
     },
     {
         id: 3,
-        img: "/service/imageMemo.svg",
+        img: "/service/introductionEffectArea/imageMemo.svg",
         title:"各種助成金に対応",
         text: "助成金で最大75%の研修費の助成率！研修費の大幅な負担削減が可能となります。\n料金に関してはカスタマイズ内容によって変動しますので、お問い合わせください。"
     },
@@ -28,9 +28,9 @@ export function IntroductionEffectArea () {
             relative
             w-full min-h-screen
             flex flex-col justify-center items-center
-            bg-[url('/service/introductionEffectAreaBgSp.svg')]
+            bg-[url('/service/introductionEffectArea/introductionEffectAreaBgSp.svg')]
             bg-top bg-no-repeat bg-cover
-            xl:bg-[url('/service/introductionEffectAreaBgPc.svg')]
+            xl:bg-[url('/service/introductionEffectArea/introductionEffectAreaBgPc.svg')]
             xl:max-xl:bg-contain xl:max-xl:bg-no-repeat xl:max-xl:bg-top
             overflow-hidden
         `}>
@@ -40,7 +40,7 @@ export function IntroductionEffectArea () {
                 <div className="pt-[150px] text-center text-white md:space-y-5">
                     <div className="flex flex-row items-center">
                         <Image
-                            src="service/checkText.svg"
+                            src="service/introductionEffectArea/checkText.svg"
                             alt=""
                             width={400}
                             height={50}

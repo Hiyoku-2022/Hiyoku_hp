@@ -24,7 +24,7 @@ export const CaseNumber = ({ text }: CaseNumberProps) => (
             bg-center bg-no-repeat bg-contain
             px-4 py-4
         `}
-        style={{ backgroundImage: `url("service/CaseNumber.svg")` }}
+        style={{ backgroundImage: `url("service/caseStudyArea/CaseNumber.svg")` }}
         >
             <div className="flex flex-col items-center justify-center h-full">
                 <span className="text-sm font-bold text-white leading-snug pl-3">{text}</span>
