@@ -29,9 +29,9 @@ export default function Solicitation() {
                 <div className="flex mx-auto">
                     <button
                         onClick={() => handleTabClick('graduate')}
-                        className={`rounded-t-lg py-4 px-8 font-bold transition-colors
+                        className={`rounded-t-lg py-4 px-4 lg:py-4 lg:px-8 font-bold transition-colors text-sm  lg:text-base
                             ${currentRecruitment === 'graduate'
-                                ? 'bg-main' 
+                                ? 'bg-main'
                                 : 'bg-sub05'
                             }
                         `}
@@ -40,7 +40,7 @@ export default function Solicitation() {
                     </button>
                     <button
                         onClick={() => handleTabClick('midCareer')}
-                        className={`rounded-t-lg py-4 px-8 mx-2 font-bold transition-colors
+                        className={`rounded-t-lg py-4 px-4 lg:py-4 lg:px-8 mx-2 font-bold transition-colors text-sm lg:text-base
                             ${currentRecruitment === 'midCareer'
                                 ? 'bg-sub01'
                                 : 'bg-sub06'

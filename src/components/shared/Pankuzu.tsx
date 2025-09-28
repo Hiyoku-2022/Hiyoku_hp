@@ -5,6 +5,9 @@ import { ChevronRight } from 'lucide-react';
 import { Header } from '@/components/header/Header';
 import { useState, useEffect } from 'react';
 import PageTitle from './PageTitle';
+import { HeaderMobileMenu } from '../header/HeaderMobileMenu';
+import { Menu } from 'lucide-react';
+import { HeaderNav } from '../header/HeaderNav';
 
 interface BreadcrumbItem {
     label: string;
@@ -20,6 +23,8 @@ interface PankuzuProps {
 export default function Pankuzu({ titleJP, subtitleEN, breadcrumbs = [] }: PankuzuProps) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const [isFooterVisible, setIsFooterVisible] = useState(false);
 
     useEffect(() => {
         setMounted(true);
@@ -27,7 +32,31 @@ export default function Pankuzu({ titleJP, subtitleEN, breadcrumbs = [] }: Panku
             setIsScrolled(window.scrollY > 150);
         };
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        // Footerの表示状態を監視するIntersection Observer
+        const footerObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.target.tagName === 'FOOTER') {
+                        setIsFooterVisible(entry.isIntersecting);
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Footerが10%見えたら検知
+            }
+        );
+
+        // ページ内のfooter要素を監視対象に追加
+        const footerElement = document.querySelector('footer');
+        if (footerElement) {
+            footerObserver.observe(footerElement);
+        }
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            footerObserver.disconnect();
+        };
     }, []);
 
     // SSR時は絶対にパンくずリストを表示しない
@@ -42,7 +71,7 @@ export default function Pankuzu({ titleJP, subtitleEN, breadcrumbs = [] }: Panku
         );
     }
 
-    const shouldShowBreadcrumbs = breadcrumbs.length > 0 && isScrolled;
+    const shouldShowBreadcrumbs = breadcrumbs.length > 0 && isScrolled && !isFooterVisible;
 
     return (
         <>
@@ -55,28 +84,49 @@ export default function Pankuzu({ titleJP, subtitleEN, breadcrumbs = [] }: Panku
             </div>
             <PageTitle titleJP={titleJP} subtitleEN={subtitleEN} />
             {shouldShowBreadcrumbs && (
-                <nav className="flex bt-4 bx-8 text-sm text-gray-600 transition-all duration-300 fixed top-0 left-0 right-0 py-6 px-8 bg-background z-10">
-                    <Link
-                        href="/"
-                        className="flex items-center transition-all duration-300 border-b border-foreground hover:border-transparent"
-                    >
-                        TOP
-                    </Link>
-                    {breadcrumbs.map((item, index) => (
-                        <div key={index} className="flex items-center">
-                            <ChevronRight size={16} className="mx-2 text-gray-400" />
-                            {item.href ? (
-                                <Link
-                                    href={item.href}
-                                    className="transition-all duration-300 border-b border-foreground hover:border-transparent"
-                                >
-                                    {item.label}
-                                </Link>
-                            ) : (
-                                <span className="text-gray-800 font-medium">{item.label}</span>
-                            )}
+                <nav className="flex justify-between bt-4 bx-8 text-gray-600
+                transition-all duration-300 fixed top-0
+                left-0 right-0 py-3 px-6 bg-background z-10
+                text-xs md:text-base
+                w-3xs"
+                >
+                    <div className='flex'>
+                        <div className='flex items-center'>
+                            <Link
+                                href="/"
+                                className="transition-all duration-300 border-b border-foreground hover:border-transparent"
+                            >
+                                TOP
+                            </Link>
                         </div>
-                    ))}
+                        {breadcrumbs.map((item, index) => (
+                            <div key={index} className="flex items-center max-w-32 xl:max-w-full">
+                                <ChevronRight size={16} className="mx-2 flex-shrink-0" />
+                                {item.href ? (
+                                    <Link
+                                        href={item.href}
+                                        className="transition-all duration-300 border-b border-foreground hover:border-transparent truncate block"
+                                        title={item.label}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                ) : (
+                                    <span className="font-medium truncate block" title={item.label}>{item.label}</span>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                    <HeaderNav />
+                    {/* ハンバーガー（SPのみ） */}
+                    <div className="lg:hidden">
+                        <button onClick={() => setIsOpen(true)} aria-label="メニューを開く">
+                            <Menu
+                                size={28}
+                                className="w-8 h-8"
+                            />
+                        </button>
+                    </div>
+                    {isOpen && <HeaderMobileMenu onClose={() => setIsOpen(false)} />}
                 </nav>
             )}
         </>

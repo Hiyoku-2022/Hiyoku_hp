@@ -30,7 +30,7 @@ export default function Modal({ isOpen, item, onClose }: ModalProps) {
 
     return (
         <div className="fixed inset-0 z-10 flex items-center justify-center bg-black/50">
-            <div 
+            <div
                 className="fixed inset-0 transition-opacity"
                 onClick={onClose}
             />
@@ -52,15 +52,15 @@ export default function Modal({ isOpen, item, onClose }: ModalProps) {
                         </div>
                     </div>
                     <div className="bg-gray-100 p-4 relative rounded-md
-                        before:content-[''] 
-                        before:absolute 
-                        before:w-0 
+                        before:content-['']
+                        before:absolute
+                        before:w-0
                         before:h-0
                         before:border-l-[12px]
                         before:border-r-[12px]
                         before:border-b-[15px]
-                        before:border-l-transparent 
-                        before:border-r-transparent 
+                        before:border-l-transparent
+                        before:border-r-transparent
                         before:border-b-gray-100
                         before:-top-[15px]
                         before:left-[38px]">
