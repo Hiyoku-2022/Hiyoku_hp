@@ -13,11 +13,11 @@ const occupations: WorkDetailItem[] = [
 
 export default function WorkDetail() {
     return (
-        <div className="flex flex-col md:flex-row justify-center mx-auto w-[90%] md:w-[80%]">
+        <div className="flex flex-col md:flex-row justify-center mx-auto w-[90%] md:w-[70%]">
             {occupations.map((item) => (
                 <div key={item.id} className="text-left flex flex-col">
-                    <p className="text-center text-base lg:text-lg font-bold my-4 lg:my-8 whitespace-pre-line flex-1">{item.occupation}</p>
-                    <p className="mx-5 my-5 text-sm lg:text-base flex-1">{item.sentence}</p>
+                    <p className="text-center text-lg font-bold my-8 whitespace-pre-line flex-1">{item.occupation}</p>
+                    <p className="mx-5 my-5 text-base flex-1">{item.sentence}</p>
                 </div>
             ))}
         </div>

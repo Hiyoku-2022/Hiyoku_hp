@@ -18,14 +18,12 @@ export default function RecruitPage() {
             />
 
             <div className="mx-auto text-center w-[90%]">
-                <p className="text-xl lg:text-3xl my-8 font-bold">あなたの「やってみたい」が、未来を創る。
+                <p className="text-3xl my-8 font-bold">あなたの「やってみたい」が、未来を創る。
                     <br />Hiyokuで、次世代のITエンジニア・ビジネスパーソンを目指しませんか？
                 </p>
-                <p className="text-sm lg:text-base mx-auto w-[90%] md:w-[90%]">
-                    「IT業界で活躍したい」「もっとスキルを磨きたい」
-                    <br />— その熱い想い、Hiyokuが全力で応援します！
-                    <br />未経験からプロを目指す方も、キャリアをさらに加速させたい経験者の方も、
-                    <br />Hiyokuにはあなたの可能性を広げるステージがあります。
+                <p className="mx-auto w-[90%] md:w-[70%]">
+                    「IT業界で活躍したい」「もっとスキルを磨きたい」—その熱い想い、Hiyokuが全力で応援します！
+                    <br />未経験からプロを目指す方も、キャリアをさらに加速させたい経験者の方も、Hiyokuにはあなたの可能性を広げるステージがあります。
                     <br />私たちと一緒に、挑戦し、学び、成長し続ける仲間を心からお待ちしています。
                 </p>
             </div>
