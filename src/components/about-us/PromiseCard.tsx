@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Image from "next/image";
 
 interface PromiseCardProps {
     imageUrl: string;
@@ -19,11 +20,15 @@ export const PromiseCard: React.FC<PromiseCardProps> = ({
             className={`p-8 bg-white rounded-xl w-[90%] md:w-[50%] xl:w-[300px] space-y-5 ${className}`}
         >
             {/*画像の設定*/}
-            <img
-                src={imageUrl}
-                alt=""
-                className="object-contain w-full aspect-[1.55]"
-            />
+            <div className="w-full aspect-[1.55] relative">
+                <Image
+                    src={imageUrl}
+                    alt=""
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 90vw, (max-width: 1280px) 50vw, 300px"
+                />
+            </div>
 
             {/*中間タイトルの設定*/}
             <h3 className="text-xl tracking-wider leading-8 text-center">
