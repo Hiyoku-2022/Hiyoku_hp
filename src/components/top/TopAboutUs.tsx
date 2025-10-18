@@ -38,9 +38,9 @@ export function TopAboutUS() {
     }, [visibleIndex]);
 
     const data = [
-        { label: "What", src: "/top/topAboutUS/what.svg", text:"本物のエンジニア育成で\nIT業界を支えます" },
-        { label: "Why", src: "/top/topAboutUS/why.svg", text:"本当に価値のある技術者育成を\n日本から世界へ広げていきます" },
-        { label: "How", src: "/top/topAboutUS/how.svg", text:"最新技術を活用して\n最適な学びを提供します" },
+        { label: "What", src: "/top/topAboutUs/what.svg", text:"本物のエンジニア育成で\nIT業界を支えます" },
+        { label: "Why", src: "/top/topAboutUs/why.svg", text:"本当に価値のある技術者育成を\n日本から世界へ広げていきます" },
+        { label: "How", src: "/top/topAboutUs/how.svg", text:"最新技術を活用して\n最適な学びを提供します" },
     ];
 
     return (
@@ -107,7 +107,7 @@ export function TopAboutUS() {
 
 
             <Image
-                src="/top/topAboutUS/topAboutUsRight.svg"
+                src="/top/topAboutUs/topAboutUsRight.svg"
                 alt="右"
                 width={600}
                 height={200}
@@ -121,7 +121,7 @@ export function TopAboutUS() {
                 `}
             />
             <Image
-                src="/top/topAboutUS/topAboutUsLeft.svg"
+                src="/top/topAboutUs/topAboutUsLeft.svg"
                 alt="左"
                 width={600}
                 height={200}
@@ -143,7 +143,7 @@ export function TopAboutUS() {
                 `}
             >
                 <Image
-                    src="/top/topAboutUS/topAboutUsCircle.svg"
+                    src="/top/topAboutUs/topAboutUsCircle.svg"
                     alt="右下の円"
                     width={500}
                     height={500}

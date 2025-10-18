@@ -14,7 +14,7 @@ export function TopMV() {
                 lg:left-[-5%] lg:w-[600px] lg:h-[250px]
             `}>
                 <Image
-                    src="/top/topMV/topBack1.svg"
+                    src="/top/topMv/topBack1.svg"
                     alt="①"
                     fill
                     className="object-contain"
@@ -30,7 +30,7 @@ export function TopMV() {
                 lg:bottom-[-15%] lg:w-[800px] lg:h-[550px]
             `}>
                 <Image
-                    src="/top/topMV/topBack2.svg"
+                    src="/top/topMv/topBack2.svg"
                     alt="②"
                     fill
                     className="object-contain"
@@ -46,7 +46,7 @@ export function TopMV() {
                 lg:left-[-7%] lg:bottom-[-15%] lg:w-[650px] lg:h-[200px]
             `}>
                 <Image
-                    src="/top/topMV/topBack3.svg"
+                    src="/top/topMv/topBack3.svg"
                     alt="③"
                     fill
                     className="object-contain"
@@ -62,7 +62,7 @@ export function TopMV() {
                 lg:right-[-15%] lg:top-[-7%] lg:w-[800px] lg:h-[350px]
             `}>
                 <Image
-                    src="/top/topMV/topBack4.svg"
+                    src="/top/topMv/topBack4.svg"
                     alt="④"
                     fill
                     className="object-contain"
@@ -99,7 +99,7 @@ export function TopMV() {
             >
                 <div className="absolute inset-0 w-full h-full">
                     <Image
-                        src="/top/topMV/backCircleLeft.svg"
+                        src="/top/topMv/backCircleLeft.svg"
                         alt="右上から左下に移動する円"
                         fill
                         className="object-contain"
@@ -132,7 +132,7 @@ export function TopMV() {
             >
                 <div className="absolute inset-0 w-full h-full">
                     <Image
-                        src="/top/topMV/backCircleLeft.svg"
+                        src="/top/topMv/backCircleLeft.svg"
                         alt="中央上に移動する円"
                         fill
                         className="object-contain"
@@ -167,7 +167,7 @@ export function TopMV() {
             >
                 <div className="absolute inset-0 w-full h-full">
                     <Image
-                        src="/top/topMV/backCircleRight.svg"
+                        src="/top/topMv/backCircleRight.svg"
                         alt="右下に移動する円"
                         fill
                         className="object-contain"
