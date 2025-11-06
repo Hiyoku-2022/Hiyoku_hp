@@ -26,15 +26,7 @@ return (
         <SystemFeaturesArea />
 
         <Image 
-            src='service/hiyokuPamphlet.svg' 
-            alt='hiyokuPamphlet.pdf' 
-            width={800} 
-            height={1600}
-            className="mx-auto"
-        />
-
-        <Image 
-            src='service/hiyokuPamphlet2.svg' 
+            src='/service/hiyokuPamphlet.svg'
             alt='hiyokuPamphlet.pdf' 
             width={800} 
             height={1600}
