@@ -40,7 +40,7 @@ export function IntroductionEffectArea () {
                 <div className="pt-[150px] text-center text-white md:space-y-5">
                     <div className="flex flex-row items-center">
                         <Image
-                            src="service/introductionEffectArea/checkText.svg"
+                            src="/service/introductionEffectArea/checkText.svg"
                             alt=""
                             width={400}
                             height={50}
