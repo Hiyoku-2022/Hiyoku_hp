@@ -26,7 +26,7 @@ return (
         <SystemFeaturesArea />
 
         <Image 
-            src='/service/hiyokuPamphlet.svg'
+            src='/service/hiyokuPamphlet.png'
             alt='hiyokuPamphlet.pdf' 
             width={800} 
             height={1600}
