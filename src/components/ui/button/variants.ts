@@ -6,7 +6,9 @@ export type Variant =
     | "softBlue"
     | "softOrange"
     | "green"
-    | "sky";
+    | "sky"
+    | "red"
+    | "softGreen";
 
 export const variantClasses: Record<Variant, string> = {
     blue: "bg-sub03 text-white hover:bg-main",
@@ -17,4 +19,6 @@ export const variantClasses: Record<Variant, string> = {
     softOrange: "bg-white text-sub hover:text-sub02",
     green: "bg-sub01 text-text hover:bg-sub04",
     sky: "bg-sub05 text-text hover:bg-main",
+    red: "bg-red-500 text-white hover:bg-red-600",
+    softGreen: "bg-white text-green-500 hover:text-green-600",
 };
