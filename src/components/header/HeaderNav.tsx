@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { ButtonWithIcon, TopRoundedButton, BottomRoundedButton, BaseButton, } from "../ui/button";
+import { ButtonWithIcon, TopRoundedButton, BottomRoundedButton,} from "../ui/button";
 import { MiddleButton } from "../ui/button/MiddleButton";
 
 const navLinks = [
@@ -15,10 +15,8 @@ const navLinks = [
 
 export function HeaderNav () {
     const [isContactOpen, setIsContactOpen] = useState(false);
-    const [isTrainingOpen, setIsTrainingOpen] = useState(false);
 
     const contactRef = useRef<HTMLDivElement>(null);
-    const trainingRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -33,22 +31,7 @@ export function HeaderNav () {
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
-
-    useEffect(() => {
-        const handleClickOutside = (event: MouseEvent) => {
-            if (
-                trainingRef.current &&
-                !trainingRef.current.contains(event.target as Node)
-            ) {
-                setIsTrainingOpen(false);
-            }
-        };
     
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    }, []);
-    
-
     return (
         <nav className="hidden lg:flex items-center space-x-3">
             {navLinks.map((link) => (
@@ -113,34 +96,16 @@ export function HeaderNav () {
                 )}
             </div>
 
-            <div ref={trainingRef} className="relative mx-auto text-center">
-                <ButtonWithIcon
-                    variant="red"
-                    icon={<ChevronRight className="w-4 h-4 transition-colors" />}
-                    className="w-[200px]"
-                    onClick={() => setIsTrainingOpen((prev) => !prev)}
-                >
-                    2026新人研修募集
-                </ButtonWithIcon>
-
-                {isTrainingOpen && (
-                    <div className={`
-                        absolute top-full mt-6
-                        left-1/2 -translate-x-1/2
-                        flex flex-col items-center
-                        z-50
-                    `}>
-
-                        <Link href="https://hiyoku-training-tadsofc.gamma.site/">
-                            <BaseButton
-                                variant="ghostBlue"
-                                className="w-[150px] z-30"
-                            >
-                                <p className="whitespace-pre-line">2026新人研修{'\n'}お問い合わせ</p>
-                            </BaseButton>
-                        </Link>        
-                    </div>
-                )}
+            <div className="relative mx-auto text-center">
+                <Link href="https://hiyoku-training-tadsofc.gamma.site/">
+                    <ButtonWithIcon
+                        variant="red"
+                        icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                        className="w-[200px]"
+                    >
+                        2026新人研修募集
+                    </ButtonWithIcon>
+                </Link>
             </div>
         </nav>
     )

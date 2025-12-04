@@ -105,6 +105,15 @@ export function HeaderMobileMenu({ onClose }: Props) {
                         2026新人研修お問い合わせ
                     </HoverShapeButtonWithIcon>
                 </Link>
+                <Link href="https://hiyoku-training-tadsofc.gamma.site/">
+                    <HoverShapeButtonWithIcon
+                        variant="softRed"
+                        icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                        className="w-80 py-4"
+                    >
+                        2026新人研修募集
+                    </HoverShapeButtonWithIcon>
+                </Link>
             </div>
         </div>
     );
