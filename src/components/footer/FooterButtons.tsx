@@ -31,6 +31,15 @@ export function FooterButtons () {
                     採用についてのお問い合わせ
                 </HoverShapeButtonWithIcon>
             </Link>
+            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc3Bag0DDGD2ZCXFE3SV8ksV1W7jkUsIm3JpqoV6VGXomcNuQ/viewform?usp=header">
+                <HoverShapeButtonWithIcon
+                    variant="softGreen"
+                    icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                    className="w-64 py-4"
+                    >
+                    2026新人研修お問い合わせ
+                </HoverShapeButtonWithIcon>
+            </Link>
         </div>
     )
 };

@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
-import { ButtonWithIcon, TopRoundedButton, BottomRoundedButton } from "../ui/button";
+import { ButtonWithIcon, TopRoundedButton, BottomRoundedButton,} from "../ui/button";
+import { MiddleButton } from "../ui/button/MiddleButton";
 
 const navLinks = [
     { label: "私たちについて", href: "/about-us" },
@@ -13,22 +14,24 @@ const navLinks = [
 ];
 
 export function HeaderNav () {
-    const [isOpen, setIsOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
+    const [isContactOpen, setIsContactOpen] = useState(false);
+
+    const contactRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
-                menuRef.current &&
-                !menuRef.current.contains(event.target as Node)
+                contactRef.current &&
+                !contactRef.current.contains(event.target as Node)
             ) {
-                setIsOpen(false);
+                setIsContactOpen(false);
             }
         };
+    
         document.addEventListener("mousedown", handleClickOutside);
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
-
+    
     return (
         <nav className="hidden lg:flex items-center space-x-3">
             {navLinks.map((link) => (
@@ -42,17 +45,17 @@ export function HeaderNav () {
                     </span>
                 </Link>
             ))}
-            <div ref={menuRef} className="relative mx-auto text-center">
+            <div ref={contactRef} className="relative mx-auto text-center">
                 <ButtonWithIcon
                     variant="blue"
                     icon={<ChevronRight className="w-4 h-4 transition-colors" />}
                     className="w-[200px]"
-                    onClick={() => setIsOpen((prev) => !prev)}
+                    onClick={() => setIsContactOpen((prev) => !prev)}
                 >
                     お問い合わせ
                 </ButtonWithIcon>
 
-                {isOpen && (
+                {isContactOpen && (
                     <div className={`
                         absolute top-full mt-6
                         left-1/2 -translate-x-1/2
@@ -71,15 +74,38 @@ export function HeaderNav () {
                         <div className="w-[150px] h-px bg-grayMiddle" />
 
                         <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeLNJ7LVm7ITzvnTyiEWzsd40LMbp0nRtgqGJkjSabq02IHgQ/viewform?usp=sharing&ouid=103342829539540884944">
+                            <MiddleButton
+                                variant="ghostBlue"
+                                className="w-[150px]"
+                            >
+                                <p className="whitespace-pre-line">採用についての{'\n'}お問い合わせ</p>
+                            </MiddleButton>
+                        </Link>
+
+                        <div className="w-[150px] h-px bg-grayMiddle" />
+
+                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc3Bag0DDGD2ZCXFE3SV8ksV1W7jkUsIm3JpqoV6VGXomcNuQ/viewform?usp=header">
                             <BottomRoundedButton
                                 variant="ghostBlue"
                                 className="w-[150px] z-30"
                             >
-                                <p className="whitespace-pre-line">採用についての{'\n'}お問い合わせ</p>
+                                <p className="whitespace-pre-line">2026新人研修{'\n'}お問い合わせ</p>
                             </BottomRoundedButton>
-                        </Link>
+                        </Link>              
                     </div>
                 )}
+            </div>
+
+            <div className="relative mx-auto text-center">
+                <Link href="https://hiyoku-training-tadsofc.gamma.site/">
+                    <ButtonWithIcon
+                        variant="red"
+                        icon={<ChevronRight className="w-4 h-4 transition-colors" />}
+                        className="w-[200px]"
+                    >
+                        2026新人研修募集
+                    </ButtonWithIcon>
+                </Link>
             </div>
         </nav>
     )
