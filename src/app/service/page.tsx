@@ -7,32 +7,26 @@ import { CaseStudyArea } from "@/components/service/CaseStudyArea";
 import { FormArea } from "@/components/service/FormArea";
 import { SystemFeaturesArea } from "@/components/service/SystemFeaturesArea";
 import Image from "next/image"
+import { PamphletSectionArea } from "@/components/service/PamphletSectionArea";
 
 export default function ServicePage() {
-return (
-    <div>
-        <Header />
+    return (
+        <div>
+            <Header />
 
-        <TopArea />
+            <TopArea />
 
-        <CorporateTroublesArea />
+            <CorporateTroublesArea />
 
-        <IntroductionEffectArea />
+            <IntroductionEffectArea />
 
-        <CaseStudyArea />
+            <CaseStudyArea />
 
-        <FormArea />
+            <FormArea />
 
-        <SystemFeaturesArea />
-
-        <Image 
-            src='/service/hiyokuPamphlet.svg'
-            alt='hiyokuPamphlet.pdf' 
-            width={800} 
-            height={1600}
-            className="mx-auto"
-        />
-
-    </div>
-    )
+            <SystemFeaturesArea />
+            
+            <PamphletSectionArea />
+        </div>
+    );
 }
