@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { X, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { HoverShapeButtonWithIcon } from "../ui/button";
@@ -21,13 +21,13 @@ export function HeaderMobileMenu({ onClose }: Props) {
     const [isVisible, setIsVisible] = useState(true);
     const [isAnimatingOut, setIsAnimatingOut] = useState(false);
 
-    const handleClose = () => {
+    const handleClose = useCallback(() => {
         setIsAnimatingOut(true);
         setTimeout(() => {
         setIsVisible(false);
         onClose(); // メニューを閉じる外部処理
         }, 400); // fadeOutSoftと同じduration
-    };
+    }, [onClose]);
 
     useEffect(() => {
         document.body.style.overflow = "hidden";
@@ -41,7 +41,7 @@ export function HeaderMobileMenu({ onClose }: Props) {
             document.body.style.overflow = "";
             document.removeEventListener("keydown", handleEsc);
         };
-    }, []);
+    }, [handleClose]);
 
     if (!isVisible) return null;
 
