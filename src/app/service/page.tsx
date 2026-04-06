@@ -6,7 +6,7 @@ import { IntroductionEffectArea } from "@/components/service/IntroductionEffectA
 import { CaseStudyArea } from "@/components/service/CaseStudyArea";
 import { FormArea } from "@/components/service/FormArea";
 import { SystemFeaturesArea } from "@/components/service/SystemFeaturesArea";
-import { PamphletSectionArea } from "@/components/service/PamphletSectionArea";
+// import { PamphletSectionArea } from "@/components/service/PamphletSectionArea";
 
 export default function ServicePage() {
     return (
@@ -25,7 +25,7 @@ export default function ServicePage() {
 
             <SystemFeaturesArea />
 
-            <PamphletSectionArea />
+            {/* <PamphletSectionArea /> */}
         </div>
     );
 }
