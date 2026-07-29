@@ -43,8 +43,8 @@ export default function Modal({ isOpen, item, onClose }: ModalProps) {
                     ×
                 </button>
                 <div className="w-full md:w-[90%] mx-auto my-2 md:my-8">
-                    <div className="flex my-4">
-                        <Image src="/recruit/interviewIcon.svg" alt="popup" width={100} height={100} />
+                    <div className="flex my-4 rounded-full overflow-hidden">
+                        <Image src={item.src_md} alt="popup" width={100} height={100} className="rounded-full" />
                         <div className="my-auto mx-2 md:mx-8">
                             <div className="flex flex-col items-start my-2">
                                 <p className="text-2xl mx-2 font-bold ">{item.member}</p>
