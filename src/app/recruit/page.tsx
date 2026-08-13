@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import AboutHiyoku from "@/components/recruit/AboutHiyoku";
 import AboutWork from "@/components/recruit/AboutWork";
 import InterviewItems from "@/components/recruit/InterviewItems";
@@ -5,6 +6,15 @@ import Solicitation from "@/components/recruit/Solicitation";
 import FAQ from "@/components/recruit/FAQ";
 import Pankuzu from "@/components/shared/Pankuzu";
 
+
+// このページのメタデータ。求職者は「会社名 + 採用」で検索してくるので、
+// title は素直に「採用情報」でよい（template で社名が後ろに付く）。
+export const metadata: Metadata = {
+  title: "採用情報",
+  description:
+    "hiyoku合同会社の採用情報。エンジニア育成事業を一緒に伸ばしていく仲間を募集しています。仕事内容・社員インタビュー・よくある質問を掲載しています。",
+  alternates: { canonical: "/recruit" },
+};
 
 export default function RecruitPage() {
     return (
