@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cloudflare (@opennextjs/cloudflare のビルド成果物)
+/.open-next/
+.wrangler/
