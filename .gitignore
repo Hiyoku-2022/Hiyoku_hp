@@ -20,6 +20,20 @@
 # production
 /build
 
+# Cloudflare/OpenNext のビルド生成物・ローカル状態。
+# 本番は Vercel。Cloudflare は切り替え手段(フェイルオーバー)として用意しており、
+# 構成一式は open-next.config.ts / wrangler.jsonc / docs/cloudflare-failover.md
+# にある(2026-08-14時点では feature/cloudflare-failover ブランチ)。
+# どちらもソースから作り直せる派生物なので、履歴には入れない。
+#
+# ⚠️ `.wrangler/` にだけ先頭の / を付けていないのは、入れ子で作られたものも拾うため。
+#    `/.wrangler/` と書くとルート直下しか無視されず、packages/*/.wrangler/ が素通りする。
+/.open-next/
+.wrangler/
+
+# 削除ファイルの退避先(プロジェクト内ゴミ箱)。履歴には入れない。
+.trash/
+
 # misc
 .DS_Store
 *.pem
