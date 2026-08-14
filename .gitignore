@@ -22,8 +22,7 @@
 
 # Cloudflare/OpenNext のビルド生成物・ローカル状態。
 # 本番は Vercel。Cloudflare は切り替え手段(フェイルオーバー)として用意しており、
-# 構成一式は open-next.config.ts / wrangler.jsonc / docs/cloudflare-failover.md
-# にある(2026-08-14時点では feature/cloudflare-failover ブランチ)。
+# 構成一式は open-next.config.ts / wrangler.jsonc / docs/cloudflare-failover.md にある。
 # どちらもソースから作り直せる派生物なので、履歴には入れない。
 #
 # ⚠️ `.wrangler/` にだけ先頭の / を付けていないのは、入れ子で作られたものも拾うため。
@@ -53,7 +52,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# Cloudflare (@opennextjs/cloudflare のビルド成果物)
-/.open-next/
-.wrangler/
