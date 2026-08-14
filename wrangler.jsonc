@@ -1,0 +1,54 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Worker名。ダッシュボード上の表示名になる。
+  "name": "hiyoku-hp",
+
+  // @opennextjs/cloudflare がビルドして吐くエントリポイント。
+  // このファイルは .open-next/ 配下に生成されるので、先に
+  //   npx opennextjs-cloudflare build
+  // を実行してからでないと deploy できない。
+  "main": ".open-next/worker.js",
+
+  "compatibility_date": "2026-08-13",
+
+  // Next.js のサーバー処理が Node の API を使うため必須。
+  // これが無いとデプロイは通るのに実行時にモジュール解決で落ちる。
+  "compatibility_flags": ["nodejs_compat"],
+
+  /*
+    【Hiyoku名義のCloudflareアカウント】
+    wrangler は info@tsugumionline.net（個人）でログインしており、
+    そちらのアカウントも見えてしまう。ここを書かないと取り違えるので必ず明示する。
+  */
+  "account_id": "4821a0406e0a77bb48f525217666087d",
+
+  // 静的アセット（画像・CSS・JS・プリレンダリング済みHTML）の配信元。
+  // ASSETS という名前で Worker から参照される。
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+
+  /*
+    ⚠️ 独自ドメイン（hiyoku.co.jp）は【まだ紐づけない】。
+    現時点では旧環境が本番として稼働中で、これは「いつでも切り替えられる状態」を
+    先に作っておくための予備デプロイ。
+    本番に昇格させるときに routes を追加し、DNSを向け替える。
+  */
+
+  /*
+    *.workers.dev の公開URLを出すかどうか。
+    【通常は false】。公開したままだと本番と同じ内容が別URLで見えてしまい、
+    検索エンジンに重複コンテンツとして扱われ、本体の評価を下げかねない。
+    デプロイ直後の動作確認をするときだけ一時的に true にして、確認後に戻すこと。
+    なお true にするには、アカウントに workers.dev サブドメインの登録が必要
+    （未登録だと deploy がエラーになる）。
+  */
+  "workers_dev": false,
+
+  // 本番に出したあと、エラーの発生をダッシュボードで追えるようにしておく
+  "observability": {
+    "enabled": true
+  }
+}
