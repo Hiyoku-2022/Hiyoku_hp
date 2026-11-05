@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 import Pankuzu from "@/components/shared/Pankuzu";
 import HeadTitle from "@/components/recruit/HeadTitle";
 import { HoverShapeButtonWithIcon } from "@/components/ui/button";
-import { training, curriculumAreas } from "@/data/training";
+import { training, curriculumAreas, courseName } from "@/data/training";
 
 /*--------------------------------------------------------------------------
   新人研修（3ヶ月集中プログラム）の募集ページ
@@ -25,7 +25,7 @@ import { training, curriculumAreas } from "@/data/training";
      「申請代行」と読める表現は入れないこと（/service と同じ方針）。
 --------------------------------------------------------------------------*/
 export const metadata: Metadata = {
-  title: `${training.fiscalYear}年度 新人研修（3ヶ月集中プログラム）`,
+  title: courseName,
   description: `${training.fiscalYear}年度の新入社員向けエンジニア研修。${training.period.label}の${training.period.days}日間（合計${training.period.totalHoursLabel}）、コンピュータサイエンス・Java・データベース・AI駆動開発までを福岡で対面で学びます。`,
   alternates: { canonical: "/training" },
 };
@@ -75,14 +75,14 @@ export default function TrainingPage() {
       {/* リード */}
       <div className="mx-auto text-center w-[90%]">
         <p className="text-xl lg:text-3xl my-8 font-bold">
-          {training.fiscalYear}年度 新人研修
+          {courseName}
           <br />
-          3ヶ月集中プログラムの受講企業を募集しています
+          3か月の対面研修の受講企業を募集しています
         </p>
         <p className="text-sm lg:text-base mx-auto w-[90%] md:w-[70%]">
           新入社員の教育に、現場のエースエンジニアの時間を取られていませんか。
           <br className="max-md:hidden" />
-          Hiyokuの新人研修は、コンピュータサイエンスの基礎から Java・データベース・AI駆動開発までを
+          {courseName}は、コンピュータサイエンスの基礎から Java・データベース・AI駆動開発までを
           {training.period.days}日間でお預かりし、配属後すぐに現場の会話についていける状態に育てます。
         </p>
       </div>
