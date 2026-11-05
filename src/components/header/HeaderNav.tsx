@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { ButtonWithIcon, TopRoundedButton, BottomRoundedButton,} from "../ui/button";
 import { MiddleButton } from "../ui/button/MiddleButton";
+import { training } from "@/data/training";
 
 const navLinks = [
     { label: "私たちについて", href: "/about-us" },
@@ -84,12 +85,13 @@ export function HeaderNav () {
 
                         <div className="w-[150px] h-px bg-grayMiddle" />
 
-                        <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc3Bag0DDGD2ZCXFE3SV8ksV1W7jkUsIm3JpqoV6VGXomcNuQ/viewform?usp=header">
+                        {/* 年度とリンク先は src/data/training.ts から取る */}
+                        <Link href={training.inquiryUrl}>
                             <BottomRoundedButton
                                 variant="ghostBlue"
                                 className="w-[150px] z-30"
                             >
-                                <p className="whitespace-pre-line">2026新人研修{'\n'}お問い合わせ</p>
+                                <p className="whitespace-pre-line">{training.fiscalYear}新人研修{'\n'}お問い合わせ</p>
                             </BottomRoundedButton>
                         </Link>              
                     </div>
@@ -97,13 +99,14 @@ export function HeaderNav () {
             </div>
 
             <div className="relative mx-auto text-center">
-                <Link href="https://hiyoku-training-tadsofc.gamma.site/">
+                {/* 募集ページは 2027年度から外部（Gamma）ではなくサイト内の /training */}
+                <Link href="/training">
                     <ButtonWithIcon
                         variant="red"
                         icon={<ChevronRight className="w-4 h-4 transition-colors" />}
                         className="w-[200px]"
                     >
-                        2026新人研修募集
+                        {training.fiscalYear}新人研修募集
                     </ButtonWithIcon>
                 </Link>
             </div>

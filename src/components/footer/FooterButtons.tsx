@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { HoverShapeButtonWithIcon } from "../ui/button";
+import { training } from "@/data/training";
 
 export function FooterButtons () {
     return (
@@ -31,13 +32,14 @@ export function FooterButtons () {
                     採用についてのお問い合わせ
                 </HoverShapeButtonWithIcon>
             </Link>
-            <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc3Bag0DDGD2ZCXFE3SV8ksV1W7jkUsIm3JpqoV6VGXomcNuQ/viewform?usp=header">
+            {/* 年度とリンク先は src/data/training.ts から取る（年度替わりに直す場所を1つにするため） */}
+            <Link href={training.inquiryUrl}>
                 <HoverShapeButtonWithIcon
                     variant="softGreen"
                     icon={<ChevronRight className="w-4 h-4 transition-colors" />}
                     className="w-64 py-4"
                     >
-                    2026新人研修お問い合わせ
+                    {training.fiscalYear}新人研修お問い合わせ
                 </HoverShapeButtonWithIcon>
             </Link>
         </div>
