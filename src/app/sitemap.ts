@@ -41,6 +41,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      // 新人研修の募集ページ。2027年度から外部（Gamma）からサイト内へ移した。
+      // 募集期間（秋〜翌年2月頃）に中身を更新するので monthly にしている。
+      url: `${BASE_URL}/training`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${BASE_URL}/about-us`,
       lastModified,
       changeFrequency: "yearly",

@@ -5,6 +5,7 @@ import { X, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { HoverShapeButtonWithIcon } from "../ui/button";
 import { Logo } from "../shared/logo";
+import { training } from "@/data/training";
 
 const navLinks = [
     { label: "私たちについて", href: "/about-us" },
@@ -96,22 +97,24 @@ export function HeaderMobileMenu({ onClose }: Props) {
                         採用についてのお問い合わせ
                     </HoverShapeButtonWithIcon>
                 </Link>
-                 <Link href="https://docs.google.com/forms/d/e/1FAIpQLSc3Bag0DDGD2ZCXFE3SV8ksV1W7jkUsIm3JpqoV6VGXomcNuQ/viewform?usp=header">
+                {/* 新人研修の2つのボタンは、年度とリンク先を src/data/training.ts から取る。
+                    募集ページは 2027年度から外部（Gamma）ではなくサイト内の /training */}
+                <Link href={training.inquiryUrl}>
                     <HoverShapeButtonWithIcon
                         variant="softGreen"
                         icon={<ChevronRight className="w-4 h-4 transition-colors" />}
                         className="w-80 py-4"
                     >
-                        2026新人研修お問い合わせ
+                        {training.fiscalYear}新人研修お問い合わせ
                     </HoverShapeButtonWithIcon>
                 </Link>
-                <Link href="https://hiyoku-training-tadsofc.gamma.site/">
+                <Link href="/training">
                     <HoverShapeButtonWithIcon
                         variant="softRed"
                         icon={<ChevronRight className="w-4 h-4 transition-colors" />}
                         className="w-80 py-4"
                     >
-                        2026新人研修募集
+                        {training.fiscalYear}新人研修募集
                     </HoverShapeButtonWithIcon>
                 </Link>
             </div>
