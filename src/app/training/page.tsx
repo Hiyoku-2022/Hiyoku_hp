@@ -146,7 +146,7 @@ export default function TrainingPage() {
       <div className="w-[90%] md:w-[70%] mx-auto bg-white rounded-lg p-6 text-sm lg:text-base leading-relaxed">
         <p>
           本研修は、人材開発支援助成金などの活用をご検討いただける形で実施しています。
-          訓練の実施機関として、時間割（研修スケジュール）や出席簿など、Hiyokuが用意する書類をご用意します。
+          訓練の実施機関として、時間割（研修スケジュール）や出席簿などの書類を Hiyoku がご用意します。
         </p>
         <p className="mt-3 text-xs lg:text-sm text-gray-600">
           ※ 助成金の申請書類の作成・提出の代行は行っておりません。支給の可否や金額は、申請される企業様の状況により異なります。
